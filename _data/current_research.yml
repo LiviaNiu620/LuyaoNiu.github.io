@@ -1,0 +1,32 @@
+{
+  "id": "mixed-autonomy-coordination",
+  "title_en": "Coalition coordination in mixed-autonomy traffic",
+  "title_zh": "混合自主交通中的联盟协调",
+  "summary_en": "When should autonomous-vehicle firms route independently, coordinate in partial coalitions, or share a common dispatcher? I study how these organizational choices affect traffic equilibrium and network performance when human drivers also adapt their routes.",
+  "summary_zh": "自动驾驶企业何时应独立调度、形成部分联盟，或采用统一调度？我研究当人类驾驶者也会调整路径时，这些组织选择如何影响交通均衡与网络整体性能。",
+  "scope_en": "The research compares the operational effects of specified routing organizations while holding the physical network and aggregate demand fixed. It examines how to design coordination arrangements; it does not model firms’ endogenous decisions to form coalitions.",
+  "scope_zh": "研究在固定物理网络与总需求的条件下，比较给定调度组织的运行效果，关注协调安排的设计，而非企业内生形成联盟的决策。",
+  "aspects": [
+    {
+      "id": "optimization",
+      "en": "Optimization & organizational design",
+      "zh": "优化与组织设计",
+      "desc_en": "Compare independent routing, partial coordination, and common dispatch through their induced equilibria. Preserve each company’s accepted origin–destination demand when evaluating coordination arrangements.",
+      "desc_zh": "通过不同组织安排所诱导的均衡，比较独立调度、部分协调与统一调度，并在协调决策中保留各企业已承接的起讫点（OD）需求约束。"
+    },
+    {
+      "id": "equilibrium",
+      "en": "Mixed Nash–Wardrop equilibrium",
+      "zh": "混合 Nash–Wardrop 均衡",
+      "desc_en": "Model AV coalitions as atomic splittable players and human-driven traffic as a nonatomic Wardrop population. Analyze how endogenous human-driver rerouting changes the effect of coalition coordination.",
+      "desc_zh": "将自动驾驶联盟建模为可分流的原子博弈主体，将人类驾驶交通建模为非原子 Wardrop 群体，分析人类驾驶者的内生改道如何改变联盟协调的影响。"
+    },
+    {
+      "id": "game-theory",
+      "en": "Heterogeneous objectives & governance",
+      "zh": "异质目标与联盟治理",
+      "desc_en": "Study how firms’ objectives, coalition composition, and governance intensity shape congestion. Use equilibrium sensitivity and regret-based comparisons to assess local coordination choices on benchmark networks.",
+      "desc_zh": "研究企业目标、联盟构成与治理强度如何影响拥堵，通过均衡敏感性分析与基于后悔值的比较，评估基准网络上的局部协调选择。"
+    }
+  ]
+}

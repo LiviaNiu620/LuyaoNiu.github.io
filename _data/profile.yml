@@ -6,12 +6,12 @@
     "zh": "在读博士 · 南加州大学"
   },
   "intro": {
-    "en": "I study how people move through cities — and how AI can help us understand why.",
-    "zh": "探索人们如何在城市中出行，以及人工智能如何帮助我们理解出行背后的原因。"
+    "en": "Learning, decision-making, and coordination in intelligent systems.",
+    "zh": "探索智能系统中的学习、决策与协调。"
   },
   "bio": {
-    "en": "My research connects spatio-temporal data mining, urban AI, and large language models for spatial intelligence. I bring together mobility data, causal inference, and human-centered reasoning to understand urban systems.",
-    "zh": "我的研究结合时空数据挖掘、城市人工智能与面向空间智能的大语言模型，利用出行数据、因果推断与以人为本的推理方法理解城市系统。"
+    "en": "My research interests center on how agents learn about their environments, make decisions in interaction with others, and shape collective outcomes. Building on my work in spatio-temporal modeling, behavioral understanding, and AI agents, I am increasingly interested in multi-agent and autonomous systems. Transportation and mobility provide a central setting for this work.",
+    "zh": "我关注智能主体如何理解环境、在与其他主体的互动中作出决策，以及这些决策如何共同塑造系统层面的结果。基于此前在时空建模、行为理解与 AI Agent 方面的研究积累，我的兴趣逐步转向多智能体与自主系统。交通与出行系统是我开展这些研究的重要场景。"
   },
   "background": {
     "en": "Previously, I studied Smart City & Big Data at Peking University, following a B.Sc. in Traffic Engineering at Beijing Jiaotong University.",
@@ -19,31 +19,78 @@
   },
   "research": [
     {
-      "id": "spatial",
+      "id": "learning-reasoning",
       "number": "01",
-      "en": "Spatial intelligence",
-      "zh": "空间智能",
-      "desc_en": "Grounding language models in places, trajectories, and everyday urban life.",
-      "desc_zh": "将语言模型与地点、轨迹及日常城市生活相连接。",
-      "tags": "LLMs · RAG · GeoAI"
+      "en": "Learning & Reasoning",
+      "zh": "学习与推理",
+      "desc_en": "How can agents learn useful representations and reason about complex environments?",
+      "desc_zh": "智能主体如何学习有效表征，并对复杂环境进行推理？",
+      "tags": "Representations · Knowledge · Reasoning",
+      "context_en": "My work in trajectory modeling, causal forecasting, and knowledge-grounded AI agents provides a foundation for understanding environments and behavior. I am interested in how learning and reasoning can support decisions in dynamic settings.",
+      "context_zh": "轨迹建模、因果预测和知识驱动的 AI Agent 工作，为我理解环境与行为提供了基础。我希望进一步探索学习与推理如何支持动态环境中的决策。",
+      "links": [
+        {
+          "url": "#trajectory-reasoning",
+          "en": "Trajectory reasoning",
+          "zh": "轨迹推理"
+        },
+        {
+          "url": "#event-causnet",
+          "en": "Event-CausNet",
+          "zh": "Event-CausNet"
+        },
+        {
+          "url": "#asknearby",
+          "en": "AskNearby",
+          "zh": "方元问问"
+        }
+      ]
     },
     {
-      "id": "mobility",
+      "id": "multi-agent-decision-making",
       "number": "02",
-      "en": "Human mobility",
-      "zh": "人类出行行为",
-      "desc_en": "Learning how people travel, what shapes their choices, and what comes next.",
-      "desc_zh": "研究人们如何出行、选择背后的因素，以及未来的出行变化。",
-      "tags": "Trajectories · Representation learning"
+      "en": "Multi-Agent Decision-Making",
+      "zh": "多智能体决策",
+      "desc_en": "How should agents make decisions when their actions and objectives interact?",
+      "desc_zh": "当行为相互影响、目标各不相同时，智能主体应如何决策？",
+      "tags": "Reinforcement learning · Game theory",
+      "context_en": "Traffic assignment, multi-agent scheduling, and my current mixed-autonomy work connect individual decisions to system performance. I am interested in combining learning, optimization, and game-theoretic perspectives to study adaptive and strategic decision-making.",
+      "context_zh": "交通分配、多智能体调度与当前的人机混合交通研究，将个体决策与系统表现联系起来。我希望结合学习、优化和博弈论视角，研究适应性与策略性决策。",
+      "links": [
+        {
+          "url": "#mixed-autonomy-coordination",
+          "en": "Mixed-autonomy coordination",
+          "zh": "混合自主交通协调"
+        },
+        {
+          "url": "#other-projects",
+          "en": "Routing & multi-agent scheduling",
+          "zh": "路径分配与多智能体调度"
+        }
+      ]
     },
     {
-      "id": "causal",
+      "id": "coordination-collective-intelligence",
       "number": "03",
-      "en": "Causal urban analytics",
-      "zh": "城市因果分析",
-      "desc_en": "Understanding the effects of events, policies, and new mobility systems.",
-      "desc_zh": "理解事件、政策与新型交通系统对城市的影响。",
-      "tags": "Causal inference · Transportation"
+      "en": "Coordination & Collective Intelligence",
+      "zh": "协调与集体智能",
+      "desc_en": "How can interaction among agents lead to effective collective behavior?",
+      "desc_zh": "多个智能主体如何通过互动，形成有效的集体行为？",
+      "tags": "Cooperation · Interaction · Collective behavior",
+      "context_en": "My current research on routing organizations examines how coordination changes collective outcomes. This motivates a broader interest in cooperation, communication, and collective intelligence across multi-agent and autonomous systems.",
+      "context_zh": "当前关于路径调度组织的研究，探讨协调如何改变集体结果。这也促使我进一步关注多智能体与自主系统中的合作、通信和集体智能。",
+      "links": [
+        {
+          "url": "#mixed-autonomy-coordination",
+          "en": "Current coordination study",
+          "zh": "当前协调研究"
+        },
+        {
+          "url": "#other-projects",
+          "en": "Multi-agent warehouse systems",
+          "zh": "仓储多智能体系统"
+        }
+      ]
     }
   ],
   "news": [
@@ -97,5 +144,9 @@
       "degree_zh": "交通工程学士 · 辅修金融学",
       "date": "2019–2023"
     }
-  ]
+  ],
+  "focus": {
+    "en": "Learning, decision-making, and coordination in intelligent systems, with a growing focus on multi-agent and autonomous systems.",
+    "zh": "围绕智能系统中的学习、决策与协调展开研究，并逐步聚焦多智能体与自主系统。"
+  }
 }

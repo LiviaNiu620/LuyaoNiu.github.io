@@ -36,7 +36,7 @@ Other role end dates, the master's thesis ongoing label, and the Transactions in
 
 This is a Jekyll site with reusable templates and data files, not a standalone self-editing HTML artifact. Content is edited in the repository. Original unused template files remain for reference but are not loaded by the new default layout. Build dependencies were simplified to Jekyll and the plugins already used by this site.
 
-The user requested this version be committed and pushed to a dedicated `urbanai` branch. This does not merge changes into `main` or change the GitHub Pages source.
+The owner requested publication of the latest `urbanai` version on 2026-09-17. GitHub Pages publishes from the root of `urbanai`; future pushes to that branch trigger deployment. The `main` branch remains separate.
 
 ## Verification results (2026-09-16)
 
@@ -58,3 +58,14 @@ The rebuilt pages contain the August 2026 USC start date and the confirmed KDD 2
 ## Contact and Xiaohongshu internship update
 
 The owner requested removal of the Chinese name from the homepage, a new contact address (`luyaoniu@usc.edu`), and a May-August 2026 AI Agent Engineering internship in Xiaohongshu's Data Analytics department. The bilingual CV now covers the knowledge base, agent architecture/development, end-to-end validation, and domain Skill design, evaluation, monitoring, and operations. No new performance metrics or business results are claimed. The May 2026 news entry links to `/cv/#xiaohongshu`. The PDF includes the same English experience and new email, with four reviewed pages after adding the internship. Browser verification passed 48 layouts and 31 internal destinations; PDF text, mail action, and the served download were also checked.
+
+
+## Research positioning (2026-09-17)
+
+The owner approved a long-term research narrative around learning, decision-making, and coordination in intelligent systems, with a growing focus on multi-agent and autonomous systems. Transportation and mobility provide a central setting. The three interest labels are **Learning & Reasoning**, **Multi-Agent Decision-Making**, and **Coordination & Collective Intelligence**. Earlier work in spatio-temporal modeling, behavioral understanding, causal analysis, and AI agents is described as a foundation; emerging interests in reinforcement learning, communication, and collective intelligence are not presented as completed contributions.
+
+The homepage cards link to three matching research threads on the Projects page. Each thread explains the connection between earlier work and prospective questions, with working links to relevant projects. Coalition coordination in mixed-autonomy traffic remains one current USC topic, not the definition of the owner's entire research agenda. Its summary retains the distinction between comparing specified coordination arrangements and endogenous coalition formation. No draft benchmark results, formal paper title, submission status, or author list were invented.
+
+General positioning is centralized in `_data/profile.yml`; the specific current topic lives in `_data/current_research.yml`. The homepage, project overview, CV research interests, downloadable PDF, metadata, and README use this separation.
+
+Validation of the approved positioning: strict safe-mode Jekyll build passed; 48 responsive/language cases and 33 internal destinations passed browser checks. Five main pages in both themes had zero detected axe violations. Desktop, mobile, Chinese dark-theme, and PDF renders were inspected. The PDF retains four pages and the latest user-confirmed contact, internship, and submission details.

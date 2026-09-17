@@ -3,10 +3,30 @@ permalink: /projects/
 title: Projects
 title_zh: 研究项目
 eyebrow: IDEAS INTO PRACTICE
-description: "From trajectory representations to language models grounded in the city."
-description_zh: "从轨迹表征学习，到扎根城市场景的大语言模型。"
+description: "Connecting learning, decision-making, and coordination across intelligent systems."
+description_zh: "连接智能系统中的学习、决策与协调。"
 ---
-<div class="project-topics"><a id="spatial" href="#asknearby"><span lang="en">Spatial intelligence</span><span lang="zh">空间智能</span> ↗</a><a id="mobility" href="#trajectory-reasoning"><span lang="en">Human mobility</span><span lang="zh">人类出行</span> ↗</a><a id="causal" href="#event-causnet"><span lang="en">Causal analytics</span><span lang="zh">因果分析</span> ↗</a></div>
+{% assign current = site.data.current_research %}
+<nav class="project-topics" aria-label="Research interests">{% for interest in site.data.profile.research %}<a href="#{{ interest.id }}"><span lang="en">{{ interest.en }}</span><span lang="zh">{{ interest.zh }}</span> ↗</a>{% endfor %}</nav>
+<section class="research-threads" aria-labelledby="research-threads-title">
+ <div class="section-heading"><div><p class="eyebrow"><span lang="en">A DEVELOPING RESEARCH AGENDA</span><span lang="zh">持续发展的研究脉络</span></p><h2 id="research-threads-title"><span lang="en">From understanding to collective outcomes</span><span lang="zh">从理解环境，到塑造集体结果</span></h2></div></div>
+ <p class="research-threads-intro"><span lang="en">{{ site.data.profile.focus.en }} My earlier work and current projects inform three connected interests.</span><span lang="zh">{{ site.data.profile.focus.zh }} 已有积累与当前课题，共同支持以下三个相互连接的研究兴趣。</span></p>
+ {% for interest in site.data.profile.research %}
+ <section class="research-thread" id="{{ interest.id }}">
+  <h3><span class="thread-number" aria-hidden="true">{{ interest.number }}</span><span lang="en">{{ interest.en }}</span><span lang="zh">{{ interest.zh }}</span></h3>
+  <p><span lang="en">{{ interest.context_en }}</span><span lang="zh">{{ interest.context_zh }}</span></p>
+  <div class="thread-links"><span class="thread-links-label"><span lang="en">Related work</span><span lang="zh">相关工作</span></span>{% for link in interest.links %}<a class="text-link" href="{{ link.url }}"><span lang="en">{{ link.en }}</span><span lang="zh">{{ link.zh }}</span>{% include icon.html name="arrow" %}</a>{% endfor %}</div>
+ </section>
+ {% endfor %}
+</section>
+<section class="project-detail current-project" id="{{ current.id }}" aria-labelledby="current-project-title">
+ <span class="project-index"><span lang="en">A CURRENT TOPIC · USC</span><span lang="zh">当前课题 · USC</span></span>
+ <h2 id="current-project-title"><span lang="en">{{ current.title_en }}</span><span lang="zh">{{ current.title_zh }}</span></h2>
+ <p class="current-project-question"><span lang="en">{{ current.summary_en }}</span><span lang="zh">{{ current.summary_zh }}</span></p>
+ {% for aspect in current.aspects %}<section class="research-aspect" id="{{ aspect.id }}"><h3><span lang="en">{{ aspect.en }}</span><span lang="zh">{{ aspect.zh }}</span></h3><p><span lang="en">{{ aspect.desc_en }}</span><span lang="zh">{{ aspect.desc_zh }}</span></p></section>{% endfor %}
+ <p class="research-scope"><span lang="en">{{ current.scope_en }}</span><span lang="zh">{{ current.scope_zh }}</span></p>
+</section>
+<div class="section-heading project-history-heading"><h2><span lang="en">Further research projects</span><span lang="zh">其他研究项目</span></h2></div>
 <div class="project-list" markdown="1">
 <section class="project-detail" id="trajectory-reasoning" markdown="1">
 <span class="project-index">PROJECT / 01</span>

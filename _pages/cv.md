@@ -8,6 +8,11 @@ description_zh: "教育背景、科研经历与一路积累。"
 ---
 <div class="cv-toolbar"><a class="button button-primary" href="{{ site.author.cv | relative_url }}">{% include icon.html name="file" %}<span lang="en">Download CV</span><span lang="zh">下载简历</span><span class="button-note">PDF</span></a><nav class="section-nav" aria-label="CV sections"><a href="#education"><span lang="en">Education</span><span lang="zh">教育</span></a><a href="#experience"><span lang="en">Experience</span><span lang="zh">经历</span></a><a href="#honors"><span lang="en">Honors</span><span lang="zh">荣誉</span></a><a href="#skills"><span lang="en">Skills</span><span lang="zh">技能</span></a></nav></div>
 <div class="prose cv-content" markdown="1">
+## <span lang="en">Research focus</span><span lang="zh">研究方向</span> {#research-focus}
+<p><span lang="en">{{ site.data.profile.focus.en }}</span><span lang="zh">{{ site.data.profile.focus.zh }}</span></p>
+<ul>{% for interest in site.data.profile.research %}<li><span lang="en">{{ interest.en }}</span><span lang="zh">{{ interest.zh }}</span></li>{% endfor %}</ul>
+<p><a href="{{ '/projects/' | relative_url }}#{{ site.data.current_research.id }}"><span lang="en">Current topic: {{ site.data.current_research.title_en }}</span><span lang="zh">当前课题：{{ site.data.current_research.title_zh }}</span></a></p>
+
 ## <span lang="en">Education</span><span lang="zh">教育经历</span> {#education}
 <div lang="en" markdown="1">
 - *2026.08 - present*, **Ph.D. student in Transportation Systems Engineering**, University of Southern California (USC).

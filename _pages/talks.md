@@ -3,8 +3,8 @@ permalink: /talks/
 title: Talks & presentations
 title_zh: 报告与展示
 eyebrow: IDEAS IN CONVERSATION
-description: "Sharing research across communities in geography, AI, and transportation."
-description_zh: "在地理、人工智能与交通领域的学术交流。"
+description: "Sharing research across transportation, AI, and intelligent systems."
+description_zh: "在交通、人工智能与智能系统领域的学术交流。"
 ---
 <div class="talk-list">
 {% assign talk_ids = 'asknearby,mf-attnbilstm,regional-integration,transport-policy' | split: ',' %}

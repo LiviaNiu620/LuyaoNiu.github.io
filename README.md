@@ -1,6 +1,6 @@
 # Luyao Niu · Academic Homepage
 
-A bilingual academic website about urban AI, human mobility, and spatial intelligence. Built with Jekyll 3.10, semantic HTML, locally hosted fonts, CSS, and a small vanilla JavaScript enhancement. No frontend framework or JavaScript build is required to publish the site.
+A bilingual academic website connecting learning, decision-making, and coordination in intelligent systems, with a growing focus on multi-agent and autonomous systems. Built with Jekyll 3.10, semantic HTML, locally hosted fonts, CSS, and a small vanilla JavaScript enhancement. No frontend framework or JavaScript build is required to publish the site.
 
 ## Quick preview on this Mac
 
@@ -27,6 +27,7 @@ The production output is `_site/`. Do not edit generated files there.
 
 | File | Purpose |
 | --- | --- |
+| `_data/current_research.yml` | One current USC topic, bilingual summary and methodology |
 | `_data/profile.yml` | Bilingual role and bio, research interests, news, education |
 | `_data/experience.yml` | Bilingual Xiaohongshu internship role and responsibilities |
 | `_data/publications.yml` | Publications, authors, venues, status, links, citations, featured selection |
@@ -55,7 +56,7 @@ url: "https://livianiu620.github.io"
 baseurl: "/LuyaoNiu.github.io"
 ```
 
-After pushing reviewed changes, enable **Settings → Pages → Deploy from a branch**, select the branch to publish and `/ (root)`. GitHub Pages builds Jekyll automatically. Publishing the `urbanai` branch does not merge it into `main` or change remote Pages settings. To make this version public, select `urbanai` as the Pages source or merge the reviewed changes into the configured publishing branch.
+Production uses **Settings → Pages → Deploy from a branch → `urbanai` → `/ (root)`**. GitHub Pages builds Jekyll automatically when changes are pushed to `urbanai`. The public site is https://livianiu620.github.io/LuyaoNiu.github.io/. The `main` branch remains separate; merging into it is not required to publish this version.
 
 If the repository is renamed to `LiviaNiu620.github.io`, set `baseurl: ""`. For a custom domain, set `url` to that domain and `baseurl` to the appropriate path. Do not change it merely to make local preview links shorter; use `bundle exec jekyll serve --baseurl ''` for a root-path preview.
 
