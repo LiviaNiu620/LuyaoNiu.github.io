@@ -1,17 +1,29 @@
-# main links — multi-page navigation
-# Titles carry both languages; the lang toggle (data-lang) shows the active one.
-main:
-  - title: '<span lang="en">Publications</span><span lang="zh">论文</span>'
-    url: "/publications/"
-
-  - title: '<span lang="en">CV</span><span lang="zh">履历</span>'
-    url: "/cv/"
-
-  - title: '<span lang="en">Talks</span><span lang="zh">报告</span>'
-    url: "/talks/"
-
-  - title: '<span lang="en">Projects</span><span lang="zh">项目</span>'
-    url: "/projects/"
-
-  - title: '<span lang="en">CV (PDF)</span><span lang="zh">简历 PDF</span>'
-    url: "/files/CV.pdf"
+{
+  "main": [
+    {
+      "en": "About",
+      "zh": "关于",
+      "url": "/"
+    },
+    {
+      "en": "Publications",
+      "zh": "论文",
+      "url": "/publications/"
+    },
+    {
+      "en": "Projects",
+      "zh": "项目",
+      "url": "/projects/"
+    },
+    {
+      "en": "Talks",
+      "zh": "报告",
+      "url": "/talks/"
+    },
+    {
+      "en": "CV",
+      "zh": "履历",
+      "url": "/cv/"
+    }
+  ]
+}

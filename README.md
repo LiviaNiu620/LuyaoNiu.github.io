@@ -1,72 +1,87 @@
+# Luyao Niu · Academic Homepage
 
-<h1 align="center">
-AcadHomepage
-</h1>
+A bilingual academic website about urban AI, human mobility, and spatial intelligence. Built with Jekyll 3.10, semantic HTML, locally hosted fonts, CSS, and a small vanilla JavaScript enhancement. No frontend framework or JavaScript build is required to publish the site.
 
-<div align="center">
+## Quick preview on this Mac
 
-[![](https://img.shields.io/github/stars/RayeRen/acad-homepage.github.io)](https://github.com/RayeRen/acad-homepage.github.io)
-[![](https://img.shields.io/github/forks/RayeRen/acad-homepage.github.io)](https://github.com/RayeRen/acad-homepage.github.io)
-[![](https://img.shields.io/github/issues/RayeRen/acad-homepage.github.io)](https://github.com/RayeRen/acad-homepage.github.io)
-[![](https://img.shields.io/github/license/RayeRen/acad-homepage.github.io)](https://github.com/RayeRen/acad-homepage.github.io/blob/main/LICENSE)  | [中文文档](./docs/README-zh.md) 
-</div>
+在 Finder 中双击根目录的 `预览网站.command`，即可打开已构建的网站预览。它会复用现有预览服务器，或使用 Python 标准库启动本机服务；无需安装其他 Python 包。保留 `_site/` 目录，关闭终端会停止由它启动的服务。这个快捷方式预览现有构建；编辑源码后，请按下面的方式重新构建。
 
-<p align="center">A Modern and Responsive Academic Personal Homepage</p>
+## Local preview
 
-<p align="center">
-    <br>
-    <img src="docs/screenshot.png" width="100%"/>
-    <br>
-</p>
+Use Ruby 3.1–3.3 with Bundler (macOS's preinstalled Ruby 2.6 is not recommended):
 
-Some examples:
-- [Demo Page](https://rayeren.github.io/acad-homepage.github.io/)
-- [Personal Homepage of the author](https://rayeren.github.io/)
+```sh
+bundle install
+./run_server.sh
+```
 
-## Key Features
-- **Automatically update google scholar citations**: using the google scholar crawler and github action, this REPO can update the author citations and publication citations automatically.
-- **Support Google analytics**: you can trace the traffics of your homepage by easy configuration.
-- **Responsive**: this homepage automatically adjust for different screen sizes and viewports.
-- **Beautiful and Simple Design**: this homepage is beautiful and simple, which is very suitable for academic personal homepage.
-- **SEO**: search Engine Optimization (SEO) helps search engines find the information you publish on your homepage easily, then rank it against similar websites.
+Open **http://127.0.0.1:4000/LuyaoNiu.github.io/**.
 
-## Quick Start
+```sh
+bundle exec jekyll build --strict_front_matter
+```
 
-1. Fork this REPO and rename to `USERNAME.github.io`, where `USERNAME` is your github USERNAME.
-1. Configure the google scholar citation crawler:
-    1. Find your google scholar ID in the url of your google scholar page (e.g., https://scholar.google.com/citations?user=SCHOLAR_ID), where `SCHOLAR_ID` is your google scholar ID.
-    1. Set GOOGLE_SCHOLAR_ID variable to your google scholar ID in `Settings -> Secrets -> Actions -> New repository secret` of the REPO website with `name=GOOGLE_SCHOLAR_ID` and `value=SCHOLAR_ID`.
-    1. Click the `Action` of the REPO website and enable the workflows by clicking *"I understand my workflows, go ahead and enable them"*. This github action will generate google scholar citation stats data `gs_data.json` in `google-scholar-stats` branch of your REPO. When you update your main branch, this action will be triggered. This action will also be trigger 08:00 UTC everyday.
-1. Generate favicon using [favicon-generator](https://redketchup.io/favicon-generator) and download all generated files to `REPO/images`.
-1. Modify the configuration of your homepage `_config.yml`:
-    1. `title`: the title of your homepage
-    1. `description`: the description of your homepage
-    1. `repository`: USER_NAME/REPO_NAME  
-    1. `google_analytics_id` (optional): google analytics ID
-    1. SEO Related keys (optional): get these keys from search engine consoles (e.g. Google, Bing and Baidu) and paste here.
-    1. `author`: the author information of this homepage, including some other websites, emails, city and univeristy.
-    1. More configuration details are described in the comments.
-1. Add your homepage content in `_pages/about.md`.
-    1. You can use html+markdown syntax just same as jekyll.
-    1. You can use a `<span>` tag with class `show_paper_citations` and attribute `data` to display the citations of your paper. Set the data to the google scholar paper ID. For
-        ```html
-        <span class='show_paper_citations' data='DhtAFkwAAAAJ:ALROH1vI_8AC'></span>
-        ``` 
-        > Q: How to get the google scholar paper ID?   
-        > A: Enter your google scholar homepage and click the paper name. Then you can see the paper ID from `citation_for_view=XXXX`, where `XXXX` is the required paper ID.
-1. Your page will be published at `https://USERNAME.github.io`.
+The production output is `_site/`. Do not edit generated files there.
 
-## Debug Locally
+## Edit content
 
-1. Clone your REPO to local using `git clone`.
-1. Install Jekyll building environment, including `Ruby`, `RubyGems`, `GCC` and `Make` following [the installation guide](https://jekyllrb.com/docs/installation/#requirements).
-1. Run `bash run_server.sh` to start Jekyll livereload server.
-1. Open http://127.0.0.1:4000 in your browser.
-1. If you change the source code of the website, the livereload server will automatically refresh.
-1. When you finish the modification of your homepage, `commit` your changings and `push` to your remote REPO using `git` command.
+| File | Purpose |
+| --- | --- |
+| `_data/profile.yml` | Bilingual role and bio, research interests, news, education |
+| `_data/experience.yml` | Bilingual Xiaohongshu internship role and responsibilities |
+| `_data/publications.yml` | Publications, authors, venues, status, links, citations, featured selection |
+| `_data/navigation.yml` | Bilingual top navigation |
+| `_config.yml` | Contact details, social profiles, metadata, URL/base path |
+| `_pages/about.md` | Homepage layout and opening research statement |
+| `_pages/projects.md` | Detailed bilingual project descriptions |
+| `_pages/cv.md` | Bilingual education, experience, honors, skills |
+| `files/CV.pdf` | Downloadable CV with confirmed education and submission updates |
+| `assets/images/luyao-niu.webp` | Optimized personal photo |
+| `assets/css/academic.css` | Design tokens, typography, layout, responsive rules, print styles |
+| `assets/js/academic.js` | Language/theme, navigation, publication search/filter, citation copying |
 
-# Acknowledges
+The data files use JSON syntax, which is valid YAML. Both Jekyll and common editors can read them directly. Keep `id` values stable: homepage links and publication/project anchors use them.
 
-- AcadHomepage incorporates Font Awesome, which is distributed under the terms of the SIL OFL 1.1 and MIT License.
-- AcadHomepage is influenced by the github repo [mmistakes/minimal-mistakes](https://github.com/mmistakes/minimal-mistakes), which is distributed under the MIT License.
-- AcadHomepage is influenced by the github repo [academicpages/academicpages.github.io](https://github.com/academicpages/academicpages.github.io), which is distributed under the MIT License.
+Publication statuses: `published`, `review`, `submitted`, `preprint`, `preparation`, `manuscript`. Categories: `journal`, `conference`, `preprint` (the latter is labeled **Manuscripts** to include ongoing work). Only set `featured: true` when a real corresponding project and local illustration exist. `citation` is plain text, not fabricated BibTeX metadata.
+
+New external links open in a separate tab with `noopener noreferrer`; local links stay in the same tab. PDF links open a separate tab. Use Jekyll's `relative_url` filter for local links so deployment under a subpath works.
+
+## GitHub Pages
+
+For the current repository, `LiviaNiu620/LuyaoNiu.github.io`, the default project-site settings are:
+
+```yaml
+url: "https://livianiu620.github.io"
+baseurl: "/LuyaoNiu.github.io"
+```
+
+After pushing reviewed changes, enable **Settings → Pages → Deploy from a branch**, select the branch to publish and `/ (root)`. GitHub Pages builds Jekyll automatically. Publishing the `urbanai` branch does not merge it into `main` or change remote Pages settings. To make this version public, select `urbanai` as the Pages source or merge the reviewed changes into the configured publishing branch.
+
+If the repository is renamed to `LiviaNiu620.github.io`, set `baseurl: ""`. For a custom domain, set `url` to that domain and `baseurl` to the appropriate path. Do not change it merely to make local preview links shorter; use `bundle exec jekyll serve --baseurl ''` for a root-path preview.
+
+The old Scholar crawler workflow is retained. The redesigned site links directly to Google Scholar and does not depend on the crawler, its secrets, or a citation-count API.
+
+## Browser verification
+
+Optional testing tools only; not required to build or publish the website:
+
+```sh
+npm ci
+npx playwright install chromium
+# With the Jekyll server running in another terminal:
+npm test
+```
+
+For an installed Chrome browser:
+
+```sh
+CHROME_PATH="/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" npm test
+```
+
+`BASE_URL` overrides the preview address; `OUTPUT_DIR` overrides `test-results/`.
+
+The checks cover 320 / 390 / 768 / 1440 px layouts, both languages, local links and anchors, images, search/filtering, empty results, clipboard contents, deep links, preference persistence, mobile navigation, reduced motion, and JavaScript-disabled navigation. Screenshots and a JSON report are generated locally. See `docs/REDESIGN.md` for the design and content audit.
+
+## Attribution
+
+The original repository is based on [AcadHomepage by Yi Ren](https://github.com/RayeRen/acad-homepage.github.io). Its MIT license is retained in `LICENSE`. DM Sans is distributed under the SIL Open Font License, included at `assets/fonts/DM-Sans-LICENSE.txt`. The three SVG research thumbnails are original conceptual illustrations, not paper figures or experimental results. The photograph and CV were already present in the supplied repository.

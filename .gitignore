@@ -5,3 +5,13 @@ push.sh
 .preview.Gemfile.lock
 vendor/
 .jekyll-cache/
+
+.bundle/
+node_modules/
+test-results/
+playwright-report/
+
+.sass-cache/
+
+__pycache__/
+*.py[cod]

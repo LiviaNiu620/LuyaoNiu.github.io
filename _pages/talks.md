@@ -1,20 +1,12 @@
 ---
 permalink: /talks/
-title: ""
-excerpt: ""
-author_profile: true
+title: Talks & presentations
+title_zh: 报告与展示
+eyebrow: IDEAS IN CONVERSATION
+description: "Sharing research across communities in geography, AI, and transportation."
+description_zh: "在地理、人工智能与交通领域的学术交流。"
 ---
-
-# <span lang="en">💬 Talks & Presentations</span><span lang="zh">💬 报告与展示</span> {#talks}
-<div lang="en" markdown="1">
-- *2025*, **AskNearby: An LLM-based Application for Neighborhood Information Retrieval and Personalized Cognitive-map Recommendations** — Oral, *ACM SIGSPATIAL GeoAI'25*.
-- *2025*, **MF-AttnBiLSTM: Traffic Flow Prediction via Hybrid Signal Decomposition and Dual-Stream Temporal Attention Learning** — Oral, *IEEE GLOBECOM 2025*.
-- *2025*, **Evaluating the Causal Impacts of Shenzhen–Hong Kong Regional Integration Policies on Spatial Satisfaction Sentiment** — Oral, *EUGEO 2025*.
-- *2025*, **Why Public Transport Policies Work or Not? A Meta-analysis Based on the Behaviour Change Wheel** — Oral, *AESOP 2025*.
-</div>
-<div lang="zh" markdown="1">
-- *2025*，**AskNearby：基于 LLM 的社区信息检索与个性化认知地图推荐** —— 口头报告，*ACM SIGSPATIAL GeoAI'25*。
-- *2025*，**MF-AttnBiLSTM：基于混合信号分解与双流时序注意力的交通流预测** —— 口头报告，*IEEE GLOBECOM 2025*。
-- *2025*，**评估深港区域一体化政策对空间满意度情感的因果影响** —— 口头报告，*EUGEO 2025*。
-- *2025*，**公共交通政策为何有效或失效？基于行为改变轮的元分析** —— 口头报告，*AESOP 2025*。
+<div class="talk-list">
+{% assign talk_ids = 'asknearby,mf-attnbilstm,regional-integration,transport-policy' | split: ',' %}
+{% for id in talk_ids %}{% assign paper = site.data.publications | where: 'id', id | first %}<article class="talk"><div class="talk-date"><span>{{ paper.year }}</span><span class="oral-badge"><span lang="en">Oral presentation</span><span lang="zh">口头报告</span></span></div><div><p class="eyebrow">{{ paper.venue }}</p><h2>{{ paper.title }}</h2><a class="text-link" href="{{ '/publications/' | relative_url }}#{{ paper.id }}"><span lang="en">Publication details</span><span lang="zh">论文详情</span>{% include icon.html name="arrow" %}</a></div></article>{% endfor %}
 </div>

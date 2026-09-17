@@ -1,0 +1,7 @@
+{
+  "name": "luyao-niu-academic-homepage",
+  "private": true,
+  "description": "Browser checks only. The website itself is built with Jekyll.",
+  "scripts": { "test": "node tests/site-check.cjs" },
+  "devDependencies": { "playwright": "^1.58.0" }
+}

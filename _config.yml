@@ -7,8 +7,10 @@
 
 # Site Settings
 title                    : "Luyao Niu"
-description              : "Currently a Master student at Peking University. Incoming PhD Student in Transportation System at University of Southern California."   # shown in sidebar + SEO
-repository               : "lauraNiu/lauraNiu.github.io"   # USER/REPO — used by the Google Scholar citation crawler
+description              : "Luyao Niu — PhD student at USC since August 2026. Research in urban AI, human mobility, spatio-temporal data mining, and spatial intelligence."
+repository               : "LiviaNiu620/LuyaoNiu.github.io"
+url                      : "https://livianiu620.github.io"
+baseurl                  : "/LuyaoNiu.github.io"
 google_scholar_stats_use_cdn : true
 
 # google analytics
@@ -22,14 +24,14 @@ baidu_site_verification  :  # get baidu_site_verification from https://ziyuan.ba
 # Site Author
 author:
   name             : "Luyao Niu"
-  avatar           : "images/android-chrome-512x512.png"   # TODO: 换成你的照片，例如 images/avatar.jpg
-  bio              : "Incoming PhD @ USC · M.Sc. @ Peking University"   # shown in sidebar
+  avatar           : "assets/images/luyao-niu.webp"
+  bio              : "PhD @ USC · M.Sc. @ Peking University"   # shown in sidebar
   location         : "Beijing, China"
   cv               : "files/CV.pdf"
   employer         :
   pubmed           :
   googlescholar    : "https://scholar.google.com/citations?user=uAMrhyAAAAAJ&hl=zh-CN"
-  email            : "luyao0160@stu.pku.edu.cn"
+  email            : "luyaoniu@usc.edu"
   researchgate     : "https://www.researchgate.net/profile/Luyao-Niu-3"
   uri              : "https://luyao0160.owlstown.net/"
   bitbucket        :
@@ -38,7 +40,7 @@ author:
   flickr           :
   facebook         :
   foursquare       :
-  github           : lauraNiu
+  github           : LiviaNiu620
   google_plus      :
   keybase          :
   instagram        :
@@ -67,6 +69,12 @@ include:
   - files
 exclude:
   - docs
+  - scripts
+  - "预览网站.command"
+  - tests
+  - test-results
+  - playwright-report
+  - package-lock.json
   - google_scholar_crawler
   - "*.sublime-project"
   - "*.sublime-workspace"
@@ -154,6 +162,7 @@ whitelist:
   - jekyll-gist
   - jekyll-feed
   - jemoji
+  - jekyll-redirect-from
 
 
 # HTML Compression

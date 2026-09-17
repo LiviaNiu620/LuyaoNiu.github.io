@@ -1,0 +1,101 @@
+{
+  "name": "Luyao Niu",
+  "name_zh": "牛璐瑶",
+  "role": {
+    "en": "PhD student · University of Southern California",
+    "zh": "在读博士 · 南加州大学"
+  },
+  "intro": {
+    "en": "I study how people move through cities — and how AI can help us understand why.",
+    "zh": "探索人们如何在城市中出行，以及人工智能如何帮助我们理解出行背后的原因。"
+  },
+  "bio": {
+    "en": "My research connects spatio-temporal data mining, urban AI, and large language models for spatial intelligence. I bring together mobility data, causal inference, and human-centered reasoning to understand urban systems.",
+    "zh": "我的研究结合时空数据挖掘、城市人工智能与面向空间智能的大语言模型，利用出行数据、因果推断与以人为本的推理方法理解城市系统。"
+  },
+  "background": {
+    "en": "Previously, I studied Smart City & Big Data at Peking University, following a B.Sc. in Traffic Engineering at Beijing Jiaotong University.",
+    "zh": "此前，我在北京大学学习智慧城市与大数据，本科就读于北京交通大学交通工程专业，辅修金融学。"
+  },
+  "research": [
+    {
+      "id": "spatial",
+      "number": "01",
+      "en": "Spatial intelligence",
+      "zh": "空间智能",
+      "desc_en": "Grounding language models in places, trajectories, and everyday urban life.",
+      "desc_zh": "将语言模型与地点、轨迹及日常城市生活相连接。",
+      "tags": "LLMs · RAG · GeoAI"
+    },
+    {
+      "id": "mobility",
+      "number": "02",
+      "en": "Human mobility",
+      "zh": "人类出行行为",
+      "desc_en": "Learning how people travel, what shapes their choices, and what comes next.",
+      "desc_zh": "研究人们如何出行、选择背后的因素，以及未来的出行变化。",
+      "tags": "Trajectories · Representation learning"
+    },
+    {
+      "id": "causal",
+      "number": "03",
+      "en": "Causal urban analytics",
+      "zh": "城市因果分析",
+      "desc_en": "Understanding the effects of events, policies, and new mobility systems.",
+      "desc_zh": "理解事件、政策与新型交通系统对城市的影响。",
+      "tags": "Causal inference · Transportation"
+    }
+  ],
+  "news": [
+    {
+      "date": "2026.05",
+      "en": "Joined Xiaohongshu’s Data Analytics department as an AI Agent Engineering Intern.",
+      "zh": "加入小红书数据分析部，担任 AI Agent Engineering 实习生。",
+      "url": "/cv/#xiaohongshu"
+    },
+    {
+      "date": "2025.12",
+      "en": "AskNearby accepted for an oral presentation at ACM SIGSPATIAL GeoAI ’25.",
+      "zh": "AskNearby 在 ACM SIGSPATIAL GeoAI ’25 作口头报告。",
+      "url": "/publications/#asknearby"
+    },
+    {
+      "date": "2025.09",
+      "en": "MF-AttnBiLSTM accepted for an oral presentation at IEEE GLOBECOM 2025.",
+      "zh": "MF-AttnBiLSTM 在 IEEE GLOBECOM 2025 作口头报告。",
+      "url": "/publications/#mf-attnbilstm"
+    },
+    {
+      "date": "2025.08",
+      "en": "Our work on joint SAV–transit design published in Transportation Research Part C.",
+      "zh": "共享自动驾驶车辆与公共交通联合设计研究发表于 Transportation Research Part C。",
+      "url": "/publications/#sav-transit"
+    }
+  ],
+  "education": [
+    {
+      "short": "USC",
+      "en": "University of Southern California",
+      "zh": "南加州大学",
+      "degree_en": "PhD · Transportation Systems Engineering",
+      "degree_zh": "在读博士 · 交通系统工程",
+      "date": "2026.08–present"
+    },
+    {
+      "short": "PKU",
+      "en": "Peking University",
+      "zh": "北京大学",
+      "degree_en": "M.Sc. · Urban Planning / Smart City & Big Data",
+      "degree_zh": "城市规划硕士 · 智慧城市与大数据",
+      "date": "2023–2026"
+    },
+    {
+      "short": "BJTU",
+      "en": "Beijing Jiaotong University",
+      "zh": "北京交通大学",
+      "degree_en": "B.Sc. · Traffic Engineering; minor in Finance",
+      "degree_zh": "交通工程学士 · 辅修金融学",
+      "date": "2019–2023"
+    }
+  ]
+}
