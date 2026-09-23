@@ -2149,6 +2149,14 @@ html:not(.js-ready) .header-controls {
   margin: 0;
   padding: 7px 10px;
 }
+.cv-research-focus > .text-link {
+  align-items: flex-start;
+  max-width: 100%;
+  white-space: normal;
+}
+.cv-research-focus > .text-link .icon {
+  margin-top: .2em;
+}
 .cv-education-list,
 .cv-experience-list,
 .cv-activity-list {
