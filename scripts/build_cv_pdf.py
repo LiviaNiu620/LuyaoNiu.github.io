@@ -167,9 +167,10 @@ def main():
         paragraph("PUBLICATIONS", "section"),
     ])
 
-    journal = [paper for paper in publications if paper["kind"] == "journal"]
-    conference = [paper for paper in publications if paper["kind"] == "conference"]
-    manuscripts = [paper for paper in publications if paper["kind"] == "preprint"]
+    publications_by_year = sorted(publications, key=lambda paper: paper["year"], reverse=True)
+    journal = [paper for paper in publications_by_year if paper["kind"] == "journal"]
+    conference = [paper for paper in publications_by_year if paper["kind"] == "conference"]
+    manuscripts = [paper for paper in publications_by_year if paper["kind"] == "preprint"]
     for heading, papers in (("Journal", journal), ("Conference", conference), ("Manuscripts & Preprints", manuscripts)):
         if not papers:
             continue

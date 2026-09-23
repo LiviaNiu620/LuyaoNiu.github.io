@@ -77,3 +77,5 @@ The CV now renders professional experience from one shared bilingual data struct
 Publication records were updated from owner-provided information: the EV quasi-experiment is under review at *Applied Geography* with the revised title and author list; the cross-border spatial-identity manuscript has its revised title; and *GeoSplit* plus *Whose Normal?* are submitted to ICASSP 2027. The asterisk on *GeoSplit* is displayed with the supplied equal-contribution note. The site and PDF use these same data sources; no URLs, identifiers, results, or additional status claims were inferred.
 
 The owner subsequently added the published *Systems* article, “Gender and Age Disparities in Public Health Crisis Disruptions to Cross-Border Mobility,” with the supplied author list, volume, issue, article number, MDPI link, and DOI. It is rendered as a published journal article and is included in the downloadable CV.
+
+Publication records are displayed in descending year order across the publications page, selected-work section, and downloadable CV. Within a year, records preserve the existing data order because not every record includes a verified month or day.

@@ -145,6 +145,13 @@ fs.mkdirSync(output, { recursive: true });
     await page.locator(".publication-list .paper:visible").count(),
     14,
   );
+  const publicationYears = await page
+    .locator(".publication-list .paper .paper-meta > span:first-child")
+    .allTextContents();
+  assert.deepEqual(
+    publicationYears.map(Number),
+    [...publicationYears].map(Number).sort((a, b) => b - a),
+  );
   await page.locator('[data-filter="journal"]').click();
   assert.equal(
     await page.locator(".publication-list .paper:visible").count(),
