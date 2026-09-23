@@ -79,3 +79,5 @@ Publication records were updated from owner-provided information: the EV quasi-e
 The owner subsequently added the published *Systems* article, “Gender and Age Disparities in Public Health Crisis Disruptions to Cross-Border Mobility,” with the supplied author list, volume, issue, article number, MDPI link, and DOI. It is rendered as a published journal article and is included in the downloadable CV.
 
 Publication records are displayed in descending year order across the publications page, selected-work section, and downloadable CV. Within a year, records preserve the existing data order because not every record includes a verified month or day.
+
+MF-AttnBiLSTM was updated with the owner-provided IEEE Xplore record: the full GLOBECOM 2025 conference title, published date, pages 2952–2957, formal author list, and IEEE Xplore URL. No DOI was added because one was not supplied or verified from the publisher page.

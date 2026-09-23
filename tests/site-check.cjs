@@ -173,6 +173,12 @@ fs.mkdirSync(output, { recursive: true });
     await page.locator(".publication-list .paper:visible").count(),
     1,
   );
+  await page.locator("#publication-search").fill("MF-AttnBiLSTM");
+  assert.equal(
+    await page.locator(".publication-list .paper:visible").count(),
+    1,
+  );
+  assert((await page.locator("#mf-attnbilstm").innerText()).includes("2952–2957"));
   await page.locator("#publication-search").fill("no-such-publication");
   assert(await page.locator("#no-results").isVisible());
   await page.evaluate(() => {

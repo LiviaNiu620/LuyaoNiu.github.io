@@ -117,13 +117,13 @@ description_zh: "连接智能系统中的学习、决策与协调。"
 
 ## <span lang="en">MF-AttnBiLSTM: Time-series Forecasting via Hybrid Signal Decomposition</span><span lang="zh">MF-AttnBiLSTM：基于混合信号分解的时序预测模型</span>
 <div lang="en" markdown="1">
-*Lead author · IEEE GLOBECOM 2025 (Oral)*
+*Lead author · GLOBECOM 2025 — 2025 IEEE Global Communications Conference · pp. 2952–2957*
 - Designed a decompose-then-predict framework: moving average for trend, DFT (top-K frequencies) for periodicity, decoupling trend/period/noise.
 - Built a dual-stream BiLSTM + multi-head attention network modeling trend and period dynamics separately, then fusing predictions.
 - Achieved SOTA MAE/SMAPE/RMSE on PeMS04 / PeMS07, with strong robustness on non-stationary stations.
 </div>
 <div lang="zh" markdown="1">
-*一作 · IEEE GLOBECOM 2025（Oral）*
+*一作 · GLOBECOM 2025 — 2025 IEEE Global Communications Conference · 第 2952–2957 页*
 - **信号分解**：decompose-then-predict 框架——移动平均提取趋势，对去趋势残差施加 DFT 保留 top-K 频率重建周期信号，实现趋势/周期/噪声三分量解耦。
 - **双流建模**：双流 BiLSTM + 多头注意力，分别建模趋势与周期分量的时序动态并融合预测。
 - **结果**：在 PeMS04/PeMS07 上 MAE/SMAPE/RMSE 均达 SOTA，非平稳站点场景下鲁棒性尤为突出。

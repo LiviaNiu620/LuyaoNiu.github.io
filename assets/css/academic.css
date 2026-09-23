@@ -735,6 +735,12 @@ html[data-theme="dark"] .moon-icon {
   color: var(--muted);
   margin-top: 3px;
 }
+.paper-detail {
+  color: var(--muted);
+  font-size: 11px;
+  line-height: 1.7;
+  margin-top: 4px;
+}
 .paper-actions {
   display: flex;
   align-items: center;

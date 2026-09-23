@@ -87,9 +87,15 @@
     "year": 2025,
     "kind": "conference",
     "status": "published",
-    "venue": "IEEE GLOBECOM 2025",
+    "venue": "GLOBECOM 2025 — 2025 IEEE Global Communications Conference",
+    "published_date": "2025-12-08",
+    "pages": "2952–2957",
+    "details_en": "Published Dec. 8, 2025 · pp. 2952–2957 · IEEE",
+    "details_zh": "发表于 2025 年 12 月 8 日 · 第 2952–2957 页 · IEEE",
     "oral": true,
-    "citation": "Niu, L.; Wang, Z.; Liu, J.; Boukerche, A.; Sun, P. (2025). MF-AttnBiLSTM: Traffic Flow Prediction via Hybrid Signal Decomposition and Dual-Stream Temporal Attention Learning. IEEE GLOBECOM 2025."
+    "url": "https://ieeexplore.ieee.org/abstract/document/11432074/",
+    "resource": "IEEE Xplore",
+    "citation": "Niu, L.; Wang, Z.; Liu, J.; Boukerche, A.; Sun, P. (2025). MF-AttnBiLSTM: Traffic Flow Prediction via Hybrid Signal Decomposition and Dual-Stream Temporal Attention Learning. GLOBECOM 2025 — 2025 IEEE Global Communications Conference, pp. 2952–2957. IEEE. https://ieeexplore.ieee.org/abstract/document/11432074/"
   },
   {
     "id": "spatial-identity",
