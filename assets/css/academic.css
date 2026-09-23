@@ -2110,11 +2110,206 @@ html:not(.js-ready) .header-controls {
   }
 }
 
-/* A directly linkable experience, shared by the news and CV pages. */
-.experience-entry { scroll-margin-top: 110px; margin-bottom: 28px; }
-.experience-entry h3 { font-size: 17px; line-height: 1.5; }
-.experience-entry p { color: var(--muted); font-size: 13px; margin: 7px 0 14px; }
-.experience-entry:target { border-left: 2px solid var(--accent); padding-left: 18px; }
+/* CV: one rhythm for research, education, professional work, and recognition. */
+.cv-section {
+  border-top: 1px solid var(--line);
+  padding: 38px 0;
+}
+.cv-section > .eyebrow {
+  color: var(--accent);
+  margin-bottom: 9px;
+}
+.cv-section > h2 {
+  font-family: var(--serif);
+  font-size: 29px;
+  font-weight: 400;
+  margin: 0 0 20px;
+  scroll-margin-top: 120px;
+}
+.cv-research-focus > p:not(.eyebrow) {
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.85;
+  max-width: 780px;
+}
+.research-interest-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  list-style: none;
+  margin: 18px 0;
+  padding: 0;
+}
+.research-interest-list li {
+  border: 1px solid var(--line);
+  border-radius: 3px;
+  color: var(--muted);
+  font-size: 11px;
+  line-height: 1.5;
+  margin: 0;
+  padding: 7px 10px;
+}
+.cv-education-list,
+.cv-experience-list,
+.cv-activity-list {
+  display: grid;
+  gap: 0;
+}
+.cv-education-entry,
+.cv-experience-entry,
+.cv-activity-list article {
+  border-top: 1px solid var(--line);
+  padding: 22px 0;
+}
+.cv-education-entry:first-child,
+.cv-experience-entry:first-child,
+.cv-activity-list article:first-child {
+  border-top: 0;
+  padding-top: 0;
+}
+.cv-education-entry {
+  align-items: flex-start;
+  display: flex;
+  gap: 16px;
+}
+.cv-education-entry .school-mark {
+  flex: 0 0 46px;
+}
+.cv-entry-heading {
+  align-items: flex-start;
+  display: flex;
+  gap: 24px;
+  justify-content: space-between;
+}
+.cv-experience-entry,
+.cv-activity-list article {
+  scroll-margin-top: 115px;
+}
+.cv-experience-entry h3,
+.cv-education-entry h3,
+.cv-activity-list h3,
+.cv-award-group h3,
+.cv-service h3 {
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.55;
+  margin: 0;
+}
+.cv-entry-org,
+.cv-education-entry div > p:last-child,
+.cv-activity-list article > p:last-child {
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.75;
+  margin: 5px 0 0;
+}
+.cv-entry-date {
+  color: var(--subtle);
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: .25px;
+  line-height: 1.6;
+  margin: 2px 0 0;
+  white-space: nowrap;
+}
+.cv-experience-entry ul,
+.cv-award-group ul {
+  margin: 15px 0 0;
+  max-width: 800px;
+  padding-left: 20px;
+}
+.cv-experience-entry li,
+.cv-award-group li {
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.8;
+  margin-bottom: 7px;
+  padding-left: 4px;
+}
+.cv-experience-entry li::marker,
+.cv-award-group li::marker {
+  color: var(--accent);
+}
+.cv-experience-entry:target {
+  border-left: 2px solid var(--accent);
+  padding-left: 18px;
+}
+.cv-recognition-grid {
+  display: grid;
+  gap: 36px;
+  grid-template-columns: minmax(0, 1fr) 245px;
+}
+.cv-award-group + .cv-award-group {
+  border-top: 1px solid var(--line);
+  margin-top: 21px;
+  padding-top: 21px;
+}
+.cv-award-group ul {
+  margin-top: 10px;
+}
+.cv-service {
+  align-self: start;
+  background: var(--surface-soft);
+  border-left: 2px solid var(--accent);
+  padding: 20px;
+}
+.cv-service .eyebrow {
+  color: var(--accent);
+  margin-bottom: 8px;
+}
+.cv-service p:last-child {
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.8;
+  margin: 9px 0 0;
+}
+.cv-activity-list {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 30px;
+}
+.cv-activity-list article + article {
+  border-top: 0;
+  padding-top: 0;
+}
+.paper-note {
+  color: var(--subtle);
+  font-size: 10px;
+  font-style: italic;
+  margin-top: 6px;
+}
+
+@media (max-width: 640px) {
+  .cv-section {
+    padding: 30px 0;
+  }
+  .cv-section > h2 {
+    font-size: 25px;
+  }
+  .cv-entry-heading,
+  .cv-recognition-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 6px;
+  }
+  .cv-entry-date {
+    white-space: normal;
+  }
+  .cv-experience-entry li,
+  .cv-award-group li,
+  .cv-entry-org,
+  .cv-education-entry div > p:last-child,
+  .cv-activity-list article > p:last-child {
+    font-size: 12px;
+  }
+  .cv-activity-list {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+  .cv-activity-list article + article {
+    border-top: 1px solid var(--line);
+    padding-top: 22px;
+  }
+}
 
 /* Current USC research sits above the selected publication archive. */
 .current-research {

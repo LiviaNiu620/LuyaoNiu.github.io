@@ -1,50 +1,90 @@
 {
-  "xiaohongshu": {
-    "en": {
-      "role": "AI Agent Engineering Intern",
-      "org": "Xiaohongshu · Data Analytics",
-      "date": "May - Aug. 2026",
-      "bullets": [
-        [
-          "Domain knowledge infrastructure",
-          "Built a domain-specific data analytics knowledge base, structuring analytical knowledge to support knowledge-grounded agent workflows."
-        ],
-        [
-          "Agent architecture and development",
-          "Developed the agent framework and implemented data analysis workflows, integrating knowledge resources and domain capabilities into the agent architecture."
-        ],
-        [
-          "End-to-end validation",
-          "Validated the complete agent workflow, evaluating execution behavior and analytical outputs to guide systematic iteration."
-        ],
-        [
-          "Domain Skill lifecycle",
-          "Designed and built domain-specific Skills, covering evaluation, monitoring, and ongoing operations to support maintainable, reusable agent capabilities."
+  "items": [
+    {
+      "id": "xiaohongshu",
+      "en": {
+        "role": "AI Agent Engineering Intern",
+        "org": "Xiaohongshu · Data Analytics",
+        "date": "May - Aug. 2026",
+        "bullets": [
+          ["Domain knowledge infrastructure", "Built a domain-specific data analytics knowledge base to support knowledge-grounded agent workflows."],
+          ["Agent architecture and development", "Developed agent frameworks and data-analysis workflows that connect knowledge resources with domain capabilities."],
+          ["Validation and Skill operations", "Validated end-to-end agent behavior and analytical outputs; designed, evaluated, monitored, and operated reusable domain Skills."]
         ]
-      ]
+      },
+      "zh": {
+        "role": "AI Agent 开发工程师（实习）",
+        "org": "小红书 · 数据分析部",
+        "date": "2026.05 - 2026.08",
+        "bullets": [
+          ["领域知识基础设施", "构建面向数据分析场景的领域知识库，为知识驱动的 Agent 工作流提供支撑。"],
+          ["Agent 架构与工程实现", "搭建 Agent 框架与数据分析工作流，将知识资源和领域能力融入系统。"],
+          ["验证与 Skill 运营", "开展端到端 Agent 行为与分析结果验证，并负责领域 Skill 的设计、评价、监控与运营。"]
+        ]
+      }
     },
-    "zh": {
-      "role": "AI Agent 开发工程师（实习）",
-      "org": "小红书 · 数据分析部",
-      "date": "2026.05 - 2026.08",
-      "bullets": [
-        [
-          "领域知识基础设施",
-          "构建面向数据分析场景的领域知识库，对分析知识进行结构化组织，为 Agent 工作流提供可复用的知识支撑。"
-        ],
-        [
-          "Agent 架构与工程实现",
-          "参与 Agent 框架搭建与开发，将知识资源与领域能力融入数据分析工作流，推进智能体架构的工程实现。"
-        ],
-        [
-          "端到端验证与迭代",
-          "开展 Agent 全流程验证，围绕执行过程与分析结果进行评估，为系统的持续迭代提供依据。"
-        ],
-        [
-          "领域 Skill 全生命周期",
-          "负责领域 Skill 的设计、构建、评价、监控与运营，推动领域能力的模块化复用与持续维护。"
+    {
+      "id": "qianmo-zhilian",
+      "en": {
+        "role": "Co-founder",
+        "org": "Qianmo Zhilian (Shenzhen) Technology Co., Ltd.",
+        "date": "Dec. 2024 - Present",
+        "bullets": [
+          ["AskNearby", "Co-founded and led development of an LLM-powered community information platform combining RAG and spatio-temporal data."],
+          ["Recognition", "The project received a Gold Award at the Nanshan District Innovation & Entrepreneurship Competition and Third Prize at the Baidu ERNIE Cup."]
         ]
-      ]
+      },
+      "zh": {
+        "role": "联合创始人",
+        "org": "阡陌智联（深圳）科技有限公司",
+        "date": "2024.12 - 至今",
+        "bullets": [
+          ["方元问问", "联合创立并主导开发融合 RAG 与时空数据的 LLM 智能社区信息平台。"],
+          ["项目成果", "项目获南山区创新创业大赛金奖与百度文心杯 AI 创业大赛三等奖。"]
+        ]
+      }
+    },
+    {
+      "id": "duke-kunshan",
+      "en": {
+        "role": "Research Assistant",
+        "org": "Data Science Department, Duke Kunshan University · Suzhou, China",
+        "date": "Jan. 2025 - Present",
+        "bullets": [
+          ["Research leadership", "Led independent research on spatio-temporal data mining, traffic forecasting, and behavioral modeling."],
+          ["Research output", "First-authored work published at IEEE GLOBECOM; Event-CausNet submitted to KDD 2027."]
+        ]
+      },
+      "zh": {
+        "role": "研究助理",
+        "org": "杜克昆山大学数据科学系 · 中国苏州",
+        "date": "2025.01 - 至今",
+        "bullets": [
+          ["研究工作", "主导时空数据挖掘、交通预测与行为建模相关研究。"],
+          ["研究成果", "一作成果发表于 IEEE GLOBECOM；Event-CausNet 已投稿至 KDD 2027。"]
+        ]
+      }
+    },
+    {
+      "id": "calsp",
+      "en": {
+        "role": "LLM Algorithm R&D",
+        "org": "China Academy of Land Surveying and Planning · Collaborative project",
+        "date": "Apr. 2025 - Jan. 2026",
+        "bullets": [
+          ["Knowledge and reporting agents", "Led the RAG retrieval module for a policy knowledge base and developed an LLM-agent reporting workflow."],
+          ["Workflow impact", "The reporting workflow reduced initial-draft preparation time by more than 90%."]
+        ]
+      },
+      "zh": {
+        "role": "大语言模型算法研发",
+        "org": "国土勘测规划院 · 合作项目",
+        "date": "2025.04 - 2026.01",
+        "bullets": [
+          ["知识库与报告 Agent", "主导政策知识库 RAG 检索模块，搭建 LLM Agent 报告生成工作流。"],
+          ["工作流影响", "将报告初稿编制时间缩短 90% 以上。"]
+        ]
+      }
     }
-  }
+  ]
 }

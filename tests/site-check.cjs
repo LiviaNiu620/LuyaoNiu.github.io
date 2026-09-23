@@ -143,22 +143,22 @@ fs.mkdirSync(output, { recursive: true });
     await page.locator("#lang-toggle").click();
   assert.equal(
     await page.locator(".publication-list .paper:visible").count(),
-    11,
+    13,
   );
   await page.locator('[data-filter="journal"]').click();
   assert.equal(
     await page.locator(".publication-list .paper:visible").count(),
-    1,
+    2,
   );
   await page.locator('[data-filter="conference"]').click();
   assert.equal(
     await page.locator(".publication-list .paper:visible").count(),
-    4,
+    6,
   );
   await page.locator('[data-filter="preprint"]').click();
   assert.equal(
     await page.locator(".publication-list .paper:visible").count(),
-    6,
+    5,
   );
   await page.locator('[data-filter="all"]').click();
   await page.locator("#publication-search").fill("AskNearby");
@@ -174,7 +174,7 @@ fs.mkdirSync(output, { recursive: true });
   await page.waitForFunction(() => !document.getElementById("st-proc").hidden);
   assert.equal(
     await page.locator(".publication-list .paper:visible").count(),
-    11,
+    13,
   );
   // Clipboard behavior and its actual copied content.
   await context.grantPermissions(["clipboard-read", "clipboard-write"]);
@@ -192,6 +192,10 @@ fs.mkdirSync(output, { recursive: true });
   await page.goto(base);
   assert.equal(await page.getAttribute("html", "data-lang"), "zh");
   assert.equal(await page.getAttribute("html", "data-theme"), "dark");
+  await page.goto(base + "cv/");
+  assert.equal(await page.locator(".cv-experience-entry").count(), 4);
+  assert((await page.locator(".cv-service").innerText()).includes("WSDM"));
+  assert.equal(await page.locator("#skills").count(), 0);
   await page.screenshot({
     path: path.join(output, "home-dark-zh.png"),
     fullPage: true,
@@ -247,7 +251,7 @@ fs.mkdirSync(output, { recursive: true });
   assert(await staticPage.locator("#main-nav").isVisible());
   assert.equal(
     await staticPage.locator(".publication-list .paper:visible").count(),
-    11,
+    13,
   );
   assert.equal(
     await staticPage.locator(".publication-tools").isVisible(),

@@ -29,7 +29,8 @@ The production output is `_site/`. Do not edit generated files there.
 | --- | --- |
 | `_data/current_research.yml` | One current USC topic, bilingual summary and methodology |
 | `_data/profile.yml` | Bilingual role and bio, research interests, news, education |
-| `_data/experience.yml` | Bilingual Xiaohongshu internship role and responsibilities |
+| `_data/experience.yml` | Bilingual professional-experience entries used by the CV and PDF |
+| `_data/cv.yml` | Awards and academic-service entries used by the CV and PDF |
 | `_data/publications.yml` | Publications, authors, venues, status, links, citations, featured selection |
 | `_data/navigation.yml` | Bilingual top navigation |
 | `_config.yml` | Contact details, social profiles, metadata, URL/base path |
@@ -42,6 +43,14 @@ The production output is `_site/`. Do not edit generated files there.
 | `assets/js/academic.js` | Language/theme, navigation, publication search/filter, citation copying |
 
 The data files use JSON syntax, which is valid YAML. Both Jekyll and common editors can read them directly. Keep `id` values stable: homepage links and publication/project anchors use them.
+
+Rebuild the downloadable CV after editing the CV data files:
+
+```sh
+/Users/linyang/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3 scripts/build_cv_pdf.py
+```
+
+The generator checks that required CV sections and publication records are present before it writes `files/CV.pdf`.
 
 Publication statuses: `published`, `review`, `submitted`, `preprint`, `preparation`, `manuscript`. Categories: `journal`, `conference`, `preprint` (the latter is labeled **Manuscripts** to include ongoing work). Only set `featured: true` when a real corresponding project and local illustration exist. `citation` is plain text, not fabricated BibTeX metadata.
 

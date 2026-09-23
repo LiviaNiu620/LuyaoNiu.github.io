@@ -69,3 +69,9 @@ The homepage cards link to three matching research threads on the Projects page.
 General positioning is centralized in `_data/profile.yml`; the specific current topic lives in `_data/current_research.yml`. The homepage, project overview, CV research interests, downloadable PDF, metadata, and README use this separation.
 
 Validation of the approved positioning: strict safe-mode Jekyll build passed; 48 responsive/language cases and 33 internal destinations passed browser checks. Five main pages in both themes had zero detected axe violations. Desktop, mobile, Chinese dark-theme, and PDF renders were inspected. The PDF retains four pages and the latest user-confirmed contact, internship, and submission details.
+
+## CV and Publication Update (2026-09-23)
+
+The CV now renders professional experience from one shared bilingual data structure, so Xiaohongshu, Qianmo Zhilian, Duke Kunshan University, and the China Academy of Land Surveying and Planning use the same role, organization, date, and responsibility pattern. The generic skills section was removed. Awards are retained and academic service now records peer review for WSDM, IEEE GLOBECOM, and TRB.
+
+Publication records were updated from owner-provided information: the EV quasi-experiment is under review at *Applied Geography* with the revised title and author list; the cross-border spatial-identity manuscript has its revised title; and *GeoSplit* plus *Whose Normal?* are submitted to ICASSP 2027. The asterisk on *GeoSplit* is displayed with the supplied equal-contribution note. The site and PDF use these same data sources; no URLs, identifiers, results, or additional status claims were inferred.

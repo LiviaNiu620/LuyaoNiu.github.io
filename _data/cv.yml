@@ -1,0 +1,33 @@
+{
+  "awards": [
+    {
+      "group_en": "Scholarships & honors",
+      "group_zh": "奖学金与荣誉",
+      "items": [
+        {"en": "Baosteel Outstanding Student Award (500 recipients nationwide / year), 2022.12", "zh": "宝钢奖学金（全国每年 500 名），2022.12"},
+        {"en": "National Scholarship (highest undergraduate honor in China, top 1%), 2020.12", "zh": "国家奖学金（中国本科生最高荣誉，前 1%），2020.12"},
+        {"en": "First-class Academic Scholarship (top 3%), 2020.12", "zh": "一等学业奖学金（前 3%），2020.12"},
+        {"en": "Beijing Outstanding Graduate", "zh": "北京市优秀毕业生"}
+      ]
+    },
+    {
+      "group_en": "Competition awards",
+      "group_zh": "竞赛奖项",
+      "items": [
+        {"en": "First Prize, National University Traffic Science & Technology Competition, 2022.07", "zh": "全国交通科技大赛一等奖，2022.07"},
+        {"en": "Second Prize, China MathorCup Mathematical Modeling Competition, 2022.04", "zh": "全国 MathorCup 数学建模竞赛二等奖，2022.04"},
+        {"en": "Third Prize, China College Mathematics Competition, 2020.04", "zh": "全国大学生数学竞赛三等奖，2020.04"},
+        {"en": "Third Prize, Baidu ERNIE Cup AI Entrepreneurship Competition, 2024.09", "zh": "百度文心杯 AI 创业大赛三等奖，2024.09"},
+        {"en": "Gold Award, Nanshan District Innovation & Entrepreneurship Competition", "zh": "南山区创新创业大赛金奖"}
+      ]
+    }
+  ],
+  "service": [
+    {
+      "role_en": "Peer Reviewer",
+      "role_zh": "同行评审",
+      "venues_en": "WSDM · IEEE GLOBECOM · Transportation Research Board (TRB)",
+      "venues_zh": "WSDM · IEEE GLOBECOM · 美国交通研究委员会（TRB）"
+    }
+  ]
+}

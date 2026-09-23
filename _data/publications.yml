@@ -80,23 +80,23 @@
   },
   {
     "id": "spatial-identity",
-    "title": "A Cross-Lingual Framework Driven by Large Language Models for Spatial Identity Sensing from Social Media",
+    "title": "Leveraging Large Language Models to Measure Cross-Border Spatial Identity from Multilingual Social Media Data",
     "authors": "Niu, L.; Wang, Y.; He, S.; Zhang, W.",
     "year": 2025,
     "kind": "preprint",
     "status": "review",
     "venue": "Transactions in GIS",
-    "citation": "Niu, L.; Wang, Y.; He, S.; Zhang, W. (2025). A Cross-Lingual Framework Driven by Large Language Models for Spatial Identity Sensing from Social Media. Transactions in GIS (Under review)."
+    "citation": "Niu, L.; Wang, Y.; He, S.; Zhang, W. (2025). Leveraging Large Language Models to Measure Cross-Border Spatial Identity from Multilingual Social Media Data. Transactions in GIS (Under review)."
   },
   {
     "id": "ev-adoption",
-    "title": "Travel Behavior Shifts Following Electric Vehicle Adoption: Evidence from a Big Data-driven Quasi-experiment",
-    "authors": "Liu, C.; Niu, L.; Wan, L.; Zhang, W.",
+    "title": "Rebound or Substitution? The Causal Effect of Electric Vehicle Adoption on Individual Travel Behaviour: A Quasi-Experiment",
+    "authors": "Liu, C.; Niu, L.; Zhang, W.",
     "year": 2025,
-    "kind": "preprint",
-    "status": "manuscript",
-    "venue": "",
-    "citation": "Liu, C.; Niu, L.; Wan, L.; Zhang, W. (2025). Travel Behavior Shifts Following Electric Vehicle Adoption: Evidence from a Big Data-driven Quasi-experiment. Research manuscript."
+    "kind": "journal",
+    "status": "review",
+    "venue": "Applied Geography",
+    "citation": "Liu, C.; Niu, L.; Zhang, W. (2025). Rebound or Substitution? The Causal Effect of Electric Vehicle Adoption on Individual Travel Behaviour: A Quasi-Experiment. Applied Geography (Under review)."
   },
   {
     "id": "regional-integration",
@@ -142,5 +142,27 @@
     "resource": "arXiv",
     "doi": "10.48550/arXiv.2402.19273",
     "citation": "Zhu, H.; Zhang, W.; Huang, N.; Li, B.; Niu, L.; …; Liu, X. (2024). PlanGPT: Enhancing Urban Planning with Tailored Language Model and Efficient Retrieval. arXiv (Preprint). https://doi.org/10.48550/arXiv.2402.19273"
+  },
+  {
+    "id": "geosplit",
+    "title": "GeoSplit: Selective Map Acquisition for Unseen-User Travel-Mode Recognition",
+    "authors": "Wang, Z.*; Niu, L.*; Ban, J.",
+    "year": 2027,
+    "kind": "conference",
+    "status": "submitted",
+    "venue": "ICASSP 2027",
+    "note_en": "* Equal contribution.",
+    "note_zh": "* 共同一作。",
+    "citation": "Wang, Z.*; Niu, L.*; Ban, J. (2027). GeoSplit: Selective Map Acquisition for Unseen-User Travel-Mode Recognition. ICASSP 2027 (Submitted)."
+  },
+  {
+    "id": "mobility-anomaly",
+    "title": "Whose Normal? Reference and Perturbation Controls for Personal Mobility Anomaly Detection",
+    "authors": "Niu, L.; Wang, Z.",
+    "year": 2027,
+    "kind": "conference",
+    "status": "submitted",
+    "venue": "ICASSP 2027",
+    "citation": "Niu, L.; Wang, Z. (2027). Whose Normal? Reference and Perturbation Controls for Personal Mobility Anomaly Detection. ICASSP 2027 (Submitted)."
   }
 ]
