@@ -190,7 +190,7 @@ def main():
     text = "\n".join(page.extract_text() for page in PdfReader(OUTPUT).pages)
     required = [
         "Xiaohongshu", "WSDM", "IEEE GLOBECOM", "Transportation Research Board",
-        "Applied Geography", "GeoSplit", "Whose Normal", "ICASSP 2027",
+        "Applied Geography", "GeoSplit", "Whose Normal", "ICASSP 2027", "Systems",
     ]
     missing = [item for item in required if item not in text]
     if missing:

@@ -143,12 +143,12 @@ fs.mkdirSync(output, { recursive: true });
     await page.locator("#lang-toggle").click();
   assert.equal(
     await page.locator(".publication-list .paper:visible").count(),
-    13,
+    14,
   );
   await page.locator('[data-filter="journal"]').click();
   assert.equal(
     await page.locator(".publication-list .paper:visible").count(),
-    2,
+    3,
   );
   await page.locator('[data-filter="conference"]').click();
   assert.equal(
@@ -174,7 +174,7 @@ fs.mkdirSync(output, { recursive: true });
   await page.waitForFunction(() => !document.getElementById("st-proc").hidden);
   assert.equal(
     await page.locator(".publication-list .paper:visible").count(),
-    13,
+    14,
   );
   // Clipboard behavior and its actual copied content.
   await context.grantPermissions(["clipboard-read", "clipboard-write"]);
@@ -251,7 +251,7 @@ fs.mkdirSync(output, { recursive: true });
   assert(await staticPage.locator("#main-nav").isVisible());
   assert.equal(
     await staticPage.locator(".publication-list .paper:visible").count(),
-    13,
+    14,
   );
   assert.equal(
     await staticPage.locator(".publication-tools").isVisible(),

@@ -1,5 +1,18 @@
 [
   {
+    "id": "cross-border-mobility-health",
+    "title": "Gender and Age Disparities in Public Health Crisis Disruptions to Cross-Border Mobility: A Causal Analysis of Daily Flows Between Shenzhen and Hong Kong",
+    "authors": "Niu, C.; He, S.; Fang, C.; Niu, L.; Xiao, Y.; Zhang, W.",
+    "year": 2026,
+    "kind": "journal",
+    "status": "published",
+    "venue": "Systems, 14(7), 772",
+    "url": "https://www.mdpi.com/2079-8954/14/7/772",
+    "resource": "Journal",
+    "doi": "10.3390/systems14070772",
+    "citation": "Niu, C.; He, S.; Fang, C.; Niu, L.; Xiao, Y.; Zhang, W. (2026). Gender and Age Disparities in Public Health Crisis Disruptions to Cross-Border Mobility: A Causal Analysis of Daily Flows Between Shenzhen and Hong Kong. Systems, 14(7), 772. https://doi.org/10.3390/systems14070772"
+  },
+  {
     "id": "asknearby",
     "title": "AskNearby: An LLM-based Application for Neighborhood Information Retrieval and Personalized Cognitive-map Recommendations",
     "short": "AskNearby",
