@@ -46,7 +46,8 @@ description_zh: "教育、研究、经历、奖项与学术服务。"
     {% for item in experience %}
     <article class="cv-experience-entry" id="{{ item.id }}">
       <div class="cv-entry-heading"><div><h3><span lang="en">{{ item.en.role }}</span><span lang="zh">{{ item.zh.role }}</span></h3><p class="cv-entry-org"><span lang="en">{{ item.en.org }}</span><span lang="zh">{{ item.zh.org }}</span></p></div><p class="cv-entry-date"><span lang="en">{{ item.en.date }}</span><span lang="zh">{{ item.zh.date }}</span></p></div>
-      <ul>{% for bullet in item.en.bullets %}<li><strong lang="en">{{ bullet[0] }}:</strong><span lang="en"> {{ bullet[1] }}</span></li>{% endfor %}{% for bullet in item.zh.bullets %}<li><strong lang="zh">{{ bullet[0] }}：</strong><span lang="zh">{{ bullet[1] }}</span></li>{% endfor %}</ul>
+      <ul lang="en">{% for bullet in item.en.bullets %}<li><strong>{{ bullet[0] }}:</strong> {{ bullet[1] }}</li>{% endfor %}</ul>
+      <ul lang="zh">{% for bullet in item.zh.bullets %}<li><strong>{{ bullet[0] }}：</strong>{{ bullet[1] }}</li>{% endfor %}</ul>
     </article>
     {% endfor %}
   </div>
