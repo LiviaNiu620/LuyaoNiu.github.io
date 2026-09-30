@@ -110,3 +110,41 @@
 }
 @media (prefers-reduced-motion: reduce) { .life-art-lines { transform: none; } }
 @media print { .topic-card, .service-group, .life-interest { break-inside: avoid; } .personal-motto { grid-row: auto; } }
+
+/* Owner-supplied figures retain their full bounds, including axes and captions. */
+.paper-with-preview { display: grid; grid-template-columns: 235px minmax(0, 1fr); gap: 28px; align-items: start; }
+.paper-content { min-width: 0; }
+.publication-preview { display: block; border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; background: var(--surface-soft); }
+.publication-preview img { display: block; width: 100%; aspect-ratio: 4/3; object-fit: contain; background: #fff; padding: 9px; }
+.preview-caption { display: flex; align-items: center; justify-content: space-between; gap: 8px; padding: 8px 11px; font-size: 10px; line-height: 1.5; color: var(--muted); border-top: 1px solid var(--line); }
+.preview-caption .icon { width: 13px; height: 13px; }
+a.publication-preview:hover { border-color: var(--accent); }
+a.publication-preview:hover .preview-caption { color: var(--accent); }
+.preview-mark { display: flex; aspect-ratio: 4/3; align-items: center; justify-content: center; font: 400 39px/1 var(--serif); color: var(--subtle); }
+.life-photo { display: block; aspect-ratio: 2/1; border: 1px solid var(--line); overflow: hidden; background: var(--surface-soft); }
+.life-photo img { width: 100%; height: 100%; object-fit: cover; object-position: center; }
+.life-rock .life-photo img { object-position: 50% 76%; }
+.life-reading .life-photo img { object-fit: contain; }
+.talks-photo { display: grid; grid-template-columns: 220px minmax(0,1fr); gap: 36px; align-items: center; max-width: 760px; margin: 10px 0 40px; }
+.talks-photo img { width: 220px; height: 270px; object-fit: cover; object-position: center 40%; border-radius: var(--radius); }
+.talks-photo figcaption { font: italic 25px/1.6 var(--serif); color: var(--muted); max-width: 340px; }
+@media (max-width: 850px) { .paper-with-preview { grid-template-columns: 185px minmax(0,1fr); gap: 22px; } }
+@media (max-width: 640px) {
+ .paper-with-preview { grid-template-columns: 105px minmax(0,1fr); gap: 15px; }
+ .publication-preview img { padding: 5px; }
+ .preview-caption { font-size: 9px; padding: 7px; gap: 3px; }
+ .preview-caption .icon { width: 11px; height: 11px; }
+ .preview-mark { font-size: 29px; }
+ .paper-with-preview h3 { font-size: 14px; line-height: 1.6; }
+ .paper-with-preview .paper-authors { font-size: 11px; }
+ .life-photo { aspect-ratio: 1.9/1; }
+ .talks-photo { grid-template-columns: 130px minmax(0,1fr); gap: 20px; }
+ .talks-photo img { width: 130px; height: 185px; }
+ .talks-photo figcaption { font-size: 19px; }
+}
+@media (max-width: 360px) {
+ .paper-with-preview { grid-template-columns: 84px minmax(0,1fr); gap: 12px; }
+ .preview-caption .icon { display: none; }
+ .preview-caption { font-size: 8px; }
+}
+@media print { .paper-with-preview { grid-template-columns: 120px minmax(0,1fr); gap: 16px; } .talks-photo { break-inside: avoid; } }

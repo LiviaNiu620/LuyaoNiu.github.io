@@ -95,6 +95,12 @@
   ],
   "news": [
     {
+      "date":"2026.08",
+      "en":"Arrived in Los Angeles to begin my PhD at USC and joined the SIAS Lab, advised by Prof. Ruolin Li. A great adventure awaits!",
+      "zh":"来到洛杉矶，开启 USC 博士旅程，加入 SIAS Lab，师从 Ruolin Li 教授。新的冒险，正在前方！",
+      "url":"/cv/#education"
+    },
+    {
       "date": "2026.05",
       "en": "Joined rednote’s Data Analytics department as an Agentic AI Engineering Intern in Shanghai.",
       "zh": "加入小红书上海数据分析部，担任 Agentic AI Engineering 实习生。",

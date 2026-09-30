@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Build the downloadable CV from the same data used by the Jekyll site."""
+"""Build an optional data-derived draft; never overwrite the owner's download PDF."""
 
 from __future__ import annotations
 
@@ -18,7 +18,7 @@ from reportlab.platypus import KeepTogether, PageBreak, Paragraph, SimpleDocTemp
 
 ROOT = Path(__file__).resolve().parents[1]
 DATA = ROOT / "_data"
-OUTPUT = ROOT / "files" / "CV.pdf"
+OUTPUT = ROOT / "tmp" / "cv-generated" / "CV.pdf"
 INK = colors.HexColor("#292B2A")
 MUTED = colors.HexColor("#555B55")
 ACCENT = colors.HexColor("#8B3D48")
@@ -89,6 +89,7 @@ def footer(canvas, document):
 
 
 def main():
+    OUTPUT.parent.mkdir(parents=True, exist_ok=True)
     profile = read_data("profile")
     current = read_data("current_research")
     experience = read_data("experience")["items"]
@@ -194,7 +195,7 @@ def main():
     missing = [item for item in required if item not in text]
     if missing:
         raise RuntimeError(f"CV PDF is missing required content: {missing}")
-    print(f"Built {OUTPUT.name}: {len(PdfReader(OUTPUT).pages)} pages.")
+    print(f"Built draft {OUTPUT}: {len(PdfReader(OUTPUT).pages)} pages. Owner-provided files/CV.pdf is unchanged.")
 
 
 if __name__ == "__main__":

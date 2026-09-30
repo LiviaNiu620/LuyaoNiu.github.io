@@ -4,8 +4,8 @@
   "intro_zh": "研究之外，我喜欢打架子鼓、听摇滚、看现场和阅读。也喜欢从一个共同兴趣开始，聊出新的想法、结识新的朋友。",
   "interests": [
     {"id":"drums","number":"01","en":"Behind the drums","zh":"鼓点之间","desc_en":"Playing the drums. Finding a rhythm, then making it my own.","desc_zh":"打架子鼓，在节奏里找到自己的表达。","word":"RHYTHM"},
-    {"id":"rock","number":"02","en":"Turn it up","zh":"把音量调大","desc_en":"Rock music is part of my life beyond the desk. Always happy to exchange a good recommendation.","desc_zh":"摇滚是书桌之外的一部分生活。欢迎交换喜欢的音乐。","word":"VOLUME"},
-    {"id":"live","number":"03","en":"In the crowd","zh":"去现场","desc_en":"Live shows: music, energy, and a room full of people sharing the moment.","desc_zh":"喜欢现场的音乐、能量，以及和陌生人共享同一个瞬间。","word":"PRESENCE"},
-    {"id":"reading","number":"04","en":"Between the pages","zh":"翻开下一页","desc_en":"Reading is another way to explore. I would love to hear about a book that stayed with you.","desc_zh":"阅读是另一种探索。也想听听，哪本书曾让你久久难忘。","word":"WONDER"}
+    {"id":"rock","number":"02","en":"Turn it up","zh":"把音量调大","desc_en":"Rock music is part of my life beyond the desk. Always happy to exchange a good recommendation.","desc_zh":"摇滚是书桌之外的一部分生活。欢迎交换喜欢的音乐。","word":"VOLUME","image":"/assets/images/life/rock.webp","alt":"Rock show under red stage lights"},
+    {"id":"live","number":"03","en":"In the crowd","zh":"去现场","desc_en":"Live shows: music, energy, and a room full of people sharing the moment.","desc_zh":"喜欢现场的音乐、能量，以及和陌生人共享同一个瞬间。","word":"PRESENCE","image":"/assets/images/life/live.webp","alt":"Musicians performing at a live show"},
+    {"id":"reading","number":"04","en":"Between the pages","zh":"翻开下一页","desc_en":"Reading is another way to explore. I would love to hear about a book that stayed with you.","desc_zh":"阅读是另一种探索。也想听听，哪本书曾让你久久难忘。","word":"WONDER","image":"/assets/images/life/reading.webp","alt":"A photographed passage from a book"}
   ]
 }

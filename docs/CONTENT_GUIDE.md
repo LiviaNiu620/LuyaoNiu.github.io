@@ -20,13 +20,17 @@ Experience follows the latest owner-provided roles, dates, locations and work ar
 
 ## Life
 
-`_data/life.yml` contains the owner's motto and four stated interests. Photos, books, bands and playlists can be added when supplied. The decorative typographic panels are artwork, not substitute photographs.
+`_data/life.yml` contains the owner's motto and four stated interests. The rock, live-show and reading sections use the owner's supplied photos. The drums section retains its graphic cover at the owner's explicit request. Presentation.jpg is used on Talks, without inferring a specific conference from the photo.
 
 ## Image slots
 
 `_data/paper_images.yml` maps approved paper image filenames to local website paths. Only files actually present are rendered; otherwise a text cover is shown. The old conceptual diagrams are no longer shown as paper previews.
 
-For the first batch, provide AskNearby Figure 1, the public Event-CausNet overview, and the public ST-ProC overview. MF-AttnBiLSTM Figure 1 is a good next addition. Use only an approved public version of under-review work. The local `incoming-assets/` folder includes Chinese checklists and is excluded from Git and Jekyll output.
+Fifteen owner-selected figures from Picture/ are converted to WebP. The four remaining paper slots (Blind Spots, regional integration, traffic assignment, and spatial satisfaction) retain text covers until figures are supplied. No source figure PDF or unrelated file in Picture/ is published. Later images can be processed with scripts/import_picture_assets.py.
+
+## Downloadable resume
+
+The owner-supplied personal_resume (1).pdf is the authoritative download. It is copied verbatim to files/CV.pdf. The optional data-based builder now writes only to the excluded tmp/cv-generated directory, preventing accidental replacement of the supplied resume.
 
 ## Reference observations
 

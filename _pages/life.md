@@ -13,7 +13,9 @@ description_zh: "架子鼓、摇滚、现场，以及一本好书。"
 <div class="life-grid">
 {% for interest in site.data.life.interests %}
 <section class="life-interest life-{{ interest.id }}" aria-labelledby="life-{{ interest.id }}-title">
-  <div class="life-art" aria-hidden="true"><span class="life-art-word">{{ interest.word }}</span><span class="life-art-lines"></span><span class="life-index">{{ interest.number }} / OFF THE CLOCK</span></div>
+  {% if interest.image %}
+  <a class="life-photo" href="{{ interest.image | relative_url }}" target="_blank" rel="noopener noreferrer" aria-label="{{ interest.en }} — view photo"><img src="{{ interest.image | relative_url }}" alt="{{ interest.alt | escape }}" width="1200" height="800" loading="lazy"></a>
+  {% else %}<div class="life-art" aria-hidden="true"><span class="life-art-word">{{ interest.word }}</span><span class="life-art-lines"></span><span class="life-index">{{ interest.number }} / OFF THE CLOCK</span></div>{% endif %}
   <h2 id="life-{{ interest.id }}-title"><span lang="en">{{ interest.en }}</span><span lang="zh">{{ interest.zh }}</span></h2>
   <p><span lang="en">{{ interest.desc_en }}</span><span lang="zh">{{ interest.desc_zh }}</span></p>
 </section>

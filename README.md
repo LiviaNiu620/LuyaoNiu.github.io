@@ -42,7 +42,7 @@ The production output is `_site/`. Do not edit generated files there.
 | `_pages/cv.md` | Bilingual education, experience, service, honors and global engagement |
 | `_pages/service.md` | Dedicated peer-review service page |
 | `_pages/life.md` | Personal interests beyond research |
-| `files/CV.pdf` | Downloadable CV with confirmed education and submission updates |
+| `files/CV.pdf` | Owner-provided personal_resume (1).pdf, copied without modification |
 | `assets/images/luyao-niu.webp` | Optimized personal photo |
 | `assets/css/academic.css` | Design tokens, typography, layout, responsive rules, print styles |
 | `assets/css/personal.css` | Service, current topics, Life page and expanded navigation |
@@ -50,13 +50,15 @@ The production output is `_site/`. Do not edit generated files there.
 
 The data files use JSON syntax, which is valid YAML. Both Jekyll and common editors can read them directly. Keep `id` values stable: homepage links and publication/project anchors use them.
 
-Rebuild the downloadable CV after editing the CV data files:
+Optionally generate a separate data-derived CV draft after editing the CV data files:
 
 ```sh
 /Users/linyang/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3 scripts/build_cv_pdf.py
 ```
 
-The generator checks that required CV sections and publication records are present before it writes `files/CV.pdf`.
+The generator writes `tmp/cv-generated/CV.pdf`, excluded from Git and the site. It never overwrites `files/CV.pdf`, which is the owner's uploaded resume. Replace that file only with an explicitly supplied new resume.
+
+To reprocess approved images placed in the local `Picture/` directory, run `scripts/import_picture_assets.py` with Python containing Pillow and system Poppler. It converts single-page figure PDFs and images into WebP under `assets/images/papers/` and `assets/images/life/`. Every publication has a preview slot; a real figure opens at full size when clicked. `Picture/` stays out of Git and Jekyll output.
 
 Publication statuses: `published`, `review`, `submitted`, `preprint`, `preparation`, `manuscript`, `working`. Categories: `journal`, `conference`, `preprint` (the latter is labeled **Manuscripts** to include ongoing work). `working` denotes a manuscript draft, not a submitted or accepted paper. Featured papers use an approved figure when the mapped file exists, otherwise a text cover. `citation` is plain text, not fabricated BibTeX metadata.
 

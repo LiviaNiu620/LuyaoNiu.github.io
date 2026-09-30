@@ -19,3 +19,5 @@ __pycache__/
 # Local editorial notes may refer to unpublished research sources.
 .local-review/
 incoming-assets/
+Picture/
+tmp/

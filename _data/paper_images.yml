@@ -1,8 +1,17 @@
 {
-  "asknearby": {"path":"/assets/images/papers/asknearby.png","alt":"System overview from the AskNearby paper"},
-  "event-causnet": {"path":"/assets/images/papers/event-causnet.png","alt":"Overview from the public Event-CausNet preprint"},
-  "st-proc": {"path":"/assets/images/papers/st-proc.png","alt":"Method overview from the public ST-ProC preprint"},
-  "mf-attnbilstm": {"path":"/assets/images/papers/mf-attnbilstm.png","alt":"Architecture from the MF-AttnBiLSTM paper"},
-  "cross-border-mobility-health": {"path":"/assets/images/papers/cross-border-mobility-health.png","alt":"Study overview from the Systems paper"},
-  "sav-transit": {"path":"/assets/images/papers/sav-transit.png","alt":"SAV and transit system design from the Transportation Research Part C paper"}
+  "asknearby":{"path":"/assets/images/papers/asknearby.webp","alt":"System overview from the AskNearby paper"},
+  "event-causnet":{"path":"/assets/images/papers/event-causnet.webp","alt":"Architecture of Event-CausNet"},
+  "st-proc":{"path":"/assets/images/papers/st-proc.webp","alt":"Framework overview from ST-ProC"},
+  "mf-attnbilstm":{"path":"/assets/images/papers/mf-attnbilstm.webp","alt":"Signal decomposition and temporal learning architecture of MF-AttnBiLSTM"},
+  "cross-border-mobility-health":{"path":"/assets/images/papers/cross-border-mobility-health.webp","alt":"Cross-border mobility trends by demographic group"},
+  "sav-transit":{"path":"/assets/images/papers/sav-transit.webp","alt":"Joint design of shared autonomous vehicles and public transit"},
+  "spatial-identity":{"path":"/assets/images/papers/spatial-identity.webp","alt":"Cross-border spatial identity measurement framework"},
+  "ev-adoption":{"path":"/assets/images/papers/ev-adoption.webp","alt":"Quasi-experimental study design for electric vehicle adoption"},
+  "transport-policy":{"path":"/assets/images/papers/transport-policy.webp","alt":"Behaviour Change Wheel used in the public transport policy study"},
+  "plangpt":{"path":"/assets/images/papers/plangpt.webp","alt":"PlanGPT framework"},
+  "geosplit":{"path":"/assets/images/papers/geosplit.webp","alt":"GeoSplit edge-server framework"},
+  "msdloss":{"path":"/assets/images/papers/msdloss.webp","alt":"MSDLoss forecasting framework"},
+  "critical-roads":{"path":"/assets/images/papers/critical-roads.webp","alt":"Illustration from Protecting Critical Roads during Wildfires"},
+  "braess-recovery":{"path":"/assets/images/papers/braess-recovery.webp","alt":"Network illustration from Fleet Coordination for Braess Recovery"},
+  "robotaxi-competition":{"path":"/assets/images/papers/robotaxi-competition.webp","alt":"Network illustration from Operational Competition in Robotaxi Systems"}
 }

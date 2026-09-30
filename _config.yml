@@ -26,7 +26,7 @@ author:
   name             : "Luyao Niu"
   avatar           : "assets/images/luyao-niu.webp"
   bio              : "PhD @ USC · M.Sc. @ Peking University"   # shown in sidebar
-  location         : "Beijing, China"
+  location         : "Los Angeles, CA"
   cv               : "files/CV.pdf"
   employer         :
   pubmed           :
@@ -70,6 +70,7 @@ include:
 exclude:
   - .local-review
   - incoming-assets
+  - Picture
   - docs
   - scripts
   - "预览网站.command"

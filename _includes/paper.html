@@ -1,12 +1,21 @@
 {% assign paper = include.paper %}
 {% assign preview = site.data.paper_images[paper.id] %}
 {% assign preview_file = site.static_files | where: 'path', preview.path | first %}
-<article class="paper {% if include.featured %}paper-featured{% endif %}" id="{{ paper.id }}" data-kind="{{ paper.kind }}" data-year="{{ paper.year }}" data-search="{{ paper.title | append: ' ' | append: paper.authors | append: ' ' | append: paper.venue | append: ' ' | append: paper.year | downcase | escape }}">
+<article class="paper {% if include.featured %}paper-featured{% else %}paper-with-preview{% endif %}" id="{{ paper.id }}" data-kind="{{ paper.kind }}" data-year="{{ paper.year }}" data-search="{{ paper.title | append: ' ' | append: paper.authors | append: ' ' | append: paper.venue | append: ' ' | append: paper.year | downcase | escape }}">
  {% if include.featured %}
  <a class="paper-visual" href="{{ '/publications/' | relative_url }}#{{ paper.id }}" aria-label="{{ paper.short }} — publication details">
   {% if preview and preview_file %}<img src="{{ preview.path | relative_url }}" width="240" height="180" alt="{{ preview.alt | escape }}" loading="lazy">{% else %}<span class="paper-type-cover" aria-hidden="true">{{ paper.short }}</span>{% endif %}
   <span>{{ paper.short }} {% include icon.html name="external" %}</span>
  </a>
+ {% else %}
+  {% if preview and preview_file %}
+  <a class="publication-preview" href="{{ preview.path | relative_url }}" target="_blank" rel="noopener noreferrer" aria-label="View figure: {{ paper.title | escape }}">
+    <img src="{{ preview.path | relative_url }}" alt="{{ preview.alt | escape }}" width="240" height="180" loading="lazy">
+    <span class="preview-caption"><span lang="en">View figure</span><span lang="zh">查看原图</span>{% include icon.html name="external" %}</span>
+  </a>
+  {% else %}
+  <div class="publication-preview preview-placeholder" aria-label="Figure placeholder"><span class="preview-mark" aria-hidden="true">{{ paper.year }}</span><span class="preview-caption"><span lang="en">{% if paper.status == 'published' %}Publication{% else %}Manuscript{% endif %}</span><span lang="zh">{% if paper.status == 'published' %}论文{% else %}研究稿件{% endif %}</span></span></div>
+  {% endif %}
  {% endif %}
  <div class="paper-content">
   <div class="paper-meta"><span>{{ paper.year }}</span><span class="meta-separator">/</span>

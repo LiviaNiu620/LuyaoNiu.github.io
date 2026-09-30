@@ -6,6 +6,7 @@ eyebrow: IDEAS IN CONVERSATION
 description: "Sharing research, meeting people, and continuing the conversation."
 description_zh: "分享研究、结识同行，也让讨论继续。"
 ---
+<figure class="talks-photo"><img src="{{ '/assets/images/life/presentation.webp' | relative_url }}" alt="Luyao Niu wearing a conference badge" width="1279" height="1706" loading="lazy"><figcaption><span lang="en">Sharing ideas, one conversation at a time.</span><span lang="zh">分享想法，让交流发生。</span></figcaption></figure>
 <div class="talk-list">
 {% assign talks = site.data.talks | sort: 'date' | reverse %}
 {% for talk in talks %}

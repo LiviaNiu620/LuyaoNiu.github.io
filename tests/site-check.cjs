@@ -147,6 +147,9 @@ fs.mkdirSync(output, { recursive: true });
     await page.locator(".publication-list .paper:visible").count(),
     19,
   );
+  assert.equal(await page.locator('.publication-list .publication-preview').count(), 19);
+  assert.equal(await page.locator('.publication-list .publication-preview img').count(), 15);
+  assert.equal(await page.locator('.publication-list .preview-placeholder').count(), 4);
   const publicationYears = await page
     .locator(".publication-list .paper .paper-meta > span:first-child")
     .allTextContents();
@@ -224,8 +227,15 @@ fs.mkdirSync(output, { recursive: true });
   assert.equal(await page.locator('a[href*="Management"]').count(), 0);
   await page.goto(base + "life/");
   assert.equal(await page.locator('.life-interest').count(), 4);
+  assert.equal(await page.locator('.life-photo img').count(), 3);
+  assert.equal(await page.locator('.life-drums .life-art').count(), 1);
   assert((await page.locator('.life-motto').innerText()).includes('dance'));
   await page.goto(base);
+  assert((await page.locator('.news-list li').first().innerText()).includes('2026.08'));
+  assert((await page.locator('.news-list li').first().innerText()).includes('SIAS Lab'));
+  const resumeResponse = await context.request.get(base + 'files/CV.pdf');
+  assert(resumeResponse.ok());
+  assert((await resumeResponse.body()).equals(fs.readFileSync(path.join(__dirname, '../files/CV.pdf'))), 'Downloaded resume must match the owner-provided PDF');
   await page.screenshot({
     path: path.join(output, "home-dark-zh.png"),
     fullPage: true,
