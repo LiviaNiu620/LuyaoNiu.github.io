@@ -24,10 +24,29 @@
   ],
   "service": [
     {
-      "role_en": "Peer Reviewer",
-      "role_zh": "同行评审",
-      "venues_en": "WSDM · IEEE GLOBECOM · Transportation Research Board (TRB)",
-      "venues_zh": "WSDM · IEEE GLOBECOM · 美国交通研究委员会（TRB）"
+      "role_en": "Journal reviewing",
+      "role_zh": "期刊审稿",
+      "venues": ["IEEE Transactions on Dependable and Secure Computing (TDSC)", "IEEE Transactions on Big Data (TBD)"],
+      "venues_en": "IEEE Transactions on Dependable and Secure Computing (TDSC); IEEE Transactions on Big Data (TBD)",
+      "venues_zh": "IEEE Transactions on Dependable and Secure Computing (TDSC)；IEEE Transactions on Big Data (TBD)"
+    },
+    {
+      "role_en": "Conference reviewing",
+      "role_zh": "会议审稿",
+      "venues": ["ACM MSWiM", "IEEE GLOBECOM", "Transportation Research Board (TRB)"],
+      "venues_en": "ACM MSWiM; IEEE GLOBECOM; Transportation Research Board (TRB)",
+      "venues_zh": "ACM MSWiM；IEEE GLOBECOM；美国交通研究委员会（TRB）"
+    }
+  ],
+  "programs": [
+    {
+      "en":"New Youth Global Competence Development Program",
+      "zh":"新青年全球胜任力人才培养计划",
+      "date":"2022–2023",
+      "org_en":"China Education Association for International Exchange (CEAIE) and partner organizations",
+      "org_zh":"中国教育国际交流协会及合作单位",
+      "desc_en":"Participated in a program focused on international perspectives, global competence, and intercultural communication.",
+      "desc_zh":"参与以国际视野、全球胜任力与跨文化沟通为主题的人才培养计划。"
     }
   ]
 }

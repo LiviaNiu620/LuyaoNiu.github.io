@@ -3,8 +3,8 @@
     {
       "id": "xiaohongshu",
       "en": {
-        "role": "AI Agent Engineering Intern",
-        "org": "Xiaohongshu · Data Analytics",
+        "role": "Agentic AI Engineer · Intern",
+        "org": "rednote (Xiaohongshu) · Data Analytics · Shanghai, China · On-site",
         "date": "May - Aug. 2026",
         "bullets": [
           ["Domain knowledge infrastructure", "Built a domain-specific data analytics knowledge base to support knowledge-grounded agent workflows."],
@@ -13,8 +13,8 @@
         ]
       },
       "zh": {
-        "role": "AI Agent 开发工程师（实习）",
-        "org": "小红书 · 数据分析部",
+        "role": "Agentic AI Engineer（实习）",
+        "org": "小红书（rednote）· 数据分析部 · 中国上海 · 现场办公",
         "date": "2026.05 - 2026.08",
         "bullets": [
           ["领域知识基础设施", "构建面向数据分析场景的领域知识库，为知识驱动的 Agent 工作流提供支撑。"],
@@ -48,8 +48,8 @@
       "id": "duke-kunshan",
       "en": {
         "role": "Research Assistant",
-        "org": "Data Science Department, Duke Kunshan University · Suzhou, China",
-        "date": "Jan. 2025 - Present",
+        "org": "Duke Kunshan University · Internship · Suzhou, China · Remote",
+        "date": "Jan. 2025 - Jun. 2026",
         "bullets": [
           ["Research leadership", "Led independent research on spatio-temporal data mining, traffic forecasting, and behavioral modeling."],
           ["Research output", "First-authored work published at IEEE GLOBECOM; Event-CausNet submitted to KDD 2027."]
@@ -57,13 +57,23 @@
       },
       "zh": {
         "role": "研究助理",
-        "org": "杜克昆山大学数据科学系 · 中国苏州",
-        "date": "2025.01 - 至今",
+        "org": "杜克昆山大学 · 实习 · 中国苏州 · 远程办公",
+        "date": "2025.01 - 2026.06",
         "bullets": [
           ["研究工作", "主导时空数据挖掘、交通预测与行为建模相关研究。"],
           ["研究成果", "一作成果发表于 IEEE GLOBECOM；Event-CausNet 已投稿至 KDD 2027。"]
         ]
       }
+    },
+    {
+      "id": "peking-university",
+      "en": {"role":"Graduate Research Assistant","org":"Peking University · Full-time · Beijing, China · On-site","date":"Sep. 2023 - Jun. 2026","bullets":[]},
+      "zh": {"role":"研究生研究助理","org":"北京大学 · 全职 · 中国北京 · 现场办公","date":"2023.09 - 2026.06","bullets":[]}
+    },
+    {
+      "id": "railway-sciences",
+      "en": {"role":"Management Intern","org":"China Academy of Railway Sciences · Haidian, Beijing, China · On-site","date":"Sep. 2022 - Nov. 2022","bullets":[]},
+      "zh": {"role":"管理实习生","org":"中国铁道科学研究院 · 中国北京海淀区 · 现场办公","date":"2022.09 - 2022.11","bullets":[]}
     },
     {
       "id": "calsp",

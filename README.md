@@ -27,19 +27,25 @@ The production output is `_site/`. Do not edit generated files there.
 
 | File | Purpose |
 | --- | --- |
-| `_data/current_research.yml` | One current USC topic, bilingual summary and methodology |
+| `_data/current_research.yml` | Three concise current topics and public method keywords |
 | `_data/profile.yml` | Bilingual role and bio, research interests, news, education |
 | `_data/experience.yml` | Bilingual professional-experience entries used by the CV and PDF |
 | `_data/cv.yml` | Awards and academic-service entries used by the CV and PDF |
+| `_data/talks.yml` | Presentation months and cities, separate from publication dates |
+| `_data/life.yml` | Personal motto and interests |
+| `_data/paper_images.yml` | Approved paper figure paths and descriptions |
 | `_data/publications.yml` | Publications, authors, venues, status, links, citations, featured selection |
 | `_data/navigation.yml` | Bilingual top navigation |
 | `_config.yml` | Contact details, social profiles, metadata, URL/base path |
 | `_pages/about.md` | Homepage layout and opening research statement |
-| `_pages/projects.md` | Detailed bilingual project descriptions |
-| `_pages/cv.md` | Bilingual education, experience, honors, skills |
+| `_pages/projects.md` | Concise bilingual topic and method overview |
+| `_pages/cv.md` | Bilingual education, experience, service, honors and global engagement |
+| `_pages/service.md` | Dedicated peer-review service page |
+| `_pages/life.md` | Personal interests beyond research |
 | `files/CV.pdf` | Downloadable CV with confirmed education and submission updates |
 | `assets/images/luyao-niu.webp` | Optimized personal photo |
 | `assets/css/academic.css` | Design tokens, typography, layout, responsive rules, print styles |
+| `assets/css/personal.css` | Service, current topics, Life page and expanded navigation |
 | `assets/js/academic.js` | Language/theme, navigation, publication search/filter, citation copying |
 
 The data files use JSON syntax, which is valid YAML. Both Jekyll and common editors can read them directly. Keep `id` values stable: homepage links and publication/project anchors use them.
@@ -52,7 +58,9 @@ Rebuild the downloadable CV after editing the CV data files:
 
 The generator checks that required CV sections and publication records are present before it writes `files/CV.pdf`.
 
-Publication statuses: `published`, `review`, `submitted`, `preprint`, `preparation`, `manuscript`. Categories: `journal`, `conference`, `preprint` (the latter is labeled **Manuscripts** to include ongoing work). Only set `featured: true` when a real corresponding project and local illustration exist. `citation` is plain text, not fabricated BibTeX metadata.
+Publication statuses: `published`, `review`, `submitted`, `preprint`, `preparation`, `manuscript`, `working`. Categories: `journal`, `conference`, `preprint` (the latter is labeled **Manuscripts** to include ongoing work). `working` denotes a manuscript draft, not a submitted or accepted paper. Featured papers use an approved figure when the mapped file exists, otherwise a text cover. `citation` is plain text, not fabricated BibTeX metadata.
+
+See `docs/CONTENT_GUIDE.md` for disclosure boundaries, reference-site observations, and figure suggestions. The local `incoming-assets/` and `.local-review/` folders are excluded from both Git and the published website. Unpublished manuscripts, internal dashboards, and their full text should never be copied into public assets.
 
 New external links open in a separate tab with `noopener noreferrer`; local links stay in the same tab. PDF links open a separate tab. Use Jekyll's `relative_url` filter for local links so deployment under a subpath works.
 

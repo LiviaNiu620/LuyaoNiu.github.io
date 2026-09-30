@@ -77,8 +77,8 @@
       "desc_en": "How can interaction among agents lead to effective collective behavior?",
       "desc_zh": "多个智能主体如何通过互动，形成有效的集体行为？",
       "tags": "Cooperation · Interaction · Collective behavior",
-      "context_en": "My current research on routing organizations examines how coordination changes collective outcomes. This motivates a broader interest in cooperation, communication, and collective intelligence across multi-agent and autonomous systems.",
-      "context_zh": "当前关于路径调度组织的研究，探讨协调如何改变集体结果。这也促使我进一步关注多智能体与自主系统中的合作、通信和集体智能。",
+      "context_en": "My current interests connect coordination, information, and collective outcomes in autonomous systems. I am exploring these questions through transportation networks, with a broader interest in cooperation and collective intelligence.",
+      "context_zh": "我目前关注自主系统中的协调、信息与集体结果，通过交通网络探索这些问题，并对合作与集体智能保持更广泛的兴趣。",
       "links": [
         {
           "url": "#mixed-autonomy-coordination",
@@ -96,21 +96,21 @@
   "news": [
     {
       "date": "2026.05",
-      "en": "Joined Xiaohongshu’s Data Analytics department as an AI Agent Engineering Intern.",
-      "zh": "加入小红书数据分析部，担任 AI Agent Engineering 实习生。",
+      "en": "Joined rednote’s Data Analytics department as an Agentic AI Engineering Intern in Shanghai.",
+      "zh": "加入小红书上海数据分析部，担任 Agentic AI Engineering 实习生。",
       "url": "/cv/#xiaohongshu"
-    },
-    {
-      "date": "2025.12",
-      "en": "AskNearby accepted for an oral presentation at ACM SIGSPATIAL GeoAI ’25.",
-      "zh": "AskNearby 在 ACM SIGSPATIAL GeoAI ’25 作口头报告。",
-      "url": "/publications/#asknearby"
     },
     {
       "date": "2025.12",
       "en": "MF-AttnBiLSTM published in the 2025 IEEE Global Communications Conference proceedings.",
       "zh": "MF-AttnBiLSTM 发表于 2025 IEEE Global Communications Conference 论文集。",
       "url": "/publications/#mf-attnbilstm"
+    },
+    {
+      "date": "2025.11",
+      "en": "Presented AskNearby at ACM SIGSPATIAL GeoAI ’25 in Minneapolis.",
+      "zh": "在明尼阿波利斯 ACM SIGSPATIAL GeoAI ’25 作 AskNearby 口头报告。",
+      "url": "/publications/#asknearby"
     },
     {
       "date": "2025.08",

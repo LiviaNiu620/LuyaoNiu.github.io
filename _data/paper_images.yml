@@ -1,0 +1,8 @@
+{
+  "asknearby": {"path":"/assets/images/papers/asknearby.png","alt":"System overview from the AskNearby paper"},
+  "event-causnet": {"path":"/assets/images/papers/event-causnet.png","alt":"Overview from the public Event-CausNet preprint"},
+  "st-proc": {"path":"/assets/images/papers/st-proc.png","alt":"Method overview from the public ST-ProC preprint"},
+  "mf-attnbilstm": {"path":"/assets/images/papers/mf-attnbilstm.png","alt":"Architecture from the MF-AttnBiLSTM paper"},
+  "cross-border-mobility-health": {"path":"/assets/images/papers/cross-border-mobility-health.png","alt":"Study overview from the Systems paper"},
+  "sav-transit": {"path":"/assets/images/papers/sav-transit.png","alt":"SAV and transit system design from the Transportation Research Part C paper"}
+}

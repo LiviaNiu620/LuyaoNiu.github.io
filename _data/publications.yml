@@ -164,24 +164,76 @@
   },
   {
     "id": "geosplit",
-    "title": "GeoSplit: Selective Map Acquisition for Unseen-User Travel-Mode Recognition",
-    "authors": "Wang, Z.*; Niu, L.*; Ban, J.",
+    "title": "GeoSplit: Selective Edge–Server Map Acquisition for Cross-User Travel-Mode Recognition",
+    "authors": "Wang, Z.*; Niu, L.*; Li, R.; Ban, J. (X.).",
     "year": 2027,
     "kind": "conference",
     "status": "submitted",
     "venue": "ICASSP 2027",
     "note_en": "* Equal contribution.",
     "note_zh": "* 共同一作。",
-    "citation": "Wang, Z.*; Niu, L.*; Ban, J. (2027). GeoSplit: Selective Map Acquisition for Unseen-User Travel-Mode Recognition. ICASSP 2027 (Submitted)."
+    "citation": "Wang, Z.*; Niu, L.*; Li, R.; Ban, J. (X.). (2027). GeoSplit: Selective Edge–Server Map Acquisition for Cross-User Travel-Mode Recognition. ICASSP 2027 (Submitted)."
   },
   {
-    "id": "mobility-anomaly",
-    "title": "Whose Normal? Reference and Perturbation Controls for Personal Mobility Anomaly Detection",
-    "authors": "Niu, L.; Wang, Z.",
+    "id": "msdloss",
+    "title": "MSDLoss: EMA-Adaptive Multi-Scale Difference Loss for Time Series Forecasting",
+    "authors": "Wang, Z.*; Liao, B.*; Niu, L.; Li, R.; Ban, J. (X.).",
     "year": 2027,
     "kind": "conference",
     "status": "submitted",
     "venue": "ICASSP 2027",
-    "citation": "Niu, L.; Wang, Z. (2027). Whose Normal? Reference and Perturbation Controls for Personal Mobility Anomaly Detection. ICASSP 2027 (Submitted)."
+    "note_en": "* Equal contribution.",
+    "note_zh": "* 共同一作。",
+    "citation": "Wang, Z.*; Liao, B.*; Niu, L.; Li, R.; Ban, J. (X.). (2027). MSDLoss: EMA-Adaptive Multi-Scale Difference Loss for Time Series Forecasting. ICASSP 2027 (Submitted)."
+  },
+  {
+    "id":"blind-spots",
+    "title":"Blind Spots: How Uneven Information Shapes Competing Autonomous Fleets and Where to Place Public Sensing",
+    "authors":"Niu, L.; Li, R.",
+    "year":2026,
+    "kind":"preprint",
+    "status":"working",
+    "venue":"",
+    "citation":"Niu, L.; Li, R. (2026). Blind Spots: How Uneven Information Shapes Competing Autonomous Fleets and Where to Place Public Sensing. Working manuscript."
+  },
+  {
+    "id":"critical-roads",
+    "title":"Protecting Critical Roads during Wildfires: Selective Coordination of Commercial AV Fleets",
+    "authors":"Niu, L.; Li, R.",
+    "year":2026,
+    "kind":"preprint",
+    "status":"working",
+    "venue":"",
+    "citation":"Niu, L.; Li, R. (2026). Protecting Critical Roads during Wildfires: Selective Coordination of Commercial AV Fleets. Working manuscript."
+  },
+  {
+    "id":"braess-recovery",
+    "title":"Fleet Coordination for Braess Recovery: Organization and Penetration Thresholds on a Fixed Network",
+    "authors":"Niu, L.; Li, R.",
+    "year":2026,
+    "kind":"preprint",
+    "status":"working",
+    "venue":"",
+    "citation":"Niu, L.; Li, R. (2026). Fleet Coordination for Braess Recovery: Organization and Penetration Thresholds on a Fixed Network. Working manuscript."
+  },
+  {
+    "id":"robotaxi-competition",
+    "title":"Operational Competition in Robotaxi Systems with Congestion and Heterogeneous Constraints",
+    "authors":"Tsao, M.; Guan, Y.; Niu, L.; Li, R.",
+    "year":2026,
+    "kind":"preprint",
+    "status":"working",
+    "venue":"",
+    "citation":"Tsao, M.; Guan, Y.; Niu, L.; Li, R. (2026). Operational Competition in Robotaxi Systems with Congestion and Heterogeneous Constraints. Working manuscript."
+  },
+  {
+    "id":"spatial-satisfaction",
+    "title":"Designation is not experience: Visitor–host divergence in cross-border spatial satisfaction after integration policies in the Shenzhen–Hong Kong corridor, measured with large language models and calibrated interrupted time series",
+    "authors":"Niu, L.; Wang, Y.; Niu, C.; He, S.; Cai, Y.; Zhang, W.",
+    "year":2026,
+    "kind":"preprint",
+    "status":"working",
+    "venue":"",
+    "citation":"Niu, L.; Wang, Y.; Niu, C.; He, S.; Cai, Y.; Zhang, W. (2026). Designation is not experience: Visitor–host divergence in cross-border spatial satisfaction after integration policies in the Shenzhen–Hong Kong corridor, measured with large language models and calibrated interrupted time series. Working manuscript."
   }
 ]

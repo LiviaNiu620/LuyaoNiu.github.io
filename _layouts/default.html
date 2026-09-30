@@ -19,6 +19,7 @@
   (function(){var r=document.documentElement;try{var t=localStorage.getItem('theme'),l=localStorage.getItem('lang');r.dataset.theme=t==='dark'||t==='light'?t:(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');r.dataset.lang=l==='zh'?'zh':'en';r.lang=r.dataset.lang==='zh'?'zh-CN':'en';}catch(e){}})();
   </script>
   <link rel="stylesheet" href="{{ '/assets/css/academic.css' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/assets/css/personal.css' | relative_url }}">
   <script src="{{ '/assets/js/academic.js' | relative_url }}" defer></script>
 </head>
 <body class="{% if page.url == '/' %}is-home{% else %}is-subpage{% endif %}">
@@ -51,7 +52,7 @@
 </main>
 <footer class="site-footer container">
  <div class="footer-contact" id="contact">
-  <div><p class="eyebrow"><span lang="en">LET’S CONNECT</span><span lang="zh">保持联系</span></p><h2><span lang="en">Good research starts<br>with a conversation.</span><span lang="zh">让好的研究，<br>从一次交流开始。</span></h2></div>
+  <div class="footer-invitation"><p class="eyebrow"><span lang="en">LET’S CONNECT</span><span lang="zh">来聊聊吧</span></p><h2><span lang="en">Good ideas. New friends.<br>Let’s start a conversation.</span><span lang="zh">聊聊想法，交个朋友。</span></h2><p class="contact-note"><span lang="en">I love exchanging ideas, talking through research, and making new friends. Whether it’s a research question, a song recommendation, or just a hello—I’d be happy to hear from you.</span><span lang="zh">我很喜欢交流想法、讨论研究和认识新朋友。无论是一个研究问题、一首歌的推荐，还是简单打个招呼，都欢迎来信。</span></p></div>
   <div class="contact-details"><a class="contact-email" href="mailto:{{ site.author.email }}">{{ site.author.email }} {% include icon.html name="external" %}</a><div class="footer-socials"><a href="{{ site.author.googlescholar }}">Google Scholar {% include icon.html name="external" %}</a><a href="{{ site.author.orcid }}">ORCID {% include icon.html name="external" %}</a><a href="https://github.com/{{ site.author.github }}">GitHub {% include icon.html name="external" %}</a></div></div>
  </div>
  <div class="footer-bottom"><span>© {{ site.time | date: '%Y' }} Luyao Niu <span class="footer-dot">·</span> <span lang="en">Made with curiosity.</span><span lang="zh">保持好奇，持续探索。</span></span><a href="#main" class="back-top"><span lang="en">Back to top</span><span lang="zh">返回顶部</span> {% include icon.html name="up" %}</a></div>

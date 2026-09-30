@@ -85,7 +85,7 @@
   document.addEventListener("click", (event) => {
     if (!event.target.closest(".site-header")) closeMenu();
   });
-  matchMedia("(min-width: 641px)").addEventListener("change", () =>
+  matchMedia("(min-width: 901px)").addEventListener("change", () =>
     closeMenu(),
   );
   // Only web destinations receive new-tab behavior; mail and local navigation remain native.

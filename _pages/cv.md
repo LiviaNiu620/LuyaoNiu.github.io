@@ -14,7 +14,9 @@ description_zh: "教育、研究、经历、奖项与学术服务。"
   <nav class="section-nav" aria-label="CV sections">
     <a href="#education"><span lang="en">Education</span><span lang="zh">教育</span></a>
     <a href="#experience"><span lang="en">Experience</span><span lang="zh">经历</span></a>
-    <a href="#awards-service"><span lang="en">Awards & service</span><span lang="zh">奖项与服务</span></a>
+    <a href="#academic-service"><span lang="en">Service</span><span lang="zh">学术服务</span></a>
+    <a href="#awards-service"><span lang="en">Awards</span><span lang="zh">奖项</span></a>
+    <a href="#programs"><span lang="en">Global engagement</span><span lang="zh">国际交流</span></a>
   </nav>
 </div>
 
@@ -23,7 +25,7 @@ description_zh: "教育、研究、经历、奖项与学术服务。"
   <h2 id="research-focus-title"><span lang="en">Learning, decision-making, and coordination in intelligent systems</span><span lang="zh">智能系统中的学习、决策与协调</span></h2>
   <p><span lang="en">{{ profile.focus.en }}</span><span lang="zh">{{ profile.focus.zh }}</span></p>
   <ul class="research-interest-list">{% for interest in profile.research %}<li><span lang="en">{{ interest.en }}</span><span lang="zh">{{ interest.zh }}</span></li>{% endfor %}</ul>
-  <a class="text-link" href="{{ '/projects/' | relative_url }}#{{ site.data.current_research.id }}"><span lang="en">Current topic: {{ site.data.current_research.title_en }}</span><span lang="zh">当前课题：{{ site.data.current_research.title_zh }}</span>{% include icon.html name="arrow" %}</a>
+  <a class="text-link" href="{{ '/projects/' | relative_url }}#{{ site.data.current_research.id }}"><span lang="en">Current topics & methods</span><span lang="zh">当前主题与方法</span>{% include icon.html name="arrow" %}</a>
 </section>
 
 <section class="cv-section" id="education" aria-labelledby="education-title">
@@ -46,29 +48,33 @@ description_zh: "教育、研究、经历、奖项与学术服务。"
     {% for item in experience %}
     <article class="cv-experience-entry" id="{{ item.id }}">
       <div class="cv-entry-heading"><div><h3><span lang="en">{{ item.en.role }}</span><span lang="zh">{{ item.zh.role }}</span></h3><p class="cv-entry-org"><span lang="en">{{ item.en.org }}</span><span lang="zh">{{ item.zh.org }}</span></p></div><p class="cv-entry-date"><span lang="en">{{ item.en.date }}</span><span lang="zh">{{ item.zh.date }}</span></p></div>
-      <ul lang="en">{% for bullet in item.en.bullets %}<li><strong>{{ bullet[0] }}:</strong> {{ bullet[1] }}</li>{% endfor %}</ul>
-      <ul lang="zh">{% for bullet in item.zh.bullets %}<li><strong>{{ bullet[0] }}：</strong>{{ bullet[1] }}</li>{% endfor %}</ul>
+      {% if item.en.bullets.size > 0 %}<ul lang="en">{% for bullet in item.en.bullets %}<li><strong>{{ bullet[0] }}:</strong> {{ bullet[1] }}</li>{% endfor %}</ul>{% endif %}
+      {% if item.zh.bullets.size > 0 %}<ul lang="zh">{% for bullet in item.zh.bullets %}<li><strong>{{ bullet[0] }}：</strong>{{ bullet[1] }}</li>{% endfor %}</ul>{% endif %}
     </article>
     {% endfor %}
   </div>
 </section>
 
+<section class="cv-section" id="academic-service" aria-labelledby="cv-service-title">
+  <p class="eyebrow">ACADEMIC COMMUNITY</p><h2 id="cv-service-title"><span lang="en">Academic service</span><span lang="zh">学术服务</span></h2>
+  {% include service-list.html %}
+</section>
 <section class="cv-section" id="awards-service" aria-labelledby="awards-service-title">
   <p class="eyebrow"><span lang="en">RECOGNITION & CONTRIBUTION</span><span lang="zh">奖项与学术服务</span></p>
-  <h2 id="awards-service-title"><span lang="en">Awards & service</span><span lang="zh">奖项与学术服务</span></h2>
-  <div class="cv-recognition-grid">
+  <h2 id="awards-service-title"><span lang="en">Honors & awards</span><span lang="zh">荣誉与奖项</span></h2>
+  <div class="cv-awards-layout">
     <div class="cv-awards">
       {% for group in cv.awards %}
       <section class="cv-award-group"><h3><span lang="en">{{ group.group_en }}</span><span lang="zh">{{ group.group_zh }}</span></h3><ul>{% for item in group.items %}<li><span lang="en">{{ item.en }}</span><span lang="zh">{{ item.zh }}</span></li>{% endfor %}</ul></section>
       {% endfor %}
     </div>
-    <aside class="cv-service" aria-label="Academic service">
-      <p class="eyebrow"><span lang="en">ACADEMIC SERVICE</span><span lang="zh">学术服务</span></p>
-      {% for item in cv.service %}<h3><span lang="en">{{ item.role_en }}</span><span lang="zh">{{ item.role_zh }}</span></h3><p><span lang="en">{{ item.venues_en }}</span><span lang="zh">{{ item.venues_zh }}</span></p>{% endfor %}
-    </aside>
   </div>
 </section>
 
+<section class="cv-section" id="programs" aria-labelledby="programs-title">
+  <p class="eyebrow">GLOBAL ENGAGEMENT</p><h2 id="programs-title"><span lang="en">Learning across cultures</span><span lang="zh">跨文化学习与国际交流</span></h2>
+  {% for program in cv.programs %}<article class="cv-program"><p class="cv-entry-date">{{ program.date }}</p><h3><span lang="en">{{ program.en }}</span><span lang="zh">{{ program.zh }}</span></h3><p class="cv-entry-org"><span lang="en">{{ program.org_en }}</span><span lang="zh">{{ program.org_zh }}</span></p><p><span lang="en">{{ program.desc_en }}</span><span lang="zh">{{ program.desc_zh }}</span></p></article>{% endfor %}
+</section>
 <section class="cv-section" id="activities" aria-labelledby="activities-title">
   <p class="eyebrow"><span lang="en">COMMUNITY</span><span lang="zh">校园与社会服务</span></p>
   <h2 id="activities-title"><span lang="en">Leadership & service</span><span lang="zh">校园与社会服务</span></h2>

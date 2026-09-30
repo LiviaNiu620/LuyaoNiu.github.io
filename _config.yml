@@ -68,6 +68,8 @@ include:
   - _pages
   - files
 exclude:
+  - .local-review
+  - incoming-assets
   - docs
   - scripts
   - "预览网站.command"

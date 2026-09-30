@@ -21,9 +21,19 @@
       "url": "/talks/"
     },
     {
+      "en": "Service",
+      "zh": "服务",
+      "url": "/service/"
+    },
+    {
       "en": "CV",
       "zh": "履历",
       "url": "/cv/"
+    },
+    {
+      "en": "Life",
+      "zh": "生活",
+      "url": "/life/"
     }
   ]
 }

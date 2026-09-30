@@ -1,0 +1,8 @@
+<div class="service-groups">
+  {% for group in site.data.cv.service %}
+  <section class="service-group">
+    <h3><span lang="en">{{ group.role_en }}</span><span lang="zh">{{ group.role_zh }}</span></h3>
+    <ul>{% for venue in group.venues %}<li>{{ venue }}</li>{% endfor %}</ul>
+  </section>
+  {% endfor %}
+</div>

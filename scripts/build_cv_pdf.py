@@ -71,7 +71,9 @@ def paragraph(text: str, style: str = "body") -> Paragraph:
 
 
 def entry(role: str, organization: str, date: str, bullets: list[list[str]]):
-    block = [paragraph(f"{role} | {date}", "title"), paragraph(organization)]
+    block = [paragraph(f"{role} | {date}" if date else role, "title")]
+    if organization:
+        block.append(paragraph(organization))
     for label, detail in bullets:
         block.append(paragraph(f"- {label}: {detail}", "bullet"))
     return KeepTogether(block)
@@ -114,36 +116,15 @@ def main():
         paragraph("RESEARCH INTERESTS", "section"),
         paragraph(profile["focus"]["en"]),
         paragraph(" | ".join(item["en"] for item in profile["research"])),
-        paragraph(f"Current topic at USC: {current['title_en']}", "title"),
+        paragraph(current['title_en'], "title"),
         paragraph(current["summary_en"]),
-        paragraph("SELECTED RESEARCH EXPERIENCE", "section"),
     ])
-
-    selected_research = [
-        (
-            "Coalition Coordination in Mixed-Autonomy Traffic",
-            [
-                ["Question", "Studies when autonomous-vehicle firms should route independently, coordinate in partial coalitions, or share a common dispatcher when human drivers also adapt their routes."],
-                ["Approach", "Models heterogeneous routing organizations through mixed Nash-Wardrop equilibrium and compares their operational implications under fixed network and demand conditions."],
-            ],
-        ),
-        (
-            "Event-CausNet: Reliable Spatio-Temporal Forecasting",
-            [
-                ["Question", "Examines how unstructured event reports can improve traffic forecasts during non-recurring events."],
-                ["Approach", "Uses language models to extract event factors and combines causal knowledge with spatio-temporal forecasting. Submitted to KDD 2027."],
-            ],
-        ),
-        (
-            "AskNearby: Community Information Retrieval and Recommendation",
-            [
-                ["Question", "Addresses local information accessibility by combining neighborhood knowledge with individual context and preferences."],
-                ["Approach", "Built a multi-layer retrieval pipeline spanning knowledge-graph retrieval, semantic-vector recall, and geographic filtering. ACM SIGSPATIAL GeoAI 2025 oral presentation."],
-            ],
-        ),
-    ]
-    for title, bullets in selected_research:
-        story.append(entry(title, "", "", bullets))
+    for topic in current['items']:
+        story.append(KeepTogether([
+            paragraph(topic['en'], 'title'),
+            paragraph(topic['desc_en']),
+            paragraph(topic['methods'], 'note'),
+        ]))
 
     story.extend([PageBreak(), paragraph("PROFESSIONAL EXPERIENCE", "section")])
     for item in experience:
@@ -151,21 +132,35 @@ def main():
         story.append(entry(english["role"], english["org"], english["date"], english["bullets"]))
         story.append(Spacer(1, 4))
 
-    story.extend([paragraph("AWARDS & ACADEMIC SERVICE", "section")])
+    story.extend([PageBreak(), paragraph("ACADEMIC SERVICE", "section")])
+    for group in cv['service']:
+        story.append(paragraph(group['role_en'], 'title'))
+        for venue in group['venues']:
+            story.append(paragraph('- ' + venue, 'bullet'))
+
+    story.append(paragraph('ORAL PRESENTATIONS', 'section'))
+    for talk in sorted(read_data('talks'), key=lambda item: item['date'], reverse=True):
+        story.append(paragraph(f"{talk['venue']} | {talk['date_en']} | {talk['location_en']}"))
+
+    story.extend([paragraph("HONORS & AWARDS", "section")])
     for group in cv["awards"]:
         story.append(paragraph(group["group_en"], "title"))
         for award in group["items"]:
             story.append(paragraph(f"- {award['en']}", "bullet"))
     story.extend([
-        paragraph("Academic Service", "title"),
-        paragraph("Peer Reviewer: " + "; ".join(item["venues_en"] for item in cv["service"])),
         paragraph("LEADERSHIP & SERVICE", "section"),
         paragraph("President, Student Union | Beijing Jiaotong University | Jun. 2021 - Jun. 2023", "title"),
         paragraph("Led university-wide student affairs and brand events reaching 80,000+ participants."),
         paragraph("Volunteer, Beijing 2022 Winter Olympics | National Indoor Stadium | Jan. 2022 - Apr. 2022", "title"),
         paragraph("Personnel management and venue operations; named Outstanding Volunteer."),
-        paragraph("PUBLICATIONS", "section"),
     ])
+    for program in cv['programs']:
+        story.append(KeepTogether([
+            paragraph(f"{program['en']} | {program['date']}", 'title'),
+            paragraph(program['org_en']),
+            paragraph(program['desc_en']),
+        ]))
+    story.extend([PageBreak(), paragraph('PUBLICATIONS & MANUSCRIPTS', 'section')])
 
     publications_by_year = sorted(publications, key=lambda paper: paper["year"], reverse=True)
     journal = [paper for paper in publications_by_year if paper["kind"] == "journal"]
@@ -190,9 +185,12 @@ def main():
 
     text = "\n".join(page.extract_text() for page in PdfReader(OUTPUT).pages)
     required = [
-        "Xiaohongshu", "WSDM", "IEEE GLOBECOM", "Transportation Research Board",
-        "Applied Geography", "GeoSplit", "Whose Normal", "ICASSP 2027", "Systems",
+        "Xiaohongshu", "MSWiM", "IEEE GLOBECOM", "Transportation Research Board",
+        "Applied Geography", "GeoSplit", "MSDLoss", "ICASSP 2027", "Systems",
+        "Global Competence", "Dependable and Secure Computing", "Transactions on Big Data",
     ]
+    if 'Whose Normal' in text or 'WSDM' in text:
+        raise RuntimeError('Removed work or superseded reviewer venue remains in the CV.')
     missing = [item for item in required if item not in text]
     if missing:
         raise RuntimeError(f"CV PDF is missing required content: {missing}")
