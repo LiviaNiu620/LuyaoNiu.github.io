@@ -4,10 +4,16 @@
       "group_en": "Scholarships & honors",
       "group_zh": "奖学金与荣誉",
       "items": [
-        {"en": "Baosteel Outstanding Student Award (500 recipients nationwide / year), 2022.12", "zh": "宝钢奖学金（全国每年 500 名），2022.12"},
+        {"en": "Annenberg Fellowship, University of Southern California, 2026", "zh": "USC Annenberg Fellowship，2026"},
+        {"en": "Baosteel Outstanding Student Award (500 recipients annually nationwide across undergraduate, master's, and doctoral students), 2022.12", "zh": "宝钢奖学金（全国本科、硕士、博士学生每年共 500 名），2022.12"},
         {"en": "National Scholarship (highest undergraduate honor in China, top 1%), 2020.12", "zh": "国家奖学金（中国本科生最高荣誉，前 1%），2020.12"},
+        {"en": "Beijing Public Transport Talent Scholarship (top 3%), 2021", "zh": "北京公交人才奖学金（前 3%），2021"},
         {"en": "First-class Academic Scholarship (top 3%), 2020.12", "zh": "一等学业奖学金（前 3%），2020.12"},
-        {"en": "Beijing Outstanding Graduate", "zh": "北京市优秀毕业生"}
+        {"en": "Zhijin Scholarship (top 3%), 2022", "zh": "智瑾奖学金（前 3%），2022"},
+        {"en": "Beijing Outstanding Graduate, 2023", "zh": "北京市优秀毕业生，2023"},
+        {"en": "First-class Student Service Scholarship (top 3%), 2022", "zh": "一等社会工作奖学金（前 3%），2022"},
+        {"en": "Volunteer Star, National Indoor Stadium, Beijing 2022 Winter Olympics", "zh": "北京 2022 冬奥会国家体育馆志愿之星"},
+        {"en": "Top Ten Volunteers, Beijing Jiaotong University (ranked 1st), 2022", "zh": "北京交通大学十佳志愿者（第一名），2022"}
       ]
     },
     {
@@ -18,7 +24,10 @@
         {"en": "Second Prize, China MathorCup Mathematical Modeling Competition, 2022.04", "zh": "全国 MathorCup 数学建模竞赛二等奖，2022.04"},
         {"en": "Third Prize, China College Mathematics Competition, 2020.04", "zh": "全国大学生数学竞赛三等奖，2020.04"},
         {"en": "Third Prize, Baidu ERNIE Cup AI Entrepreneurship Competition, 2024.09", "zh": "百度文心杯 AI 创业大赛三等奖，2024.09"},
-        {"en": "Gold Award, Nanshan District Innovation & Entrepreneurship Competition", "zh": "南山区创新创业大赛金奖"}
+        {"en": "Gold Award & Linghang Special Award, Shenzhen Nanshan District Innovation & Entrepreneurship Competition, 2024.11", "zh": "深圳市南山区创新创业大赛金奖、领航特别奖，2024.11"},
+        {"en": "Third Prize, Beijing \"Internet+\" College Students Innovation and Entrepreneurship Competition, 2022", "zh": "北京市互联网+大学生创新创业大赛三等奖，2022"},
+        {"en": "Third Prize, Beijing Innovation, Entrepreneurship and Creativity Competition, 2022", "zh": "北京市创新创业创意大赛三等奖，2022"},
+        {"en": "First Prize, Beijing Jiaotong University \"Challenge Cup\" Innovation and Entrepreneurship Competition, 2022", "zh": "北京交通大学挑战杯创新创业大赛一等奖，2022"}
       ]
     }
   ],
