@@ -10,7 +10,7 @@ description_zh: "智能出行系统中的协调、信息与行为。"
 <section id="current-projects" class="current-topics" aria-labelledby="current-topics-title">
   <span id="mixed-autonomy-coordination" class="anchor-alias" aria-hidden="true"></span>
   <div class="section-heading"><div><p class="eyebrow"><span lang="en">CURRENT QUESTIONS</span><span lang="zh">当前问题</span></p><h2 id="current-topics-title"><span lang="en">{{ current.title_en }}</span><span lang="zh">{{ current.title_zh }}</span></h2></div></div>
-  <div class="topic-grid">{% for topic in current.items %}<article class="topic-card" id="{{ topic.id }}"><span class="topic-number">0{{ forloop.index }}</span><h3><span lang="en">{{ topic.en }}</span><span lang="zh">{{ topic.zh }}</span></h3><p><span lang="en">{{ topic.desc_en }}</span><span lang="zh">{{ topic.desc_zh }}</span></p><span class="topic-methods">{{ topic.methods }}</span></article>{% endfor %}</div>
+  <div class="topic-grid">{% for topic in current.items %}<article class="topic-card" id="{{ topic.id }}"><h3><span lang="en">{{ topic.en }}</span><span lang="zh">{{ topic.zh }}</span></h3></article>{% endfor %}</div>
 </section>
 <section class="research-threads" aria-labelledby="research-threads-title">
   <div class="section-heading"><div><p class="eyebrow"><span lang="en">A CONNECTED RESEARCH AGENDA</span><span lang="zh">相互连接的研究脉络</span></p><h2 id="research-threads-title"><span lang="en">Learning. Decisions. Coordination.</span><span lang="zh">学习、决策与协调</span></h2></div></div>

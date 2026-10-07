@@ -71,6 +71,12 @@ exclude:
   - .local-review
   - incoming-assets
   - Picture
+  - assets/images/life/live.webp
+  - assets/images/life/rock.webp
+  - assets/images/life/reading.webp
+  - assets/images/papers/critical-roads.webp
+  - assets/images/papers/braess-recovery.webp
+  - assets/images/papers/robotaxi-competition.webp
   - docs
   - scripts
   - "预览网站.command"

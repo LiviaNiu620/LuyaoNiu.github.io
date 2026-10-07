@@ -1,5 +1,6 @@
 ---
 permalink: /life/
+published: false
 title: Beyond research
 title_zh: 研究之外
 eyebrow: A LITTLE MORE HUMAN

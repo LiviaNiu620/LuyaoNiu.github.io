@@ -45,17 +45,16 @@
   <a class="back-link" href="{{ '/' | relative_url }}"><span aria-hidden="true">←</span> <span lang="en">Back to home</span><span lang="zh">返回首页</span></a>
   <p class="eyebrow">{{ page.eyebrow | default: 'THE ACADEMIC INDEX' }}</p>
   <h1><span lang="en">{{ page.title }}</span><span lang="zh">{{ page.title_zh }}</span><span class="accent">.</span></h1>
-  <p class="page-description"><span lang="en">{{ page.description }}</span><span lang="zh">{{ page.description_zh }}</span></p>
+  {% if page.description and page.description != '' %}<p class="page-description"><span lang="en">{{ page.description }}</span><span lang="zh">{{ page.description_zh }}</span></p>{% endif %}
  </div>
 {% endunless %}
 {{ content }}
 </main>
 <footer class="site-footer container">
  <div class="footer-contact" id="contact">
-  <div class="footer-invitation"><p class="eyebrow"><span lang="en">LET’S CONNECT</span><span lang="zh">来聊聊吧</span></p><h2><span lang="en">Good ideas. New friends.<br>Let’s start a conversation.</span><span lang="zh">聊聊想法，交个朋友。</span></h2><p class="contact-note"><span lang="en">I love exchanging ideas, talking through research, and making new friends. Whether it’s a research question, a song recommendation, or just a hello—I’d be happy to hear from you.</span><span lang="zh">我很喜欢交流想法、讨论研究和认识新朋友。无论是一个研究问题、一首歌的推荐，还是简单打个招呼，都欢迎来信。</span></p></div>
   <div class="contact-details"><a class="contact-email" href="mailto:{{ site.author.email }}">{{ site.author.email }} {% include icon.html name="external" %}</a><div class="footer-socials"><a href="{{ site.author.googlescholar }}">Google Scholar {% include icon.html name="external" %}</a><a href="{{ site.author.orcid }}">ORCID {% include icon.html name="external" %}</a><a href="https://github.com/{{ site.author.github }}">GitHub {% include icon.html name="external" %}</a></div></div>
  </div>
- <div class="footer-bottom"><span>© {{ site.time | date: '%Y' }} Luyao Niu <span class="footer-dot">·</span> <span lang="en">Made with curiosity.</span><span lang="zh">保持好奇，持续探索。</span></span><a href="#main" class="back-top"><span lang="en">Back to top</span><span lang="zh">返回顶部</span> {% include icon.html name="up" %}</a></div>
+ <div class="footer-bottom"><span>© {{ site.time | date: '%Y' }} Luyao Niu <span class="footer-dot">·</span> <span lang="en">Made with curiosity.</span><span lang="zh">保持好奇，持续探索。</span></span><span class="site-version"><span lang="en">Version updated</span><span lang="zh">版本更新</span> <time datetime="{{ site.data.site_version.updated }}">{{ site.data.site_version.updated }}</time></span><a href="#main" class="back-top"><span lang="en">Back to top</span><span lang="zh">返回顶部</span> {% include icon.html name="up" %}</a></div>
 </footer>
 <div id="toast" class="toast" role="status" aria-live="polite"></div>
 </body>

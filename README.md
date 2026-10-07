@@ -27,7 +27,8 @@ The production output is `_site/`. Do not edit generated files there.
 
 | File | Purpose |
 | --- | --- |
-| `_data/current_research.yml` | Three concise current topics and public method keywords |
+| `_data/current_research.yml` | Three title-only current research topics |
+| `_data/site_version.yml` | Footer version date; update when publishing site changes |
 | `_data/profile.yml` | Bilingual role and bio, research interests, news, education |
 | `_data/experience.yml` | Bilingual professional-experience entries used by the CV and PDF |
 | `_data/cv.yml` | Awards and academic-service entries used by the CV and PDF |
@@ -38,17 +39,17 @@ The production output is `_site/`. Do not edit generated files there.
 | `_data/navigation.yml` | Bilingual top navigation |
 | `_config.yml` | Contact details, social profiles, metadata, URL/base path |
 | `_pages/about.md` | Homepage layout and opening research statement |
-| `_pages/projects.md` | Concise bilingual topic and method overview |
+| `_pages/projects.md` | Title-only current topics, broader interests and earlier work |
 | `_pages/cv.md` | Bilingual education, experience, service, honors and global engagement |
 | `_pages/service.md` | Dedicated peer-review service page |
-| `_pages/life.md` | Personal interests beyond research |
+| `_pages/life.md` | Temporarily unpublished; source retained for later restoration |
 | `files/CV.pdf` | Owner-provided personal_resume (1).pdf, copied without modification |
 | `assets/images/luyao-niu.webp` | Optimized personal photo |
 | `assets/css/academic.css` | Design tokens, typography, layout, responsive rules, print styles |
 | `assets/css/personal.css` | Service, current topics, Life page and expanded navigation |
 | `assets/js/academic.js` | Language/theme, navigation, publication search/filter, citation copying |
 
-The data files use JSON syntax, which is valid YAML. Both Jekyll and common editors can read them directly. Keep `id` values stable: homepage links and publication/project anchors use them.
+Most data files use JSON syntax, which is valid YAML. Both Jekyll and common editors can read them directly. Keep `id` values stable: homepage links and publication/project anchors use them.
 
 Optionally generate a separate data-derived CV draft after editing the CV data files:
 
@@ -60,7 +61,7 @@ The generator writes `tmp/cv-generated/CV.pdf`, excluded from Git and the site. 
 
 To reprocess approved images placed in the local `Picture/` directory, run `scripts/import_picture_assets.py` with Python containing Pillow and system Poppler. It converts single-page figure PDFs and images into WebP under `assets/images/papers/` and `assets/images/life/`. Every publication has a preview slot; a real figure opens at full size when clicked. `Picture/` stays out of Git and Jekyll output.
 
-Publication statuses: `published`, `review`, `submitted`, `preprint`, `preparation`, `manuscript`, `working`. Categories: `journal`, `conference`, `preprint` (the latter is labeled **Manuscripts** to include ongoing work). `working` denotes a manuscript draft, not a submitted or accepted paper. Featured papers use an approved figure when the mapped file exists, otherwise a text cover. `citation` is plain text, not fabricated BibTeX metadata.
+Publication statuses: `published`, `review`, `submitted`, `preprint`, `preparation`, `manuscript`, `working`. Categories: `journal`, `conference`, `preprint` (the latter is labeled **Manuscripts**). Records with status `working` are excluded from public publication lists and the optional CV draft. Featured papers use an approved figure when the mapped file exists, otherwise a text cover. `citation` is plain text, not fabricated BibTeX metadata.
 
 See `docs/CONTENT_GUIDE.md` for disclosure boundaries, reference-site observations, and figure suggestions. The local `incoming-assets/` and `.local-review/` folders are excluded from both Git and the published website. Unpublished manuscripts, internal dashboards, and their full text should never be copied into public assets.
 

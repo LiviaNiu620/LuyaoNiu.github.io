@@ -94,7 +94,7 @@ def main():
     current = read_data("current_research")
     experience = read_data("experience")["items"]
     cv = read_data("cv")
-    publications = read_data("publications")
+    publications = [paper for paper in read_data("publications") if paper['status'] != 'working']
 
     story = [
         paragraph("LUYAO NIU (SHE/HER)", "name"),
@@ -118,13 +118,10 @@ def main():
         paragraph(profile["focus"]["en"]),
         paragraph(" | ".join(item["en"] for item in profile["research"])),
         paragraph(current['title_en'], "title"),
-        paragraph(current["summary_en"]),
     ])
     for topic in current['items']:
         story.append(KeepTogether([
             paragraph(topic['en'], 'title'),
-            paragraph(topic['desc_en']),
-            paragraph(topic['methods'], 'note'),
         ]))
 
     story.extend([PageBreak(), paragraph("PROFESSIONAL EXPERIENCE", "section")])

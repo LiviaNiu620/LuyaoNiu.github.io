@@ -25,7 +25,7 @@ description_zh: "教育、研究、经历、奖项与学术服务。"
   <h2 id="research-focus-title"><span lang="en">Learning, decision-making, and coordination in intelligent systems</span><span lang="zh">智能系统中的学习、决策与协调</span></h2>
   <p><span lang="en">{{ profile.focus.en }}</span><span lang="zh">{{ profile.focus.zh }}</span></p>
   <ul class="research-interest-list">{% for interest in profile.research %}<li><span lang="en">{{ interest.en }}</span><span lang="zh">{{ interest.zh }}</span></li>{% endfor %}</ul>
-  <a class="text-link" href="{{ '/projects/' | relative_url }}#{{ site.data.current_research.id }}"><span lang="en">Current topics & methods</span><span lang="zh">当前主题与方法</span>{% include icon.html name="arrow" %}</a>
+  <a class="text-link" href="{{ '/projects/' | relative_url }}#{{ site.data.current_research.id }}"><span lang="en">Current topics</span><span lang="zh">当前主题</span>{% include icon.html name="arrow" %}</a>
 </section>
 
 <section class="cv-section" id="education" aria-labelledby="education-title">

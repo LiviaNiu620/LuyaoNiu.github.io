@@ -1,7 +1,15 @@
 /* Personal additions reuse the academic site's typography and color tokens. */
 .personal-motto { display: inline-block; font: italic 14px/1.7 var(--serif); color: var(--accent); margin: 0 0 13px; text-wrap: pretty; }
-.contact-note { max-width: 490px; margin-top: 16px; color: var(--muted); font-size: 13px; line-height: 1.85; }
-.footer-invitation { flex: 1; min-width: 0; }
+.footer-contact { padding: 28px 0; }
+.contact-details { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 18px 28px; width: 100%; text-align: left; }
+.footer-socials { margin-top: 0; flex-wrap: wrap; }
+.footer-bottom { flex-wrap: wrap; }
+.site-version { display: inline-flex; flex-wrap: wrap; gap: 6px; }
+.site-version time { font-variant-numeric: tabular-nums; }
+.current-title-list { list-style: none; padding: 0; margin: 20px 0 26px; }
+.current-title-list li + li { border-top: 1px solid var(--line); }
+.current-title-list a { display: flex; align-items: center; justify-content: space-between; gap: 20px; padding: 15px 0; font: 400 20px/1.5 var(--serif); }
+.current-title-list a:hover { color: var(--accent); }
 .home-service { padding: 38px 0; margin-top: 30px; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
 .service-groups { display: grid; grid-template-columns: 1.25fr 1fr; gap: 45px; }
 .service-group h3 { font-family: var(--serif); font-size: 23px; font-weight: 400; margin: 2px 0 16px; }
@@ -14,7 +22,7 @@
 .cv-section, .current-topics, .topic-card, .anchor-alias { scroll-margin-top: 110px; }
 .anchor-alias { display: block; height: 0; }
 .topic-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 30px; }
-.topic-card { border-top: 2px solid var(--accent); padding: 20px 0 25px; }
+.topic-card { border-top: 2px solid var(--accent); padding: 12px 0 20px; }
 .topic-number { font: 10px/1.5 var(--mono); color: var(--accent); }
 .topic-card h3 { margin: 13px 0; font: 400 24px/1.4 var(--serif); text-wrap: pretty; }
 .topic-card p { color: var(--muted); font-size: 14px; line-height: 1.8; margin-bottom: 18px; }
@@ -105,7 +113,7 @@
  .life-art-word { font-size: 49px; }
  .life-index { left: 20px; font-size: 8px; }
  .life-interest h2 { font-size: 26px; }
- .contact-note { font-size: 12px; }
+ .current-title-list a { font-size: 18px; }
  .paper-visual > .paper-type-cover { font-size: 15px; min-height: 95px; padding: 8px; }
 }
 @media (prefers-reduced-motion: reduce) { .life-art-lines { transform: none; } }

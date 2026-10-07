@@ -38,7 +38,6 @@ fs.mkdirSync(output, { recursive: true });
     "talks/",
     "cv/",
     "service/",
-    "life/",
     "404.html",
   ];
   const destinations = new Set();
@@ -99,6 +98,11 @@ fs.mkdirSync(output, { recursive: true });
         );
         assert.equal(state.emptyLinks, 0, `${route}: empty link`);
         assert.equal(state.htmlLang, lang === "zh" ? "zh-CN" : "en");
+        assert.equal(await page.locator('a[href*="/life/"]').count(), 0);
+        assert.equal(await page.locator('.footer-invitation, .contact-note').count(), 0);
+        assert.equal(await page.locator('.site-version time').textContent(), '2026-10-07');
+        assert.equal(await page.locator('.site-version time').getAttribute('datetime'), '2026-10-07');
+        if (route === 'cv/') assert(!/20\d{2}\.\d{2}/.test(await page.locator('.cv-awards').innerText()));
         report.push({ route, width, lang, ...state });
       }
       if (width === 1440 || width === 390) {
@@ -145,11 +149,12 @@ fs.mkdirSync(output, { recursive: true });
     await page.locator("#lang-toggle").click();
   assert.equal(
     await page.locator(".publication-list .paper:visible").count(),
-    19,
+    14,
   );
-  assert.equal(await page.locator('.publication-list .publication-preview').count(), 19);
-  assert.equal(await page.locator('.publication-list .publication-preview img').count(), 15);
-  assert.equal(await page.locator('.publication-list .preview-placeholder').count(), 4);
+  assert.equal(await page.locator('.publication-list .publication-preview').count(), 14);
+  assert.equal(await page.locator('.publication-list .publication-preview img').count(), 12);
+  assert.equal(await page.locator('.publication-list .preview-placeholder').count(), 2);
+  assert.equal(await page.locator('.page-description').count(), 0);
   const publicationYears = await page
     .locator(".publication-list .paper .paper-meta > span:first-child")
     .allTextContents();
@@ -170,7 +175,7 @@ fs.mkdirSync(output, { recursive: true });
   await page.locator('[data-filter="preprint"]').click();
   assert.equal(
     await page.locator(".publication-list .paper:visible").count(),
-    10,
+    5,
   );
   await page.locator('[data-filter="all"]').click();
   await page.locator("#publication-search").fill("AskNearby");
@@ -192,7 +197,7 @@ fs.mkdirSync(output, { recursive: true });
   await page.waitForFunction(() => !document.getElementById("st-proc").hidden);
   assert.equal(
     await page.locator(".publication-list .paper:visible").count(),
-    19,
+    14,
   );
   // Clipboard behavior and its actual copied content.
   await context.grantPermissions(["clipboard-read", "clipboard-write"]);
@@ -214,6 +219,7 @@ fs.mkdirSync(output, { recursive: true });
   assert.equal(await page.locator(".cv-experience-entry").count(), 6);
   assert((await page.locator("#academic-service").innerText()).includes("MSWiM"));
   assert((await page.locator("#academic-service").innerText()).includes("Transactions on Big Data"));
+  assert((await page.locator("#academic-service").innerText()).includes("Transactions on Industrial Informatics"));
   assert((await page.locator("#programs").innerText()).includes("2022–2023"));
   assert.equal(await page.locator("#skills").count(), 0);
   assert((await page.locator("#duke-kunshan").innerText()).includes("2026.06"));
@@ -223,14 +229,19 @@ fs.mkdirSync(output, { recursive: true });
   for (const city of ['台北','明尼阿波利斯','维也纳','伊斯坦布尔']) assert((await page.locator('.talk-list').innerText()).includes(city));
   await page.goto(base + "publications/");
   assert.equal(await page.locator('#mobility-anomaly').count(), 0);
-  assert.equal(await page.locator('.paper .status-badge').filter({hasText:'研究草稿'}).count(), 5);
+  assert.equal(await page.locator('.paper .status-badge').filter({hasText:'研究草稿'}).count(), 0);
+  for (const id of ['blind-spots', 'critical-roads', 'braess-recovery', 'robotaxi-competition', 'spatial-satisfaction']) assert.equal(await page.locator('#' + id).count(), 0);
   assert.equal(await page.locator('a[href*="Management"]').count(), 0);
-  await page.goto(base + "life/");
-  assert.equal(await page.locator('.life-interest').count(), 4);
-  assert.equal(await page.locator('.life-photo img').count(), 3);
-  assert.equal(await page.locator('.life-drums .life-art').count(), 1);
-  assert((await page.locator('.life-motto').innerText()).includes('dance'));
+  const removedLife = await context.request.get(base + 'life/');
+  assert.equal(removedLife.status(), 404);
+  await page.goto(base + 'projects/');
+  assert.equal(await page.locator('.topic-card').count(), 3);
+  assert.equal(await page.locator('.topic-card > :not(h3)').count(), 0);
+  await page.goto(base + 'service/');
+  assert((await page.locator('.service-page').innerText()).includes('Transactions on Industrial Informatics'));
   await page.goto(base);
+  assert.equal(await page.locator('.current-title-list li').count(), 3);
+  assert((await page.locator('.home-service').innerText()).includes('Transactions on Industrial Informatics'));
   assert((await page.locator('.news-list li').first().innerText()).includes('2026.08'));
   assert((await page.locator('.news-list li').first().innerText()).includes('SIAS Lab'));
   const resumeResponse = await context.request.get(base + 'files/CV.pdf');
@@ -291,7 +302,7 @@ fs.mkdirSync(output, { recursive: true });
   assert(await staticPage.locator("#main-nav").isVisible());
   assert.equal(
     await staticPage.locator(".publication-list .paper:visible").count(),
-    19,
+    14,
   );
   assert.equal(
     await staticPage.locator(".publication-tools").isVisible(),
