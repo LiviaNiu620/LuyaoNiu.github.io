@@ -27,7 +27,10 @@ author:
   avatar           : "assets/images/luyao-niu.webp"
   bio              : "PhD @ USC · M.Sc. @ Peking University"   # shown in sidebar
   location         : "Los Angeles, CA"
-  cv               : "files/CV.pdf"
+  # CV download is hidden while the CV is being updated.
+  # To show the download buttons again, set this to "files/CV.pdf"
+  # and remove "files/CV.pdf" from the exclude list below.
+  cv               : 
   employer         :
   pubmed           :
   googlescholar    : "https://scholar.google.com/citations?user=uAMrhyAAAAAJ&hl=zh-CN"
@@ -68,6 +71,7 @@ include:
   - _pages
   - files
 exclude:
+  - files/CV.pdf
   - .local-review
   - incoming-assets
   - Picture
@@ -77,6 +81,11 @@ exclude:
   - assets/images/papers/critical-roads.webp
   - assets/images/papers/braess-recovery.webp
   - assets/images/papers/robotaxi-competition.webp
+  - assets/images/papers/st-proc.webp
+  - assets/images/papers/spatial-identity.webp
+  - assets/images/papers/ev-adoption.webp
+  - assets/images/papers/geosplit.webp
+  - assets/images/papers/msdloss.webp
   - docs
   - scripts
   - "预览网站.command"

@@ -21,7 +21,7 @@ description_zh: "智能出行系统中的协调、信息与行为。"
 <section class="project-history" aria-labelledby="project-history-title">
   <div class="section-heading"><h2 id="project-history-title"><span lang="en">Foundations & earlier work</span><span lang="zh">研究基础与已有工作</span></h2><a class="text-link" href="{{ '/publications/' | relative_url }}"><span lang="en">Papers & manuscripts</span><span lang="zh">论文与研究稿件</span>{% include icon.html name="arrow" %}</a></div>
   <article class="project-detail" id="trajectory-reasoning"><h3><span lang="en">Understanding travel behavior from trajectories</span><span lang="zh">从轨迹理解出行行为</span></h3><p><span lang="en">My master's work explored travel intention and behavioral representation using mobility traces and language models.</span><span lang="zh">硕士阶段的研究围绕出行轨迹与语言模型，探索出行意图和行为表征。</span></p><span class="topic-methods">Trajectory learning · Behavioral representation · LLM reasoning</span></article>
-  {% assign paper_ids = 'event-causnet,asknearby,st-proc,mf-attnbilstm' | split: ',' %}
+  {% assign paper_ids = 'event-causnet,asknearby,mf-attnbilstm' | split: ',' %}
   {% for id in paper_ids %}{% assign paper = site.data.publications | where: 'id', id | first %}
   <article class="project-detail" id="{{ id }}"><h3>{{ paper.title }}</h3>{% if paper.summary_en %}<p><span lang="en">{{ paper.summary_en }}</span><span lang="zh">{{ paper.summary_zh }}</span></p>{% endif %}<a class="text-link" href="{{ '/publications/' | relative_url }}#{{ id }}"><span lang="en">Paper & resources</span><span lang="zh">论文与资源</span>{% include icon.html name="arrow" %}</a></article>
   {% endfor %}

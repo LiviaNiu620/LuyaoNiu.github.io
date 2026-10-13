@@ -50,24 +50,6 @@
     "citation": "Niu, L.; Wang, Z.; Guan, S.; Sun, P. (2025). Event-CausNet: Unlocking Causal Knowledge from Text with LLMs for Reliable Spatio-Temporal Forecasting. KDD 2027 (Submitted). https://doi.org/10.48550/arXiv.2511.12769"
   },
   {
-    "id": "st-proc",
-    "title": "ST-ProC: A Graph-Prototypical Framework for Robust Semi-Supervised Travel Mode Identification",
-    "short": "ST-ProC",
-    "authors": "Niu, L.; Huang, N.",
-    "year": 2025,
-    "kind": "preprint",
-    "status": "preprint",
-    "venue": "arXiv",
-    "featured": true,
-    "image": "trajectory",
-    "summary_en": "Learning robust travel-mode representations from trajectories with limited labels.",
-    "summary_zh": "在标签稀缺的条件下，从轨迹中学习稳健的出行方式表征。",
-    "url": "https://arxiv.org/abs/2511.13702",
-    "resource": "arXiv",
-    "doi": "10.48550/arXiv.2511.13702",
-    "citation": "Niu, L.; Huang, N. (2025). ST-ProC: A Graph-Prototypical Framework for Robust Semi-Supervised Travel Mode Identification. arXiv (Preprint). https://doi.org/10.48550/arXiv.2511.13702"
-  },
-  {
     "id": "sav-transit",
     "title": "Joint Design of Public Transit and Autonomous Vehicle Mobility Systems for Tourist Cities Considering Abnormal Trips",
     "authors": "Shi, Z.; Luo, S.; Niu, L.; Shao, C.",
@@ -98,26 +80,6 @@
     "citation": "Niu, L.; Wang, Z.; Liu, J.; Boukerche, A.; Sun, P. (2025). MF-AttnBiLSTM: Traffic Flow Prediction via Hybrid Signal Decomposition and Dual-Stream Temporal Attention Learning. GLOBECOM 2025 — 2025 IEEE Global Communications Conference, pp. 2952–2957. IEEE. https://ieeexplore.ieee.org/abstract/document/11432074/"
   },
   {
-    "id": "spatial-identity",
-    "title": "Leveraging Large Language Models to Measure Cross-Border Spatial Identity from Multilingual Social Media Data",
-    "authors": "Niu, L.; Wang, Y.; He, S.; Zhang, W.",
-    "year": 2025,
-    "kind": "preprint",
-    "status": "review",
-    "venue": "Transactions in GIS",
-    "citation": "Niu, L.; Wang, Y.; He, S.; Zhang, W. (2025). Leveraging Large Language Models to Measure Cross-Border Spatial Identity from Multilingual Social Media Data. Transactions in GIS (Under review)."
-  },
-  {
-    "id": "ev-adoption",
-    "title": "Rebound or Substitution? The Causal Effect of Electric Vehicle Adoption on Individual Travel Behaviour: A Quasi-Experiment",
-    "authors": "Liu, C.; Niu, L.; Zhang, W.",
-    "year": 2025,
-    "kind": "journal",
-    "status": "review",
-    "venue": "Applied Geography",
-    "citation": "Liu, C.; Niu, L.; Zhang, W. (2025). Rebound or Substitution? The Causal Effect of Electric Vehicle Adoption on Individual Travel Behaviour: A Quasi-Experiment. Applied Geography (Under review)."
-  },
-  {
     "id": "regional-integration",
     "title": "Evaluating the Causal Impacts on Spatial Satisfaction Sentiment of Shenzhen–Hong Kong Regional Integration Policies: An Interrupted Time Series Study Leveraging LLMs",
     "authors": "Niu, L.; Wang, Y.; He, S.; Zhang, W.",
@@ -140,16 +102,6 @@
     "citation": "Niu, L.; Gu, J.; Liu, C.; Zhang, W. (2025). Why Public Transport Policies Work or Not? A Meta-analysis Based on the Behaviour Change Wheel. AESOP 2025."
   },
   {
-    "id": "traffic-assignment",
-    "title": "A Traffic Assignment Model Balancing User Preference and System Optimum",
-    "authors": "Niu, L.; Xing, X.; Liu, Z.; Yao, E.",
-    "year": 2025,
-    "kind": "preprint",
-    "status": "preparation",
-    "venue": "",
-    "citation": "Niu, L.; Xing, X.; Liu, Z.; Yao, E. (2025). A Traffic Assignment Model Balancing User Preference and System Optimum. In preparation."
-  },
-  {
     "id": "plangpt",
     "title": "PlanGPT: Enhancing Urban Planning with Tailored Language Model and Efficient Retrieval",
     "authors": "Zhu, H.; Zhang, W.; Huang, N.; Li, B.; Niu, L.; …; Liu, X.",
@@ -161,30 +113,6 @@
     "resource": "arXiv",
     "doi": "10.48550/arXiv.2402.19273",
     "citation": "Zhu, H.; Zhang, W.; Huang, N.; Li, B.; Niu, L.; …; Liu, X. (2024). PlanGPT: Enhancing Urban Planning with Tailored Language Model and Efficient Retrieval. arXiv (Preprint). https://doi.org/10.48550/arXiv.2402.19273"
-  },
-  {
-    "id": "geosplit",
-    "title": "GeoSplit: Selective Edge–Server Map Acquisition for Cross-User Travel-Mode Recognition",
-    "authors": "Wang, Z.*; Niu, L.*; Li, R.; Ban, J. (X.).",
-    "year": 2027,
-    "kind": "conference",
-    "status": "submitted",
-    "venue": "ICASSP 2027",
-    "note_en": "* Equal contribution.",
-    "note_zh": "* 共同一作。",
-    "citation": "Wang, Z.*; Niu, L.*; Li, R.; Ban, J. (X.). (2027). GeoSplit: Selective Edge–Server Map Acquisition for Cross-User Travel-Mode Recognition. ICASSP 2027 (Submitted)."
-  },
-  {
-    "id": "msdloss",
-    "title": "MSDLoss: EMA-Adaptive Multi-Scale Difference Loss for Time Series Forecasting",
-    "authors": "Wang, Z.*; Liao, B.*; Niu, L.; Li, R.; Ban, J. (X.).",
-    "year": 2027,
-    "kind": "conference",
-    "status": "submitted",
-    "venue": "ICASSP 2027",
-    "note_en": "* Equal contribution.",
-    "note_zh": "* 共同一作。",
-    "citation": "Wang, Z.*; Liao, B.*; Niu, L.; Li, R.; Ban, J. (X.). (2027). MSDLoss: EMA-Adaptive Multi-Scale Difference Loss for Time Series Forecasting. ICASSP 2027 (Submitted)."
   },
   {
     "id":"blind-spots",

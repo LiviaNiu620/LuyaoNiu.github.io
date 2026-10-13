@@ -10,7 +10,7 @@ description_zh: "教育、研究、经历、奖项与学术服务。"
 {% assign experience = site.data.experience.items %}
 {% assign cv = site.data.cv %}
 <div class="cv-toolbar">
-  <a class="button button-primary" href="{{ site.author.cv | relative_url }}">{% include icon.html name="file" %}<span lang="en">Download CV</span><span lang="zh">下载简历</span><span class="button-note">PDF</span></a>
+  {% if site.author.cv %}<a class="button button-primary" href="{{ site.author.cv | relative_url }}">{% include icon.html name="file" %}<span lang="en">Download CV</span><span lang="zh">下载简历</span><span class="button-note">PDF</span></a>{% endif %}
   <nav class="section-nav" aria-label="CV sections">
     <a href="#education"><span lang="en">Education</span><span lang="zh">教育</span></a>
     <a href="#experience"><span lang="en">Experience</span><span lang="zh">经历</span></a>

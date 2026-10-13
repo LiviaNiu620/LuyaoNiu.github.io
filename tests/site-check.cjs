@@ -100,8 +100,8 @@ fs.mkdirSync(output, { recursive: true });
         assert.equal(state.htmlLang, lang === "zh" ? "zh-CN" : "en");
         assert.equal(await page.locator('a[href*="/life/"]').count(), 0);
         assert.equal(await page.locator('.footer-invitation, .contact-note').count(), 0);
-        assert.equal(await page.locator('.site-version time').textContent(), '2026-10-07');
-        assert.equal(await page.locator('.site-version time').getAttribute('datetime'), '2026-10-07');
+        assert.equal(await page.locator('.site-version time').textContent(), '2026-10-12');
+        assert.equal(await page.locator('.site-version time').getAttribute('datetime'), '2026-10-12');
         if (route === 'cv/') assert(!/20\d{2}\.\d{2}/.test(await page.locator('.cv-awards').innerText()));
         report.push({ route, width, lang, ...state });
       }
@@ -149,11 +149,11 @@ fs.mkdirSync(output, { recursive: true });
     await page.locator("#lang-toggle").click();
   assert.equal(
     await page.locator(".publication-list .paper:visible").count(),
-    14,
+    8,
   );
-  assert.equal(await page.locator('.publication-list .publication-preview').count(), 14);
-  assert.equal(await page.locator('.publication-list .publication-preview img').count(), 12);
-  assert.equal(await page.locator('.publication-list .preview-placeholder').count(), 2);
+  assert.equal(await page.locator('.publication-list .publication-preview').count(), 8);
+  assert.equal(await page.locator('.publication-list .publication-preview img').count(), 7);
+  assert.equal(await page.locator('.publication-list .preview-placeholder').count(), 1);
   assert.equal(await page.locator('.page-description').count(), 0);
   const publicationYears = await page
     .locator(".publication-list .paper .paper-meta > span:first-child")
@@ -165,17 +165,17 @@ fs.mkdirSync(output, { recursive: true });
   await page.locator('[data-filter="journal"]').click();
   assert.equal(
     await page.locator(".publication-list .paper:visible").count(),
-    3,
+    2,
   );
   await page.locator('[data-filter="conference"]').click();
   assert.equal(
     await page.locator(".publication-list .paper:visible").count(),
-    6,
+    4,
   );
   await page.locator('[data-filter="preprint"]').click();
   assert.equal(
     await page.locator(".publication-list .paper:visible").count(),
-    5,
+    2,
   );
   await page.locator('[data-filter="all"]').click();
   await page.locator("#publication-search").fill("AskNearby");
@@ -192,22 +192,22 @@ fs.mkdirSync(output, { recursive: true });
   await page.locator("#publication-search").fill("no-such-publication");
   assert(await page.locator("#no-results").isVisible());
   await page.evaluate(() => {
-    location.hash = "st-proc";
+    location.hash = "event-causnet";
   });
-  await page.waitForFunction(() => !document.getElementById("st-proc").hidden);
+  await page.waitForFunction(() => !document.getElementById("event-causnet").hidden);
   assert.equal(
     await page.locator(".publication-list .paper:visible").count(),
-    14,
+    8,
   );
   // Clipboard behavior and its actual copied content.
   await context.grantPermissions(["clipboard-read", "clipboard-write"]);
-  await page.locator("#st-proc .copy-citation").click();
+  await page.locator("#event-causnet .copy-citation").click();
   await page.waitForFunction(() =>
     document.getElementById("toast").classList.contains("visible"),
   );
   assert(
     (await page.evaluate(() => navigator.clipboard.readText())).includes(
-      "ST-ProC",
+      "Event-CausNet",
     ),
   );
   await page.locator("#lang-toggle").click();
@@ -216,13 +216,13 @@ fs.mkdirSync(output, { recursive: true });
   assert.equal(await page.getAttribute("html", "data-lang"), "zh");
   assert.equal(await page.getAttribute("html", "data-theme"), "dark");
   await page.goto(base + "cv/");
-  assert.equal(await page.locator(".cv-experience-entry").count(), 6);
+  assert.equal(await page.locator(".cv-experience-entry").count(), 3);
   assert((await page.locator("#academic-service").innerText()).includes("MSWiM"));
   assert((await page.locator("#academic-service").innerText()).includes("Transactions on Big Data"));
   assert((await page.locator("#academic-service").innerText()).includes("Transactions on Industrial Informatics"));
   assert((await page.locator("#programs").innerText()).includes("2022–2023"));
   assert.equal(await page.locator("#skills").count(), 0);
-  assert((await page.locator("#duke-kunshan").innerText()).includes("2026.06"));
+  assert((await page.locator("#peking-university").innerText()).includes("2026.06"));
   assert.equal(await page.locator(".cv-experience-entry li:visible").evaluateAll(items => items.filter(item => !item.innerText.trim()).length), 0);
   await page.goto(base + "talks/");
   assert.deepEqual(await page.locator('.talk-date time').evaluateAll(items => items.map(item => item.getAttribute('datetime'))), ['2025-12','2025-11','2025-09','2025-07']);
@@ -241,12 +241,11 @@ fs.mkdirSync(output, { recursive: true });
   assert((await page.locator('.service-page').innerText()).includes('Transactions on Industrial Informatics'));
   await page.goto(base);
   assert.equal(await page.locator('.current-title-list li').count(), 3);
-  assert((await page.locator('.home-service').innerText()).includes('Transactions on Industrial Informatics'));
+  assert.equal(await page.locator('.home-service').count(), 0);
   assert((await page.locator('.news-list li').first().innerText()).includes('2026.08'));
   assert((await page.locator('.news-list li').first().innerText()).includes('SIAS Lab'));
-  const resumeResponse = await context.request.get(base + 'files/CV.pdf');
-  assert(resumeResponse.ok());
-  assert((await resumeResponse.body()).equals(fs.readFileSync(path.join(__dirname, '../files/CV.pdf'))), 'Downloaded resume must match the owner-provided PDF');
+  // The CV download is hidden while the CV is being updated (see _config.yml author.cv).
+  assert.equal(await page.locator('a[href$="CV.pdf"]').count(), 0, 'CV download link should be hidden');
   await page.screenshot({
     path: path.join(output, "home-dark-zh.png"),
     fullPage: true,
@@ -302,7 +301,7 @@ fs.mkdirSync(output, { recursive: true });
   assert(await staticPage.locator("#main-nav").isVisible());
   assert.equal(
     await staticPage.locator(".publication-list .paper:visible").count(),
-    14,
+    8,
   );
   assert.equal(
     await staticPage.locator(".publication-tools").isVisible(),

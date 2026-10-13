@@ -48,7 +48,7 @@
       "aria-label",
       zh ? "切换导航菜单" : "Toggle navigation menu",
     );
-    $('meta[name="theme-color"]').content = dark ? "#1c201e" : "#f8f7f4";
+    $('meta[name="theme-color"]').content = dark ? "#1a1714" : "#fbfaf7";
     const search = $("#publication-search");
     if (search)
       search.placeholder = zh
