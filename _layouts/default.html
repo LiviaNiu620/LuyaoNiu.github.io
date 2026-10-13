@@ -18,7 +18,8 @@
   <script>
   (function(){var r=document.documentElement;try{var t=localStorage.getItem('theme'),l=localStorage.getItem('lang');r.dataset.theme=t==='dark'||t==='light'?t:(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');r.dataset.lang=l==='zh'?'zh':'en';r.lang=r.dataset.lang==='zh'?'zh-CN':'en';}catch(e){}})();
   </script>
-  <link rel="preload" href="{{ '/assets/fonts/overpass-latin-wght-normal.woff2' | relative_url }}" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="{{ '/assets/fonts/literata-latin-wght-normal.woff2' | relative_url }}" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="{{ '/assets/fonts/lxgw-wenkai/lxgw-wenkai.css' | relative_url }}">
   <link rel="stylesheet" href="{{ '/assets/css/academic.css' | relative_url }}">
   <link rel="stylesheet" href="{{ '/assets/css/personal.css' | relative_url }}">
   <link rel="stylesheet" href="{{ '/assets/css/refresh.css' | relative_url }}">

@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Refresh (2026-10): Overpass type, oat/caramel palette, big-name hero,
+   Refresh (2026-10): Literata + LXGW WenKai type, oat/caramel palette, big-name hero,
    transit-line research strip. Loaded after academic.css and personal.css; tokens live in
    academic.css (:root). Keep component overrides here, grouped by section.
    ========================================================================== */
@@ -94,9 +94,9 @@ time, .education-date, .cv-entry-date, .news-list time, .results-count, .paper-m
   margin: 8px 0 0;
   font-family: var(--sans);
   font-size: clamp(56px, 7vw, 96px);
-  font-weight: 700;
-  line-height: 0.98;
-  letter-spacing: -0.025em;
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: -0.015em;
   white-space: normal;
   color: var(--ink);
 }
@@ -507,6 +507,7 @@ html[data-theme="dark"] .filter-group button[aria-pressed="true"] { color: var(-
   .section-heading h2,
   .news-section .section-heading h2 { font-size: 26px; }
   .text-link { font-size: 14px; }
+  .section-heading { flex-wrap: wrap; row-gap: 4px; }
   .paper-featured { grid-template-columns: 96px minmax(0, 1fr); gap: 16px; }
   .paper-featured h3 { font-size: 16px; }
   .paper-summary { font-size: 14px; }
