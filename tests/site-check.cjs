@@ -100,8 +100,8 @@ fs.mkdirSync(output, { recursive: true });
         assert.equal(state.htmlLang, lang === "zh" ? "zh-CN" : "en");
         assert.equal(await page.locator('a[href*="/life/"]').count(), 0);
         assert.equal(await page.locator('.footer-invitation, .contact-note').count(), 0);
-        assert.equal(await page.locator('.site-version time').textContent(), '2026-10-12');
-        assert.equal(await page.locator('.site-version time').getAttribute('datetime'), '2026-10-12');
+        assert.equal(await page.locator('.site-version time').textContent(), '2026-10-27');
+        assert.equal(await page.locator('.site-version time').getAttribute('datetime'), '2026-10-27');
         if (route === 'cv/') assert(!/20\d{2}\.\d{2}/.test(await page.locator('.cv-awards').innerText()));
         report.push({ route, width, lang, ...state });
       }
@@ -149,10 +149,10 @@ fs.mkdirSync(output, { recursive: true });
     await page.locator("#lang-toggle").click();
   assert.equal(
     await page.locator(".publication-list .paper:visible").count(),
-    8,
+    9,
   );
-  assert.equal(await page.locator('.publication-list .publication-preview').count(), 8);
-  assert.equal(await page.locator('.publication-list .publication-preview img').count(), 7);
+  assert.equal(await page.locator('.publication-list .publication-preview').count(), 9);
+  assert.equal(await page.locator('.publication-list .publication-preview img').count(), 8);
   assert.equal(await page.locator('.publication-list .preview-placeholder').count(), 1);
   assert.equal(await page.locator('.page-description').count(), 0);
   const publicationYears = await page
@@ -175,7 +175,7 @@ fs.mkdirSync(output, { recursive: true });
   await page.locator('[data-filter="preprint"]').click();
   assert.equal(
     await page.locator(".publication-list .paper:visible").count(),
-    2,
+    3,
   );
   await page.locator('[data-filter="all"]').click();
   await page.locator("#publication-search").fill("AskNearby");
@@ -197,7 +197,7 @@ fs.mkdirSync(output, { recursive: true });
   await page.waitForFunction(() => !document.getElementById("event-causnet").hidden);
   assert.equal(
     await page.locator(".publication-list .paper:visible").count(),
-    8,
+    9,
   );
   // Clipboard behavior and its actual copied content.
   await context.grantPermissions(["clipboard-read", "clipboard-write"]);
@@ -301,7 +301,7 @@ fs.mkdirSync(output, { recursive: true });
   assert(await staticPage.locator("#main-nav").isVisible());
   assert.equal(
     await staticPage.locator(".publication-list .paper:visible").count(),
-    8,
+    9,
   );
   assert.equal(
     await staticPage.locator(".publication-tools").isVisible(),

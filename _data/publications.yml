@@ -1,5 +1,21 @@
 [
   {
+    "id": "geosplit",
+    "title": "GeoSplit: Selective Edge–Server Map Acquisition for Cross-User Travel-Mode Recognition",
+    "short": "GeoSplit",
+    "authors": "Wang, Z.*; Niu, L.*; Li, R.; Ban, J. (X.)",
+    "year": 2026,
+    "kind": "preprint",
+    "status": "preprint",
+    "venue": "arXiv",
+    "url": "https://arxiv.org/abs/2610.26707",
+    "resource": "arXiv",
+    "doi": "10.48550/arXiv.2610.26707",
+    "note_en": "* Equal contribution.",
+    "note_zh": "* 共同一作。",
+    "citation": "Wang, Z.*; Niu, L.*; Li, R.; Ban, J. (X.) (2026). GeoSplit: Selective Edge–Server Map Acquisition for Cross-User Travel-Mode Recognition. arXiv preprint arXiv:2610.26707. https://doi.org/10.48550/arXiv.2610.26707"
+  },
+  {
     "id": "cross-border-mobility-health",
     "title": "Gender and Age Disparities in Public Health Crisis Disruptions to Cross-Border Mobility: A Causal Analysis of Daily Flows Between Shenzhen and Hong Kong",
     "authors": "Niu, C.; He, S.; Fang, C.; Niu, L.; Xiao, Y.; Zhang, W.",

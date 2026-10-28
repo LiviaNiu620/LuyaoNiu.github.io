@@ -84,7 +84,6 @@ exclude:
   - assets/images/papers/st-proc.webp
   - assets/images/papers/spatial-identity.webp
   - assets/images/papers/ev-adoption.webp
-  - assets/images/papers/geosplit.webp
   - assets/images/papers/msdloss.webp
   - docs
   - scripts
