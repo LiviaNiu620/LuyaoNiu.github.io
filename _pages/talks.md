@@ -13,7 +13,7 @@ description_zh: "分享研究、结识同行，也让讨论继续。"
 {% assign paper = site.data.publications | where: 'id', talk.paper_id | first %}
 <article class="talk" id="talk-{{ talk.paper_id }}">
   <div class="talk-date"><time datetime="{{ talk.date }}"><span lang="en">{{ talk.date_en }}</span><span lang="zh">{{ talk.date_zh }}</span></time><p class="talk-location"><span lang="en">{{ talk.location_en }}</span><span lang="zh">{{ talk.location_zh }}</span></p><span class="oral-badge"><span lang="en">Oral presentation</span><span lang="zh">口头报告</span></span></div>
-  <div><p class="eyebrow">{{ talk.venue }}</p><h2>{{ paper.title }}</h2><a class="text-link" href="{{ '/publications/' | relative_url }}#{{ paper.id }}"><span lang="en">Publication details</span><span lang="zh">论文详情</span>{% include icon.html name="arrow" %}</a></div>
+  <div><p class="eyebrow">{{ talk.venue }}</p><h2>{{ talk.title | default: paper.title }}</h2>{% if talk.session_en %}<p class="talk-session"><span lang="en">{{ talk.session_en }}</span><span lang="zh">{{ talk.session_zh }}</span></p>{% endif %}{% if paper and paper.status != 'working' %}<a class="text-link" href="{{ '/publications/' | relative_url }}#{{ paper.id }}"><span lang="en">Publication details</span><span lang="zh">论文详情</span>{% include icon.html name="arrow" %}</a>{% endif %}</div>
 </article>
 {% endfor %}
 </div>

@@ -100,8 +100,8 @@ fs.mkdirSync(output, { recursive: true });
         assert.equal(state.htmlLang, lang === "zh" ? "zh-CN" : "en");
         assert.equal(await page.locator('a[href*="/life/"]').count(), 0);
         assert.equal(await page.locator('.footer-invitation, .contact-note').count(), 0);
-        assert.equal(await page.locator('.site-version time').textContent(), '2026-10-27');
-        assert.equal(await page.locator('.site-version time').getAttribute('datetime'), '2026-10-27');
+        assert.equal(await page.locator('.site-version time').textContent(), '2026-11-07');
+        assert.equal(await page.locator('.site-version time').getAttribute('datetime'), '2026-11-07');
         if (route === 'cv/') assert(!/20\d{2}\.\d{2}/.test(await page.locator('.cv-awards').innerText()));
         report.push({ route, width, lang, ...state });
       }
@@ -225,8 +225,8 @@ fs.mkdirSync(output, { recursive: true });
   assert((await page.locator("#peking-university").innerText()).includes("2026.06"));
   assert.equal(await page.locator(".cv-experience-entry li:visible").evaluateAll(items => items.filter(item => !item.innerText.trim()).length), 0);
   await page.goto(base + "talks/");
-  assert.deepEqual(await page.locator('.talk-date time').evaluateAll(items => items.map(item => item.getAttribute('datetime'))), ['2025-12','2025-11','2025-09','2025-07']);
-  for (const city of ['台北','明尼阿波利斯','维也纳','伊斯坦布尔']) assert((await page.locator('.talk-list').innerText()).includes(city));
+  assert.deepEqual(await page.locator('.talk-date time').evaluateAll(items => items.map(item => item.getAttribute('datetime'))), ['2026-11','2025-12','2025-11','2025-09','2025-07']);
+  for (const city of ['旧金山','台北','明尼阿波利斯','维也纳','伊斯坦布尔']) assert((await page.locator('.talk-list').innerText()).includes(city));
   await page.goto(base + "publications/");
   assert.equal(await page.locator('#mobility-anomaly').count(), 0);
   assert.equal(await page.locator('.paper .status-badge').filter({hasText:'研究草稿'}).count(), 0);
@@ -242,8 +242,9 @@ fs.mkdirSync(output, { recursive: true });
   await page.goto(base);
   assert.equal(await page.locator('.current-title-list li').count(), 3);
   assert.equal(await page.locator('.home-service').count(), 0);
-  assert((await page.locator('.news-list li').first().innerText()).includes('2026.08'));
-  assert((await page.locator('.news-list li').first().innerText()).includes('SIAS Lab'));
+  assert((await page.locator('.news-list li').first().innerText()).includes('2026.11'));
+  assert((await page.locator('.news-list li').first().innerText()).includes('INFORMS'));
+  assert((await page.locator('.news-list li').nth(1).innerText()).includes('SIAS Lab'));
   // The CV download is hidden while the CV is being updated (see _config.yml author.cv).
   assert.equal(await page.locator('a[href$="CV.pdf"]').count(), 0, 'CV download link should be hidden');
   await page.screenshot({

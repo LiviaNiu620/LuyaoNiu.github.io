@@ -95,6 +95,12 @@
   ],
   "news": [
     {
+      "date": "2026.11",
+      "en": "Presented our work on selective coordination of autonomous vehicle fleets to protect critical roads during wildfires at the INFORMS 2026 Annual Meeting in San Francisco.",
+      "zh": "在旧金山 INFORMS 2026 年会上报告了自动驾驶车队选择性协调、在山火中保护关键道路的研究。",
+      "url": "/talks/#talk-critical-roads"
+    },
+    {
       "date":"2026.08",
       "en":"Arrived in Los Angeles to begin my PhD at USC and joined the SIAS Lab, advised by Prof. Ruolin Li. A great adventure awaits!",
       "zh":"来到洛杉矶，开启 USC 博士旅程，加入 SIAS Lab，师从 Ruolin Li 教授。新的冒险，正在前方！",

@@ -12,6 +12,10 @@ description_zh: "智能出行系统中的协调、信息与行为。"
   <div class="section-heading"><div><p class="eyebrow"><span lang="en">CURRENT QUESTIONS</span><span lang="zh">当前问题</span></p><h2 id="current-topics-title"><span lang="en">{{ current.title_en }}</span><span lang="zh">{{ current.title_zh }}</span></h2></div></div>
   <div class="topic-grid">{% for topic in current.items %}<article class="topic-card" id="{{ topic.id }}"><h3><span lang="en">{{ topic.en }}</span><span lang="zh">{{ topic.zh }}</span></h3></article>{% endfor %}</div>
 </section>
+<section class="recent-work" aria-labelledby="recent-work-title">
+  <div class="section-heading"><h2 id="recent-work-title"><span lang="en">Recent work</span><span lang="zh">近期工作</span></h2></div>
+  <article class="project-detail" id="wildfire-coordination"><h3>Who Should Coordinate with Whom? Selective Coordination of Autonomous Vehicle Fleets to Protect Critical Roads during Wildfires</h3><p><span lang="en">This work studies selective coordination among commercial autonomous vehicle fleets: which fleets should coordinate, and with whom, to protect critical roads during wildfires.</span><span lang="zh">这项工作研究商业自动驾驶车队之间的选择性协调：在山火中，哪些车队应当与谁协调，才能保护关键道路。</span></p><span class="topic-methods"><span lang="en">Presented at the INFORMS 2026 Annual Meeting · with Prof. Ruolin Li</span><span lang="zh">INFORMS 2026 年会报告 · 与 Ruolin Li 教授合作</span></span><a class="text-link" href="{{ '/talks/' | relative_url }}#talk-critical-roads"><span lang="en">Talk details</span><span lang="zh">报告详情</span>{% include icon.html name="arrow" %}</a></article>
+</section>
 <section class="research-threads" aria-labelledby="research-threads-title">
   <div class="section-heading"><div><p class="eyebrow"><span lang="en">A CONNECTED RESEARCH AGENDA</span><span lang="zh">相互连接的研究脉络</span></p><h2 id="research-threads-title"><span lang="en">Learning. Decisions. Coordination.</span><span lang="zh">学习、决策与协调</span></h2></div></div>
   {% for interest in site.data.profile.research %}
