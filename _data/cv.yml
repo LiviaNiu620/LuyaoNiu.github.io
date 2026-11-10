@@ -34,16 +34,26 @@
     {
       "role_en": "Journal reviewing",
       "role_zh": "期刊审稿",
-      "venues": ["IEEE Transactions on Dependable and Secure Computing (TDSC)", "IEEE Transactions on Big Data (TBD)", "IEEE Transactions on Industrial Informatics (TII)"],
-      "venues_en": "IEEE Transactions on Dependable and Secure Computing (TDSC); IEEE Transactions on Big Data (TBD); IEEE Transactions on Industrial Informatics (TII)",
-      "venues_zh": "IEEE Transactions on Dependable and Secure Computing (TDSC)；IEEE Transactions on Big Data (TBD)；IEEE Transactions on Industrial Informatics (TII)"
+      "venues": [
+        "IEEE Transactions on Information Forensics and Security (TIFS)",
+        "IEEE Transactions on Dependable and Secure Computing (TDSC)",
+        "IEEE Transactions on Industrial Informatics (TII)",
+        "IEEE Transactions on Big Data (TBD)"
+      ],
+      "venues_en": "IEEE Transactions on Information Forensics and Security (TIFS); IEEE Transactions on Dependable and Secure Computing (TDSC); IEEE Transactions on Industrial Informatics (TII); IEEE Transactions on Big Data (TBD)",
+      "venues_zh": "IEEE Transactions on Information Forensics and Security (TIFS)；IEEE Transactions on Dependable and Secure Computing (TDSC)；IEEE Transactions on Industrial Informatics (TII)；IEEE Transactions on Big Data (TBD)"
     },
     {
       "role_en": "Conference reviewing",
       "role_zh": "会议审稿",
-      "venues": ["ACM MSWiM", "IEEE GLOBECOM", "Transportation Research Board (TRB)"],
-      "venues_en": "ACM MSWiM; IEEE GLOBECOM; Transportation Research Board (TRB)",
-      "venues_zh": "ACM MSWiM；IEEE GLOBECOM；美国交通研究委员会（TRB）"
+      "venues": [
+        "American Control Conference (ACC)",
+        "IEEE GLOBECOM",
+        "ACM MSWiM",
+        "Transportation Research Board (TRB)"
+      ],
+      "venues_en": "American Control Conference (ACC); IEEE GLOBECOM; ACM MSWiM; Transportation Research Board (TRB)",
+      "venues_zh": "美国控制会议（ACC）；IEEE GLOBECOM；ACM MSWiM；美国交通研究委员会（TRB）"
     }
   ],
   "programs": [
