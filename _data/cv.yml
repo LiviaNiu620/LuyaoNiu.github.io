@@ -38,10 +38,12 @@
         "IEEE Transactions on Information Forensics and Security (TIFS)",
         "IEEE Transactions on Dependable and Secure Computing (TDSC)",
         "IEEE Transactions on Industrial Informatics (TII)",
-        "IEEE Transactions on Big Data (TBD)"
+        "IEEE Transactions on Big Data (TBD)",
+        "IEEE Access",
+        "Intelligent Transportation Infrastructure (ITI)"
       ],
-      "venues_en": "IEEE Transactions on Information Forensics and Security (TIFS); IEEE Transactions on Dependable and Secure Computing (TDSC); IEEE Transactions on Industrial Informatics (TII); IEEE Transactions on Big Data (TBD)",
-      "venues_zh": "IEEE Transactions on Information Forensics and Security (TIFS)；IEEE Transactions on Dependable and Secure Computing (TDSC)；IEEE Transactions on Industrial Informatics (TII)；IEEE Transactions on Big Data (TBD)"
+      "venues_en": "IEEE Transactions on Information Forensics and Security (TIFS); IEEE Transactions on Dependable and Secure Computing (TDSC); IEEE Transactions on Industrial Informatics (TII); IEEE Transactions on Big Data (TBD); IEEE Access; Intelligent Transportation Infrastructure (ITI)",
+      "venues_zh": "IEEE Transactions on Information Forensics and Security (TIFS)；IEEE Transactions on Dependable and Secure Computing (TDSC)；IEEE Transactions on Industrial Informatics (TII)；IEEE Transactions on Big Data (TBD)；IEEE Access；Intelligent Transportation Infrastructure (ITI)"
     },
     {
       "role_en": "Conference reviewing",

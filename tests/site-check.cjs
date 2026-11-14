@@ -100,8 +100,8 @@ fs.mkdirSync(output, { recursive: true });
         assert.equal(state.htmlLang, lang === "zh" ? "zh-CN" : "en");
         assert.equal(await page.locator('a[href*="/life/"]').count(), 0);
         assert.equal(await page.locator('.footer-invitation, .contact-note').count(), 0);
-        assert.equal(await page.locator('.site-version time').textContent(), '2026-11-10');
-        assert.equal(await page.locator('.site-version time').getAttribute('datetime'), '2026-11-10');
+        assert.equal(await page.locator('.site-version time').textContent(), '2026-11-13');
+        assert.equal(await page.locator('.site-version time').getAttribute('datetime'), '2026-11-13');
         if (route === 'cv/') assert(!/20\d{2}\.\d{2}/.test(await page.locator('.cv-awards').innerText()));
         report.push({ route, width, lang, ...state });
       }
@@ -222,6 +222,7 @@ fs.mkdirSync(output, { recursive: true });
   assert((await page.locator("#academic-service").innerText()).includes("Transactions on Industrial Informatics"));
   assert((await page.locator("#academic-service").innerText()).includes("Information Forensics and Security"));
   assert((await page.locator("#academic-service").innerText()).includes("American Control Conference"));
+  assert((await page.locator("#academic-service").innerText()).includes("IEEE Access"));
   assert((await page.locator("#programs").innerText()).includes("2022–2023"));
   assert.equal(await page.locator("#skills").count(), 0);
   assert((await page.locator("#peking-university").innerText()).includes("2026.06"));
