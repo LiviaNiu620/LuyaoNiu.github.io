@@ -1,0 +1,13 @@
+{% assign paper = include.paper %}
+{% assign preview = site.data.paper_images[paper.id] %}
+{% assign preview_file = site.static_files | where: 'path', preview.path | first %}
+<article class="pub">
+ {% if preview and preview_file %}<a class="pub-thumb" href="{{ '/publications/' | relative_url }}#{{ paper.id }}" tabindex="-1" aria-hidden="true"><img src="{{ preview.path | relative_url }}" alt="" width="240" height="180" loading="lazy"></a>{% endif %}
+ <div class="pub-body">
+  <h3><a href="{{ paper.url | default: '/publications/' | relative_url }}{% unless paper.url %}#{{ paper.id }}{% endunless %}">{{ paper.title }}</a></h3>
+  {% if paper.authors and paper.authors != '' %}<p class="pub-authors">{{ paper.authors | replace: 'Niu, L.', '<strong>Niu, L.</strong>' }}</p>{% endif %}
+  <p class="pub-venue">{% case paper.status %}{% when 'published' %}<em>{{ paper.venue }}</em>, {{ paper.year }}{% when 'submitted' %}<span lang="en">Submitted to {{ paper.venue }}</span><span lang="zh">投稿至 {{ paper.venue }}</span>{% when 'review' %}<span lang="en">Under review</span><span lang="zh">在审</span>{% else %}<span lang="en">Preprint</span><span lang="zh">预印本</span>, {{ paper.year }}{% endcase %}{% if paper.oral %} <span class="pub-badge">Oral</span>{% endif %}</p>
+  {% if paper.summary_en %}<p class="pub-summary"><span lang="en">{{ paper.summary_en }}</span><span lang="zh">{{ paper.summary_zh }}</span></p>{% endif %}
+  <div class="pub-links">{% if paper.url %}<a class="pill" href="{{ paper.url }}">{{ paper.resource | default: 'Paper' }}</a>{% endif %}<a class="pill" href="{{ '/projects/' | relative_url }}#{{ paper.id }}"><span lang="en">Project</span><span lang="zh">项目</span></a>{% if paper.citation %}<button class="pill copy-citation" type="button" data-citation="{{ paper.citation | escape }}"><span lang="en">Cite</span><span lang="zh">引用</span></button>{% endif %}</div>
+ </div>
+</article>

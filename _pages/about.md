@@ -6,28 +6,64 @@ redirect_from:
   - /about.html
 ---
 {% assign profile = site.data.profile %}
-<section class="hero" aria-labelledby="hero-name">
- <div class="hero-copy">
-  <h1 id="hero-name">Luyao Niu</h1>
-  <p class="hero-role"><span lang="en">{{ profile.role.en | replace: ' · ', ', ' }}</span><span lang="zh">{{ profile.role.zh | split: ' · ' | reverse | join: '' }}</span></p>
-  <p class="personal-motto">{{ site.data.life.motto }}</p>
-  <p class="hero-statement"><span lang="en">{{ profile.intro.en }}</span><span lang="zh">{{ profile.intro.zh }}</span></p>
-  <p class="hero-bio"><span lang="en">{{ profile.bio.en }}</span><span lang="zh">{{ profile.bio.zh }}</span></p>
-  <p class="hero-background"><span lang="en">Previously, I studied Smart City & Big Data at <a href="https://www.pku.edu.cn/">Peking University</a>, following a B.Sc. in Traffic Engineering at <a href="https://en.bjtu.edu.cn/">Beijing Jiaotong University</a>.</span><span lang="zh">此前，我在<a href="https://www.pku.edu.cn/">北京大学</a>学习智慧城市与大数据，本科就读于<a href="https://www.bjtu.edu.cn/">北京交通大学</a>交通工程专业，辅修金融学。</span></p>
-  <div class="hero-actions"><a class="button button-primary" href="{{ site.author.googlescholar }}">{% include icon.html name="scholar" %} Google Scholar {% include icon.html name="external" %}</a>{% if site.author.cv %}<a class="button button-secondary" href="{{ site.author.cv | relative_url }}">{% include icon.html name="file" %}<span lang="en">Curriculum vitae</span><span lang="zh">学术简历</span><span class="button-note">PDF</span></a>{% endif %}<a class="button button-secondary" href="mailto:{{ site.author.email }}">{% include icon.html name="mail" %}<span lang="en">Email me</span><span lang="zh">发邮件</span></a></div>
- </div>
- <figure class="hero-portrait"><img src="{{ '/assets/images/luyao-niu.webp' | relative_url }}" alt="Luyao Niu seated outdoors among stone ruins" width="512" height="512" fetchpriority="high"><figcaption><span lang="en">A little curiosity, a different perspective.</span><span lang="zh">多一点好奇，多一种看世界的方式。</span></figcaption></figure>
-</section>
-<section class="research-section" aria-labelledby="research-heading"><div class="section-label"><h2 id="research-heading"><span lang="en">Research interests</span><span lang="zh">研究兴趣</span></h2><span class="label-note"><span lang="en">From understanding to collective outcomes</span><span lang="zh">从理解环境到集体结果</span></span></div><div class="research-grid">{% for item in profile.research %}<a class="research-item" href="{{ '/projects/' | relative_url }}#{{ item.id }}"><span class="research-stop" aria-hidden="true"></span><h3><span lang="en">{{ item.en }}</span><span lang="zh">{{ item.zh }}</span>{% include icon.html name="external" %}</h3><p><span lang="en">{{ item.desc_en }}</span><span lang="zh">{{ item.desc_zh }}</span></p><span class="research-tags">{{ item.tags }}</span></a>{% endfor %}</div></section>
-{% assign current = site.data.current_research %}
-<section class="current-research" aria-labelledby="current-research-heading">
- <div class="current-research-title"><p class="eyebrow"><span lang="en">RESEARCH IN PROGRESS</span><span lang="zh">研究进行时</span></p><h2 id="current-research-heading"><span lang="en">{{ current.title_en }}</span><span lang="zh">{{ current.title_zh }}</span></h2></div>
- <div class="current-research-copy"><ul class="current-title-list">{% for topic in current.items %}<li><a href="{{ '/projects/' | relative_url }}#{{ topic.id }}"><span lang="en">{{ topic.en }}</span><span lang="zh">{{ topic.zh }}</span></a></li>{% endfor %}</ul></div>
-</section>
-<div class="home-columns">
+{% assign cv = site.data.cv %}
+<div class="home-layout">
+<aside class="profile-card" aria-label="Profile">
+ <img class="profile-photo" src="{{ '/assets/images/luyao-niu.webp' | relative_url }}" alt="Luyao Niu seated outdoors among stone ruins" width="512" height="512" fetchpriority="high">
+ <h1 class="profile-name">Luyao Niu</h1>
+ <p class="profile-role"><span lang="en">PhD Student</span><span lang="zh">博士研究生</span></p>
+ <ul class="profile-facts">
+  <li>{% include icon.html name="school" %}<span lang="en">University of Southern California</span><span lang="zh">南加州大学</span></li>
+  <li>{% include icon.html name="pin" %}<span lang="en">Los Angeles, CA</span><span lang="zh">美国 · 洛杉矶</span></li>
+ </ul>
+ <nav class="profile-links" aria-label="Contact and profiles">
+  <a href="mailto:{{ site.author.email }}" aria-label="Email" title="Email">{% include icon.html name="mail" %}</a>
+  <a href="{{ site.author.googlescholar }}" aria-label="Google Scholar" title="Google Scholar">{% include icon.html name="scholar" %}</a>
+  <a href="{{ site.author.orcid }}" aria-label="ORCID" title="ORCID">{% include icon.html name="orcid" %}</a>
+  <a href="https://github.com/{{ site.author.github }}" aria-label="GitHub" title="GitHub">{% include icon.html name="github" %}</a>
+  <a href="{{ site.author.researchgate }}" aria-label="ResearchGate" title="ResearchGate">{% include icon.html name="rg" %}</a>
+  {% if site.author.cv %}<a href="{{ site.author.cv | relative_url }}" aria-label="CV (PDF)" title="CV (PDF)">{% include icon.html name="file" %}</a>{% endif %}
+ </nav>
+ <section class="profile-interests" aria-labelledby="interests-title">
+  <h2 id="interests-title"><span lang="en">Research interests</span><span lang="zh">研究兴趣</span></h2>
+  <ul>{% for item in profile.research %}<li><a href="{{ '/projects/' | relative_url }}#{{ item.id }}"><span lang="en">{{ item.en }}</span><span lang="zh">{{ item.zh }}</span></a></li>{% endfor %}</ul>
+ </section>
+</aside>
+
+<div class="home-main">
+ <section class="home-section" id="about" aria-labelledby="about-title">
+  <h2 id="about-title"><span lang="en">About</span><span lang="zh">关于我</span></h2>
+  <p><span lang="en">I am a PhD student in Transportation Systems Engineering at the <a href="https://www.usc.edu/">University of Southern California</a>, advised by Prof. Ruolin Li in the SIAS Lab.</span><span lang="zh">我是<a href="https://www.usc.edu/">南加州大学</a>交通系统工程方向的博士研究生，师从 Ruolin Li 教授，就读于 SIAS Lab。</span></p>
+  <p><span lang="en">{{ profile.bio.en }}</span><span lang="zh">{{ profile.bio.zh }}</span></p>
+  <p><span lang="en">Previously, I studied Smart City &amp; Big Data at <a href="https://www.pku.edu.cn/">Peking University</a>, following a B.Sc. in Traffic Engineering at <a href="https://en.bjtu.edu.cn/">Beijing Jiaotong University</a>.</span><span lang="zh">此前，我在<a href="https://www.pku.edu.cn/">北京大学</a>学习智慧城市与大数据，本科就读于<a href="https://www.bjtu.edu.cn/">北京交通大学</a>交通工程专业，辅修金融学。</span></p>
+ </section>
+
+ <section class="home-section" id="news" aria-labelledby="news-title">
+  <h2 id="news-title"><span lang="en">News</span><span lang="zh">近期动态</span></h2>
+  <ol class="news-list">{% for news in profile.news %}<li><time datetime="{{ news.date | replace: '.', '-' }}">{{ news.date }}</time><p><span lang="en">{{ news.en }}</span><span lang="zh">{{ news.zh }}</span> <a class="row-link" href="{{ news.url | relative_url }}" aria-label="Details">{% include icon.html name="arrow" %}</a></p></li>{% endfor %}</ol>
+ </section>
+
  {% assign visible_publications = site.data.publications | where_exp: 'paper', "paper.status != 'working'" %}
  {% assign publication_years = visible_publications | group_by: 'year' | sort: 'name' | reverse %}
- <section class="selected-research" aria-labelledby="selected-heading"><div class="section-heading"><div><p class="eyebrow">SELECTED WORK</p><h2 id="selected-heading"><span lang="en">Selected publications</span><span lang="zh">代表论文</span></h2></div><a class="text-link" href="{{ '/publications/' | relative_url }}"><span lang="en">All publications</span><span lang="zh">全部论文</span>{% include icon.html name="arrow" %}</a></div>{% for year in publication_years %}{% for paper in year.items %}{% if paper.featured %}{% include paper.html paper=paper featured=true %}{% endif %}{% endfor %}{% endfor %}</section>
- <aside class="news-section" aria-labelledby="news-heading"><div class="section-heading"><div><p class="eyebrow">RECENT UPDATES</p><h2 id="news-heading"><span lang="en">News & notes</span><span lang="zh">近期动态</span></h2></div></div><ol class="news-list">{% for news in profile.news %}<li><time datetime="{{ news.date | replace: '.', '-' }}">{{ news.date }}</time><a href="{{ news.url | relative_url }}"><span lang="en">{{ news.en }}</span><span lang="zh">{{ news.zh }}</span>{% include icon.html name="external" %}</a></li>{% endfor %}</ol><a class="aside-link" href="{{ '/talks/' | relative_url }}"><span lang="en">Talks & presentations</span><span lang="zh">学术报告与展示</span>{% include icon.html name="arrow" %}</a></aside>
+ <section class="home-section" id="publications" aria-labelledby="selected-title">
+  <div class="home-section-head"><h2 id="selected-title"><span lang="en">Selected publications</span><span lang="zh">代表论文</span></h2><a class="text-link" href="{{ '/publications/' | relative_url }}"><span lang="en">All {{ visible_publications.size }}</span><span lang="zh">全部 {{ visible_publications.size }} 篇</span>{% include icon.html name="arrow" %}</a></div>
+  <div class="pub-list">{% for year in publication_years %}{% for paper in year.items %}{% if paper.featured %}{% include pub-compact.html paper=paper %}{% endif %}{% endfor %}{% endfor %}</div>
+ </section>
+
+ <section class="home-section" id="education" aria-labelledby="education-title">
+  <h2 id="education-title"><span lang="en">Education</span><span lang="zh">教育经历</span></h2>
+  <ul class="row-list">{% for item in profile.education %}<li class="education-item"><span class="row-date">{{ item.date }}</span><div><strong><span lang="en">{{ item.en }}</span><span lang="zh">{{ item.zh }}</span></strong><span class="row-sub"><span lang="en">{{ item.degree_en }}</span><span lang="zh">{{ item.degree_zh }}</span></span></div></li>{% endfor %}</ul>
+ </section>
+
+ <section class="home-section" id="experience" aria-labelledby="experience-title">
+  <div class="home-section-head"><h2 id="experience-title"><span lang="en">Experience</span><span lang="zh">工作经历</span></h2><a class="text-link" href="{{ '/cv/' | relative_url }}#experience"><span lang="en">Details</span><span lang="zh">详情</span>{% include icon.html name="arrow" %}</a></div>
+  <ul class="row-list">{% for item in site.data.experience.items %}<li><span class="row-date"><span lang="en">{{ item.en.date }}</span><span lang="zh">{{ item.zh.date }}</span></span><div><strong><span lang="en">{{ item.en.role }}</span><span lang="zh">{{ item.zh.role }}</span></strong><span class="row-sub"><span lang="en">{{ item.en.org | split: ' · ' | first }}</span><span lang="zh">{{ item.zh.org | split: ' · ' | first }}</span></span></div></li>{% endfor %}</ul>
+ </section>
+
+ <section class="home-section" id="honors" aria-labelledby="honors-title">
+  <div class="home-section-head"><h2 id="honors-title"><span lang="en">Selected honors</span><span lang="zh">主要荣誉</span></h2><a class="text-link" href="{{ '/cv/' | relative_url }}#awards-service"><span lang="en">All honors</span><span lang="zh">全部荣誉</span>{% include icon.html name="arrow" %}</a></div>
+  <ul class="plain-list">{% assign honors = cv.awards | first %}{% for item in honors.items limit: 4 %}<li><span lang="en">{{ item.en }}</span><span lang="zh">{{ item.zh }}</span></li>{% endfor %}</ul>
+ </section>
+
 </div>
-<section class="education-section" aria-labelledby="education-heading"><div class="section-heading"><div><p class="eyebrow">THE JOURNEY</p><h2 id="education-heading"><span lang="en">Education</span><span lang="zh">教育经历</span></h2></div><a class="text-link" href="{{ '/cv/' | relative_url }}"><span lang="en">Full curriculum vitae</span><span lang="zh">完整履历</span>{% include icon.html name="arrow" %}</a></div><div class="education-grid">{% for item in profile.education %}<div class="education-item"><span class="school-mark">{{ item.short }}</span><div><p class="education-date">{{ item.date }}</p><h3><span lang="en">{{ item.en }}</span><span lang="zh">{{ item.zh }}</span></h3><p><span lang="en">{{ item.degree_en }}</span><span lang="zh">{{ item.degree_zh }}</span></p></div></div>{% endfor %}</div></section>
+</div>
