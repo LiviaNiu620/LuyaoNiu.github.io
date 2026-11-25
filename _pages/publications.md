@@ -14,7 +14,6 @@ eyebrow: RESEARCH & SCHOLARSHIP
 {% assign publication_years = visible_publications | group_by: 'year' | sort: 'name' | reverse %}
 <div class="publication-list">{% for year in publication_years %}{% for paper in year.items %}{% include paper.html paper=paper %}{% endfor %}{% endfor %}</div>
 <p id="no-results" class="empty-state" hidden><span lang="en">No matching publications. Try a different search or filter.</span><span lang="zh">没有找到匹配的论文，请尝试其他关键词或筛选条件。</span></p>
-<p class="content-note"><span lang="en">Manuscripts include preprints, submissions, and work in preparation; these are not listed as accepted publications.</span><span lang="zh">研究稿件包含预印本、投稿与撰写中的工作，均不作为已录用成果展示。</span></p>
 {% assign talks = site.data.talks | sort: 'date' | reverse %}
 <section class="talks-section" id="talks" aria-labelledby="talks-title">
   <div class="section-heading"><h2 id="talks-title">Talks</h2></div>

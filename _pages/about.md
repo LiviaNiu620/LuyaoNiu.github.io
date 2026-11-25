@@ -33,7 +33,7 @@ redirect_from:
 <div class="home-main">
  <section class="home-section" id="about" aria-labelledby="about-title">
   <h2 id="about-title"><span lang="en">About</span><span lang="zh">关于我</span></h2>
-  <p><span lang="en">I am a PhD student in Transportation Systems Engineering at the <a href="https://www.usc.edu/">University of Southern California</a>, advised by Prof. Ruolin Li in the SIAS Lab.</span><span lang="zh">我是<a href="https://www.usc.edu/">南加州大学</a>交通系统工程方向的博士研究生，师从 Ruolin Li 教授，就读于 SIAS Lab。</span></p>
+  <p><span lang="en">I am a PhD student in Transportation Systems Engineering at the <a href="https://www.usc.edu/">University of Southern California</a>, advised by Prof. <a href="https://viterbi.usc.edu/directory/faculty/Li/Ruolin">Ruolin Li</a> in the <a href="https://ruolinli.me/">SIAS Lab</a>.</span><span lang="zh">我是<a href="https://www.usc.edu/">南加州大学</a>交通系统工程方向的博士研究生，师从 <a href="https://viterbi.usc.edu/directory/faculty/Li/Ruolin">Ruolin Li</a> 教授，就读于 <a href="https://ruolinli.me/">SIAS Lab</a>。</span></p>
   <p><span lang="en">{{ profile.bio.en }}</span><span lang="zh">{{ profile.bio.zh }}</span></p>
   <p><span lang="en">Previously, I studied Smart City &amp; Big Data at <a href="https://www.pku.edu.cn/">Peking University</a>, following a B.Sc. in Traffic Engineering at <a href="https://en.bjtu.edu.cn/">Beijing Jiaotong University</a>.</span><span lang="zh">此前，我在<a href="https://www.pku.edu.cn/">北京大学</a>学习智慧城市与大数据，本科就读于<a href="https://www.bjtu.edu.cn/">北京交通大学</a>交通工程专业，辅修金融学。</span></p>
  </section>
