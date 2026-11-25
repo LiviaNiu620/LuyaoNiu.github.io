@@ -7,7 +7,7 @@
 
 # Site Settings
 title                    : "Luyao Niu"
-description              : "Luyao Niu — PhD student at USC since August 2026. Research interests in learning, decision-making, and coordination in intelligent systems, with a growing focus on multi-agent and autonomous systems."
+description              : "Luyao Niu — PhD student at USC since August 2026. Research on collective intelligence: foundation-model agents, multi-agent learning and coordination, and the optimization and control of autonomous fleets."
 repository               : "LiviaNiu620/LuyaoNiu.github.io"
 url                      : "https://livianiu620.github.io"
 baseurl                  : "/LuyaoNiu.github.io"
@@ -20,6 +20,14 @@ google_analytics_id      :  # get google_analytics_id from https://analytics.goo
 # page-view and click tracking. Leave empty to load no analytics at all.
 umami_website_id         : "1ea0f380-e4a0-4b0b-aa93-5f77718272d2"
 umami_domains            : "livianiu620.github.io"
+
+# Comments on Notes (giscus, https://giscus.app): comments are stored in this
+# repository's GitHub Discussions. Fill repo_id and category_id to turn them on.
+giscus:
+  repo                   : "LiviaNiu620/LuyaoNiu.github.io"
+  repo_id                :
+  category               : "Notes"
+  category_id            :
 
 # SEO Related
 google_site_verification :  # get google_site_verification from https://search.google.com/search-console/about
@@ -157,6 +165,12 @@ defaults:
     values:
       layout: default
       author_profile: true
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: default
+      permalink: /notes/:title/
 
 
 # Sass/SCSS

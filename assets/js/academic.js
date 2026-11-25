@@ -11,11 +11,11 @@
       /* Private browsing: preferences remain in this tab. */
     }
   };
-  const languageButton = $("#lang-toggle");
   const themeButton = $("#theme-toggle");
   const menuButton = $("#menu-toggle");
   const nav = $("#main-nav");
-  const isChinese = () => root.dataset.lang === "zh";
+  // The site is English-only; Chinese strings in the templates stay hidden.
+  const isChinese = () => false;
   let toastTimer;
   function toast(message) {
     const el = $("#toast");
@@ -28,11 +28,6 @@
     const zh = isChinese(),
       dark = root.dataset.theme === "dark";
     root.lang = zh ? "zh-CN" : "en";
-    languageButton.textContent = zh ? "EN" : "中文";
-    languageButton.setAttribute(
-      "aria-label",
-      zh ? "Switch to English" : "切换至中文",
-    );
     themeButton.setAttribute(
       "aria-label",
       zh
@@ -48,19 +43,13 @@
       "aria-label",
       zh ? "切换导航菜单" : "Toggle navigation menu",
     );
-    $('meta[name="theme-color"]').content = dark ? "#1a1714" : "#fbfaf7";
+    $('meta[name="theme-color"]').content = dark ? "#0f141b" : "#ffffff";
     const search = $("#publication-search");
     if (search)
       search.placeholder = zh
         ? "搜索标题、作者、会议…"
         : "Search title, author, venue…";
   }
-  languageButton.addEventListener("click", () => {
-    root.dataset.lang = isChinese() ? "en" : "zh";
-    save("lang", root.dataset.lang);
-    syncControls();
-    filterPapers();
-  });
   themeButton.addEventListener("click", () => {
     root.dataset.theme = root.dataset.theme === "dark" ? "light" : "dark";
     save("theme", root.dataset.theme);
@@ -217,6 +206,36 @@
     } catch (_) {
       /* Analytics must never break navigation. */
     }
+  });
+  // Comments (giscus): load lazily in the site's current theme.
+  const giscusTheme = () => (root.dataset.theme === "dark" ? "dark" : "light");
+  $$(".giscus-mount").forEach((mount) => {
+    const script = document.createElement("script");
+    script.src = "https://giscus.app/client.js";
+    script.async = true;
+    script.crossOrigin = "anonymous";
+    const attrs = {
+      repo: mount.dataset.repo,
+      "repo-id": mount.dataset.repoId,
+      category: mount.dataset.category,
+      "category-id": mount.dataset.categoryId,
+      mapping: mount.dataset.mapping,
+      strict: "1",
+      "reactions-enabled": "1",
+      "emit-metadata": "0",
+      "input-position": "top",
+      theme: giscusTheme(),
+      lang: "en",
+      loading: "lazy",
+    };
+    if (mount.dataset.term) attrs.term = mount.dataset.term;
+    Object.entries(attrs).forEach(([key, value]) => script.setAttribute("data-" + key, value));
+    mount.appendChild(script);
+  });
+  themeButton.addEventListener("click", () => {
+    $$("iframe.giscus-frame").forEach((frame) =>
+      frame.contentWindow.postMessage({ giscus: { setConfig: { theme: giscusTheme() } } }, "https://giscus.app"),
+    );
   });
   syncControls();
 })();

@@ -35,9 +35,7 @@ fs.mkdirSync(output, { recursive: true });
     "",
     "publications/",
     "projects/",
-    "talks/",
     "cv/",
-    "service/",
     "404.html",
   ];
   const destinations = new Set();
@@ -54,9 +52,7 @@ fs.mkdirSync(output, { recursive: true });
           }),
         );
       });
-      for (const lang of ["en", "zh"]) {
-        if ((await page.getAttribute("html", "data-lang")) !== lang)
-          await page.locator("#lang-toggle").click();
+      for (const lang of ["en"]) {
         const state = await page.evaluate(() => {
           const ids = [...document.querySelectorAll("[id]")].map((el) => el.id);
           return {
@@ -97,16 +93,15 @@ fs.mkdirSync(output, { recursive: true });
           `${route}: broken image`,
         );
         assert.equal(state.emptyLinks, 0, `${route}: empty link`);
-        assert.equal(state.htmlLang, lang === "zh" ? "zh-CN" : "en");
+        assert.equal(state.htmlLang, "en");
         assert.equal(await page.locator('a[href*="/life/"]').count(), 0);
         assert.equal(await page.locator('.footer-invitation, .contact-note').count(), 0);
-        assert.equal(await page.locator('.site-version time').textContent(), '2026-11-13');
-        assert.equal(await page.locator('.site-version time').getAttribute('datetime'), '2026-11-13');
+        assert.equal(await page.locator('.site-version time').textContent(), '2026-11-24');
+        assert.equal(await page.locator('.site-version time').getAttribute('datetime'), '2026-11-24');
         if (route === 'cv/') assert(!/20\d{2}\.\d{2}/.test(await page.locator('.cv-awards').innerText()));
         report.push({ route, width, lang, ...state });
       }
       if (width === 1440 || width === 390) {
-        await page.locator("#lang-toggle").click(); // back to English
         await page.screenshot({
           path: path.join(
             output,
@@ -145,8 +140,6 @@ fs.mkdirSync(output, { recursive: true });
   }
   await page.setViewportSize({ width: 1440, height: 1000 });
   await page.goto(base + "publications/");
-  if ((await page.getAttribute("html", "data-lang")) !== "en")
-    await page.locator("#lang-toggle").click();
   assert.equal(
     await page.locator(".publication-list .paper:visible").count(),
     9,
@@ -210,10 +203,11 @@ fs.mkdirSync(output, { recursive: true });
       "Event-CausNet",
     ),
   );
-  await page.locator("#lang-toggle").click();
+  // English-only site: no language toggle, and the page stays English.
+  assert.equal(await page.locator("#lang-toggle").count(), 0);
   await page.locator("#theme-toggle").click();
   await page.goto(base);
-  assert.equal(await page.getAttribute("html", "data-lang"), "zh");
+  assert.equal(await page.getAttribute("html", "data-lang"), "en");
   assert.equal(await page.getAttribute("html", "data-theme"), "dark");
   await page.goto(base + "cv/");
   assert.equal(await page.locator(".cv-experience-entry").count(), 3);
@@ -225,12 +219,17 @@ fs.mkdirSync(output, { recursive: true });
   assert((await page.locator("#academic-service").innerText()).includes("IEEE Access"));
   assert((await page.locator("#programs").innerText()).includes("2022–2023"));
   assert.equal(await page.locator("#skills").count(), 0);
-  assert((await page.locator("#peking-university").innerText()).includes("2026.06"));
+  assert((await page.locator("#peking-university").innerText()).includes("Jun. 2026"));
   assert.equal(await page.locator(".cv-experience-entry li:visible").evaluateAll(items => items.filter(item => !item.innerText.trim()).length), 0);
-  await page.goto(base + "talks/");
-  assert.deepEqual(await page.locator('.talk-date time').evaluateAll(items => items.map(item => item.getAttribute('datetime'))), ['2026-11','2025-12','2025-11','2025-09','2025-07']);
-  for (const city of ['旧金山','台北','明尼阿波利斯','维也纳','伊斯坦布尔']) assert((await page.locator('.talk-list').innerText()).includes(city));
+  // Talks live at the end of the Publications page; /talks/ and /service/ redirect.
+  for (const [oldRoute, target] of [['talks/', '/publications/'], ['service/', '/cv/']]) {
+    const body = await (await context.request.get(base + oldRoute)).text();
+    assert(body.includes('http-equiv="refresh"') && body.includes(target), oldRoute + ' should redirect to ' + target);
+  }
   await page.goto(base + "publications/");
+  assert.deepEqual(await page.locator('.talk-row time').evaluateAll(items => items.map(item => item.getAttribute('datetime'))), ['2026-11','2025-12','2025-11','2025-09','2025-07']);
+  for (const city of ['San Francisco','Taipei','Minneapolis','Vienna','Istanbul']) assert((await page.locator('#talks').innerText()).includes(city));
+  assert.equal(await page.locator('#talk-critical-roads').count(), 1);
   assert.equal(await page.locator('#mobility-anomaly').count(), 0);
   assert.equal(await page.locator('.paper .status-badge').filter({hasText:'研究草稿'}).count(), 0);
   for (const id of ['blind-spots', 'critical-roads', 'braess-recovery', 'robotaxi-competition', 'spatial-satisfaction']) assert.equal(await page.locator('#' + id).count(), 0);
@@ -238,10 +237,11 @@ fs.mkdirSync(output, { recursive: true });
   const removedLife = await context.request.get(base + 'life/');
   assert.equal(removedLife.status(), 404);
   await page.goto(base + 'projects/');
-  assert.equal(await page.locator('.topic-card').count(), 3);
-  assert.equal(await page.locator('.topic-card > :not(h3)').count(), 0);
-  await page.goto(base + 'service/');
-  assert((await page.locator('.service-page').innerText()).includes('Transactions on Industrial Informatics'));
+  assert.equal(await page.locator('.research-line').count(), 3);
+  assert.deepEqual(await page.locator('.research-levels .level-name').allTextContents(), ['Collective', 'Interaction', 'Individual']);
+  assert.ok(await page.locator('.line-projects li').count() >= 9);
+  assert.equal(await page.locator('.interest-card').count(), 3);
+  assert.equal(await page.locator('.main-nav a[href$="/talks/"], .main-nav a[href$="/service/"]').count(), 0);
   await page.goto(base);
   assert.equal(await page.locator('.profile-interests li').count(), 3);
   assert.equal(await page.locator('.home-service, #service').count(), 0);
@@ -323,7 +323,7 @@ fs.mkdirSync(output, { recursive: true });
     networkErrors,
     checks: [
       "responsive layouts",
-      "bilingual content",
+      "English-only content",
       "images",
       "anchors and routes",
       "filters",
@@ -331,7 +331,7 @@ fs.mkdirSync(output, { recursive: true });
       "empty state",
       "deep links",
       "clipboard",
-      "persistent theme and language",
+      "persistent theme",
       "mobile menu and Escape",
       "navigation highlight",
       "safe external links",

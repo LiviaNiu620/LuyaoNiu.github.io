@@ -1,0 +1,16 @@
+{% comment %}
+  giscus comments (https://giscus.app), stored in this repository's GitHub Discussions.
+  Shown only when site.giscus.repo_id and site.giscus.category_id are set in _config.yml.
+  include.term: a fixed thread name (e.g. "Guestbook"); otherwise one thread per page path.
+{% endcomment %}
+{% if site.giscus.repo_id and site.giscus.category_id %}
+<section class="comments" aria-labelledby="comments-title-{{ include.term | default: 'page' | slugify }}">
+  <h2 id="comments-title-{{ include.term | default: 'page' | slugify }}">{{ include.title | default: 'Comments' }}</h2>
+  {% if include.intro %}<p class="comments-intro">{{ include.intro }}</p>{% endif %}
+  <div class="giscus-mount"
+    data-repo="{{ site.giscus.repo }}" data-repo-id="{{ site.giscus.repo_id }}"
+    data-category="{{ site.giscus.category }}" data-category-id="{{ site.giscus.category_id }}"
+    {% if include.term %}data-mapping="specific" data-term="{{ include.term }}"{% else %}data-mapping="pathname"{% endif %}></div>
+  <noscript>Comments need JavaScript and a GitHub account.</noscript>
+</section>
+{% endif %}

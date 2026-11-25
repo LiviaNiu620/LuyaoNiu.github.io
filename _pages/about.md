@@ -17,12 +17,12 @@ redirect_from:
   <li>{% include icon.html name="pin" %}<span lang="en">Los Angeles, CA</span><span lang="zh">美国 · 洛杉矶</span></li>
  </ul>
  <nav class="profile-links" aria-label="Contact and profiles">
-  <a href="mailto:{{ site.author.email }}" aria-label="Email" title="Email">{% include icon.html name="mail" %}</a>
-  <a href="{{ site.author.googlescholar }}" aria-label="Google Scholar" title="Google Scholar">{% include icon.html name="scholar" %}</a>
-  <a href="{{ site.author.orcid }}" aria-label="ORCID" title="ORCID">{% include icon.html name="orcid" %}</a>
-  <a href="https://github.com/{{ site.author.github }}" aria-label="GitHub" title="GitHub">{% include icon.html name="github" %}</a>
-  <a href="{{ site.author.researchgate }}" aria-label="ResearchGate" title="ResearchGate">{% include icon.html name="rg" %}</a>
-  {% if site.author.cv %}<a href="{{ site.author.cv | relative_url }}" aria-label="CV (PDF)" title="CV (PDF)">{% include icon.html name="file" %}</a>{% endif %}
+  <a href="mailto:{{ site.author.email }}" aria-label="Email: {{ site.author.email }}">{% include icon.html name="mail" %}<span class="link-label">Email</span><span class="tip" aria-hidden="true"><strong><span lang="en">Email</span><span lang="zh">邮箱</span></strong><span class="tip-detail"><span lang="en">{{ site.author.email }}</span><span lang="zh">{{ site.author.email }}</span></span></span></a>
+  <a href="{{ site.author.googlescholar }}" aria-label="Google Scholar: Publications &amp; citations">{% include icon.html name="scholar" %}<span class="link-label">Scholar</span><span class="tip" aria-hidden="true"><strong><span lang="en">Google Scholar</span><span lang="zh">谷歌学术</span></strong><span class="tip-detail"><span lang="en">Publications &amp; citations</span><span lang="zh">论文与引用</span></span></span></a>
+  <a href="{{ site.author.orcid }}" aria-label="ORCID: {{ site.author.orcid | split: '/' | last }}">{% include icon.html name="orcid" %}<span class="link-label">ORCID</span><span class="tip" aria-hidden="true"><strong><span lang="en">ORCID</span><span lang="zh">ORCID</span></strong><span class="tip-detail"><span lang="en">{{ site.author.orcid | split: '/' | last }}</span><span lang="zh">{{ site.author.orcid | split: '/' | last }}</span></span></span></a>
+  <a href="https://github.com/{{ site.author.github }}" aria-label="GitHub: @{{ site.author.github }}">{% include icon.html name="github" %}<span class="link-label">GitHub</span><span class="tip" aria-hidden="true"><strong><span lang="en">GitHub</span><span lang="zh">GitHub</span></strong><span class="tip-detail"><span lang="en">@{{ site.author.github }}</span><span lang="zh">@{{ site.author.github }}</span></span></span></a>
+  <a href="{{ site.author.researchgate }}" aria-label="ResearchGate: Research profile">{% include icon.html name="rg" %}<span class="link-label">ResearchGate</span><span class="tip" aria-hidden="true"><strong><span lang="en">ResearchGate</span><span lang="zh">ResearchGate</span></strong><span class="tip-detail"><span lang="en">Research profile</span><span lang="zh">研究主页</span></span></span></a>
+  {% if site.author.cv %}<a href="{{ site.author.cv | relative_url }}" aria-label="CV: Download PDF">{% include icon.html name="file" %}<span class="link-label">CV</span><span class="tip" aria-hidden="true"><strong><span lang="en">CV</span><span lang="zh">简历</span></strong><span class="tip-detail"><span lang="en">Download PDF</span><span lang="zh">下载 PDF</span></span></span></a>{% endif %}
  </nav>
  <section class="profile-interests" aria-labelledby="interests-title">
   <h2 id="interests-title"><span lang="en">Research interests</span><span lang="zh">研究兴趣</span></h2>

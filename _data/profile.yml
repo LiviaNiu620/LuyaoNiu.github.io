@@ -19,114 +19,152 @@
   },
   "research": [
     {
-      "id": "learning-reasoning",
+      "id": "fleet-optimization-control",
       "number": "01",
-      "en": "Learning & Reasoning",
-      "zh": "学习与推理",
-      "desc_en": "How can agents learn useful representations and reason about complex environments?",
-      "desc_zh": "智能主体如何学习有效表征，并对复杂环境进行推理？",
-      "tags": "Representations · Knowledge · Reasoning",
-      "context_en": "My work in trajectory modeling, causal forecasting, and knowledge-grounded AI agents provides a foundation for understanding environments and behavior. I am interested in how learning and reasoning can support decisions in dynamic settings.",
-      "context_zh": "轨迹建模、因果预测和知识驱动的 AI Agent 工作，为我理解环境与行为提供了基础。我希望进一步探索学习与推理如何支持动态环境中的决策。",
-      "links": [
+      "en": "Optimization & Control of Autonomous Fleets",
+      "zh": "自主车队的优化与控制",
+      "desc_en": "Collective outcomes: what emerges when many fleets share one network, and equilibrium-aware optimization and control that steers it, including under disruption and partial information.",
+      "desc_zh": "群体结果：多支车队共享路网时涌现出的系统行为，以及在扰动和信息不完整下引导它的、考虑均衡的优化与控制。",
+      "tags": "Game theory · Equilibrium · Decentralized control",
+      "projects": [
         {
-          "url": "#trajectory-reasoning",
-          "en": "Trajectory reasoning",
-          "zh": "轨迹推理"
+          "title": "Protecting critical roads during wildfires",
+          "desc": "Which commercial AV fleets should coordinate, and with whom, to keep evacuation-critical roads open.",
+          "meta": "Talk at INFORMS 2026",
+          "url": "/publications/#talk-critical-roads",
+          "id": "wildfire-coordination"
         },
         {
-          "url": "#event-causnet",
-          "en": "Event-CausNet",
-          "zh": "Event-CausNet"
+          "title": "Recovering from Braess's paradox",
+          "desc": "How much fleet organization and market penetration it takes for coordination to undo self-inflicted congestion.",
+          "meta": "In progress"
         },
         {
-          "url": "#asknearby",
-          "en": "AskNearby",
-          "zh": "方元问问"
+          "title": "Uneven information across competing fleets",
+          "desc": "How information gaps shape competing AV fleets, and where public sensing should go.",
+          "meta": "In progress"
+        },
+        {
+          "title": "Competition among robotaxi operators",
+          "desc": "Operational and pricing competition under congestion and heterogeneous constraints.",
+          "meta": "In progress"
+        },
+        {
+          "title": "Joint design of public transit and AV mobility",
+          "desc": "Transit and shared-AV service designed together for tourist cities with abnormal trips.",
+          "meta": "Transportation Research Part C",
+          "url": "/publications/#sav-transit"
         }
-      ]
+      ],
+      "level": "Collective"
     },
     {
-      "id": "multi-agent-decision-making",
+      "id": "multi-agent-learning",
       "number": "02",
-      "en": "Multi-Agent Decision-Making",
-      "zh": "多智能体决策",
-      "desc_en": "How should agents make decisions when their actions and objectives interact?",
-      "desc_zh": "当行为相互影响、目标各不相同时，智能主体应如何决策？",
-      "tags": "Reinforcement learning · Game theory",
-      "context_en": "Traffic assignment, multi-agent scheduling, and my current mixed-autonomy work connect individual decisions to system performance. I am interested in combining learning, optimization, and game-theoretic perspectives to study adaptive and strategic decision-making.",
-      "context_zh": "交通分配、多智能体调度与当前的人机混合交通研究，将个体决策与系统表现联系起来。我希望结合学习、优化和博弈论视角，研究适应性与策略性决策。",
-      "links": [
+      "en": "Multi-Agent Learning & Coordination",
+      "zh": "多智能体学习与协调",
+      "desc_en": "From individuals to teams: agents that infer what their teammates know and intend, and coordinate without joint training or much communication, from two robot arms to a vehicle fleet.",
+      "desc_zh": "从个体到团队：推断队友知道什么、想做什么，在没有联合训练、通信很少时也能协作，从两只机械臂到一支车队。",
+      "tags": "Multi-agent RL · Zero-shot coordination · Theory of mind",
+      "projects": [
         {
-          "url": "#mixed-autonomy-coordination",
-          "en": "Mixed-autonomy coordination",
-          "zh": "混合自主交通协调"
+          "title": "Zero-shot collaboration between robot arms",
+          "desc": "Plug-and-play coordination for robot arms that were never trained together, across embodiments and low-level policies, including VLAs.",
+          "meta": "In progress"
         },
         {
-          "url": "#other-projects",
-          "en": "Routing & multi-agent scheduling",
-          "zh": "路径分配与多智能体调度"
+          "title": "Fleet coordination under intermittent connectivity",
+          "desc": "Vehicles infer what their teammates already know, so the few bytes a V2X sidelink can carry reach the vehicle that needs them.",
+          "meta": "In progress"
+        },
+        {
+          "title": "Dynamic AGV scheduling in unmanned warehouses",
+          "desc": "How to dispatch a fleet of warehouse robots so that orders finish as early as possible, picking stations share the work evenly, and robots never jam or deadlock one another.",
+          "meta": "MathorCup 2022 · National Second Prize",
+          "id": "other-projects"
         }
-      ]
+      ],
+      "level": "Interaction"
     },
     {
-      "id": "coordination-collective-intelligence",
+      "id": "foundation-model-agents",
       "number": "03",
-      "en": "Coordination & Collective Intelligence",
-      "zh": "协调与集体智能",
-      "desc_en": "How can interaction among agents lead to effective collective behavior?",
-      "desc_zh": "多个智能主体如何通过互动，形成有效的集体行为？",
-      "tags": "Cooperation · Interaction · Collective behavior",
-      "context_en": "My current interests connect coordination, information, and collective outcomes in autonomous systems. I am exploring these questions through transportation networks, with a broader interest in cooperation and collective intelligence.",
-      "context_zh": "我目前关注自主系统中的协调、信息与集体结果，通过交通网络探索这些问题，并对合作与集体智能保持更广泛的兴趣。",
-      "links": [
+      "en": "Foundation-Model Agents for Decision-Making",
+      "zh": "面向决策的大模型智能体",
+      "desc_en": "Individual intelligence: foundation-model agents that learn from spatio-temporal data how the world evolves and what people intend.",
+      "desc_zh": "个体智能：从时空数据中学习世界如何演化、人们意图为何的大模型智能体。",
+      "tags": "LLM agents · World models · Spatio-temporal reasoning",
+      "projects": [
         {
-          "url": "#mixed-autonomy-coordination",
-          "en": "Current coordination study",
-          "zh": "当前协调研究"
+          "title": "Event-CausNet",
+          "desc": "Turning event reports into causal knowledge for more reliable traffic forecasting.",
+          "meta": "Under review at KDD 2027",
+          "url": "/publications/#event-causnet",
+          "id": "event-causnet"
         },
         {
-          "url": "#other-projects",
-          "en": "Multi-agent warehouse systems",
-          "zh": "仓储多智能体系统"
+          "title": "AskNearby",
+          "desc": "An LLM agent that connects neighborhood knowledge with the places and preferences that matter to each person.",
+          "meta": "ACM SIGSPATIAL GeoAI 2025",
+          "url": "/publications/#asknearby",
+          "id": "asknearby"
+        },
+        {
+          "title": "PlanGPT",
+          "desc": "A domain-tailored language model with efficient retrieval for urban planning.",
+          "meta": "arXiv",
+          "url": "/publications/#plangpt"
+        },
+        {
+          "title": "GeoSplit",
+          "desc": "Selective edge–server map acquisition for recognizing travel modes across users.",
+          "meta": "arXiv",
+          "url": "/publications/#geosplit"
+        },
+        {
+          "title": "Travel intention from trajectories",
+          "desc": "Behavioral representation from mobility traces with language models (master's thesis).",
+          "meta": "Earlier project",
+          "id": "trajectory-reasoning"
         }
-      ]
+      ],
+      "level": "Individual"
     }
   ],
   "news": [
     {
       "date": "2026.11",
-      "en": "Presented our work on selective coordination of autonomous vehicle fleets to protect critical roads during wildfires at the INFORMS 2026 Annual Meeting in San Francisco.",
+      "en": "Talk at <strong>INFORMS 2026</strong>: selective coordination of AV fleets to protect critical roads in wildfires.",
       "zh": "在旧金山 INFORMS 2026 年会上报告了自动驾驶车队选择性协调、在山火中保护关键道路的研究。",
-      "url": "/talks/#talk-critical-roads"
+      "url": "/publications/#talk-critical-roads"
     },
     {
-      "date":"2026.08",
-      "en":"Arrived in Los Angeles to begin my PhD at USC and joined the SIAS Lab, advised by Prof. Ruolin Li. A great adventure awaits!",
-      "zh":"来到洛杉矶，开启 USC 博士旅程，加入 SIAS Lab，师从 Ruolin Li 教授。新的冒险，正在前方！",
-      "url":"/cv/#education"
+      "date": "2026.08",
+      "en": "Started my <strong>PhD at USC</strong> in the <strong>SIAS Lab</strong>, advised by Prof. Ruolin Li.",
+      "zh": "来到洛杉矶，开启 USC 博士旅程，加入 SIAS Lab，师从 Ruolin Li 教授。新的冒险，正在前方！",
+      "url": "/cv/#education"
     },
     {
       "date": "2026.05",
-      "en": "Joined rednote’s Data Analytics department as an Agentic AI Engineering Intern in Shanghai.",
+      "en": "Joined <strong>rednote</strong> as an <strong>Agentic AI Engineering Intern</strong>.",
       "zh": "加入小红书上海数据分析部，担任 Agentic AI Engineering 实习生。",
       "url": "/cv/#xiaohongshu"
     },
     {
       "date": "2025.12",
-      "en": "MF-AttnBiLSTM published in the 2025 IEEE Global Communications Conference proceedings.",
+      "en": "<strong>MF-AttnBiLSTM</strong> published at <strong>IEEE GLOBECOM 2025</strong>.",
       "zh": "MF-AttnBiLSTM 发表于 2025 IEEE Global Communications Conference 论文集。",
       "url": "/publications/#mf-attnbilstm"
     },
     {
       "date": "2025.11",
-      "en": "Presented AskNearby at ACM SIGSPATIAL GeoAI ’25 in Minneapolis.",
+      "en": "<strong>AskNearby</strong> presented at <strong>ACM SIGSPATIAL GeoAI ’25</strong>.",
       "zh": "在明尼阿波利斯 ACM SIGSPATIAL GeoAI ’25 作 AskNearby 口头报告。",
       "url": "/publications/#asknearby"
     },
     {
       "date": "2025.08",
-      "en": "Our work on joint SAV–transit design published in Transportation Research Part C.",
+      "en": "Joint transit–AV system design published in <strong>Transportation Research Part C</strong>.",
       "zh": "共享自动驾驶车辆与公共交通联合设计研究发表于 Transportation Research Part C。",
       "url": "/publications/#sav-transit"
     }
@@ -158,7 +196,7 @@
     }
   ],
   "focus": {
-    "en": "Learning, decision-making, and coordination in intelligent systems, with a growing focus on multi-agent and autonomous systems.",
-    "zh": "围绕智能系统中的学习、决策与协调展开研究，并逐步聚焦多智能体与自主系统。"
+    "en": "The optimization and control of autonomous fleets, multi-agent learning and coordination, and foundation-model agents.",
+    "zh": "自主车队的优化与控制、多智能体学习与协调，以及面向决策的大模型智能体。"
   }
 }

@@ -1,10 +1,25 @@
 {
-  "id":"current-projects",
-  "title_en":"Current questions",
-  "title_zh":"正在探索的问题",
-  "items":[
-    {"id":"resilient-coordination","en":"Coordination & resilient mobility","zh":"协调与韧性交通"},
-    {"id":"information-decisions","en":"Information & autonomous decisions","zh":"信息与自主决策"},
-    {"id":"personal-history","en":"Personal history & behavioral intelligence","zh":"个人历史与行为智能"}
+  "id": "current-interests",
+  "title_en": "Current interests",
+  "title_zh": "当前兴趣",
+  "items": [
+    {
+      "id": "world-and-each-other",
+      "en": "Modeling the world and each other",
+      "desc": "How can agents predict a shared physical world, and what their teammates know and intend, from partial observations?",
+      "tags": "World models · Theory of mind"
+    },
+    {
+      "id": "unseen-partners",
+      "en": "Coordinating with unseen partners",
+      "desc": "How can robots and vehicles cooperate with teammates, bodies, and policies they were never trained with?",
+      "tags": "Zero-shot coordination · Embodied AI"
+    },
+    {
+      "id": "collective-behavior",
+      "en": "Steering collective behavior",
+      "desc": "When many autonomous agents act in one world, what collective behavior emerges, and how can it be steered toward efficient and safe outcomes?",
+      "tags": "Multi-agent systems · Learning in games"
+    }
   ]
 }

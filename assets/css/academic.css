@@ -23,22 +23,22 @@
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 /* Luyao Niu — an academic site set in Literata (Latin) and LXGW WenKai
-   (Chinese), on an oat-white page with a caramel accent. */
+   (Chinese), on a white page with an academic blue accent. */
 :root {
   color-scheme: light;
-  --paper: #fbfaf7;
-  --surface: #f1eee8;
-  --surface-soft: #f5f3ee;
-  --ink: #24201b;
-  --muted: #5c554c;
-  --subtle: #6f675d;
-  --line: #e6e1d8;
-  --accent: #8a6a45;
-  --accent-hover: #6e5335;
-  --accent-soft: #f1e9dd;
-  --sign: #f3ede3;
-  --sign-ink: #3d2f20;
-  --sign-line: #d2c2ab;
+  --paper: #ffffff;
+  --surface: #f1f4f8;
+  --surface-soft: #f5f7fa;
+  --ink: #1a1f2b;
+  --muted: #4a5363;
+  --subtle: #646d7c;
+  --line: #e5e8ee;
+  --accent: #1f5fa8;
+  --accent-hover: #174a85;
+  --accent-soft: #e8f0fa;
+  --sign: #eef3fa;
+  --sign-ink: #1f3d66;
+  --sign-line: #c3d4ea;
   --white: #fff;
   --serif: "Literata", "LXGW WenKai", "Kaiti SC", "STKaiti", "Songti SC", Georgia, serif;
   --sans: "Literata", "LXGW WenKai", "Kaiti SC", "STKaiti", "Songti SC", Georgia, serif;
@@ -47,20 +47,20 @@
 }
 html[data-theme="dark"] {
   color-scheme: dark;
-  --paper: #1a1714;
-  --surface: #26221d;
-  --surface-soft: #201c18;
-  --ink: #efeae2;
-  --muted: #bdb4a7;
-  --subtle: #a69d90;
-  --line: #36302a;
-  --accent: #d2ae84;
-  --accent-hover: #e5c9a6;
-  --accent-soft: #3a2f22;
-  --sign: #2c2620;
-  --sign-ink: #efe3d2;
-  --sign-line: #5a4c3c;
-  --white: #1a1714;
+  --paper: #0f141b;
+  --surface: #1a212b;
+  --surface-soft: #151b24;
+  --ink: #e6eaf0;
+  --muted: #aab3c0;
+  --subtle: #95a0ae;
+  --line: #2a3341;
+  --accent: #82b2ee;
+  --accent-hover: #aac9f4;
+  --accent-soft: #1a2a40;
+  --sign: #1a2433;
+  --sign-ink: #dbe7f7;
+  --sign-line: #34465f;
+  --white: #0f141b;
 }
 * {
   box-sizing: border-box;
@@ -2053,7 +2053,7 @@ html[data-theme="dark"] .moon-icon {
     --muted: #444;
     --subtle: #555;
     --line: #ccc;
-    --accent: #8a6a45;
+    --accent: #1f5fa8;
   }
   .container {
     width: 100%;

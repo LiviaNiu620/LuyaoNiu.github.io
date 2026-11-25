@@ -16,14 +16,9 @@
       "url": "/projects/"
     },
     {
-      "en": "Talks",
-      "zh": "报告",
-      "url": "/talks/"
-    },
-    {
-      "en": "Service",
-      "zh": "服务",
-      "url": "/service/"
+      "en": "Notes",
+      "zh": "随笔",
+      "url": "/notes/"
     },
     {
       "en": "CV",
