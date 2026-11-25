@@ -219,7 +219,7 @@ fs.mkdirSync(output, { recursive: true });
   assert((await page.locator("#academic-service").innerText()).includes("IEEE Access"));
   assert((await page.locator("#programs").innerText()).includes("2022–2023"));
   assert.equal(await page.locator("#skills").count(), 0);
-  assert((await page.locator("#peking-university").innerText()).includes("Jun. 2026"));
+  assert((await page.locator("#qianmo").innerText()).includes("Present"));
   assert.equal(await page.locator(".cv-experience-entry li:visible").evaluateAll(items => items.filter(item => !item.innerText.trim()).length), 0);
   // Talks live at the end of the Publications page; /talks/ and /service/ redirect.
   for (const [oldRoute, target] of [['talks/', '/publications/'], ['service/', '/cv/']]) {

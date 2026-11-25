@@ -3,49 +3,107 @@
     {
       "id": "xiaohongshu",
       "en": {
-        "role": "Agentic AI Engineer · Intern",
-        "org": "rednote (Xiaohongshu) · Data Analytics · Shanghai, China · On-site",
+        "role": "Agent R&D Intern · Enterprise Intelligence, AI Platform Team",
+        "org": "Rednote (Xiaohongshu) · Shanghai, China",
         "date": "May - Aug. 2026",
         "bullets": [
-          ["Domain knowledge infrastructure", "Built a domain-specific data analytics knowledge base to support knowledge-grounded agent workflows."],
-          ["Agent architecture and development", "Developed agent frameworks and data-analysis workflows that connect knowledge resources with domain capabilities."],
-          ["Validation and Skill operations", "Validated end-to-end agent behavior and analytical outputs; designed, evaluated, monitored, and operated reusable domain Skills."]
+          [
+            "Agent architecture",
+            "Built the framework of a production data-analysis agent that routes business questions to reusable domain Skills over a shared knowledge layer."
+          ],
+          [
+            "Knowledge base",
+            "Distilled domain expertise into the agent's knowledge base and re-architected its memory, routing, and retrieval for more accurate and efficient grounding."
+          ],
+          [
+            "Online validation",
+            "Built online validation from scratch, covering accuracy, hallucination, efficiency, and user experience, with rule- and LLM-based failure attribution that automated root-cause analysis in every iteration."
+          ]
         ]
       },
       "zh": {
-        "role": "Agentic AI Engineer（实习）",
-        "org": "小红书（rednote）· 数据分析部 · 中国上海 · 现场办公",
+        "role": "Agent 研发实习生 · 企业智能，AI 平台团队",
+        "org": "小红书（Rednote）· 中国上海",
         "date": "2026.05 - 2026.08",
         "bullets": [
-          ["领域知识基础设施", "构建面向数据分析场景的领域知识库，为知识驱动的 Agent 工作流提供支撑。"],
-          ["Agent 架构与工程实现", "搭建 Agent 框架与数据分析工作流，将知识资源和领域能力融入系统。"],
-          ["验证与 Skill 运营", "开展端到端 Agent 行为与分析结果验证，并负责领域 Skill 的设计、评价、监控与运营。"]
+          [
+            "Agent 架构",
+            "搭建生产级数据分析 Agent 框架，在共享知识层之上将业务问题路由到可复用的领域 Skill。"
+          ],
+          [
+            "知识库",
+            "将领域经验沉淀进 Agent 知识库，并重构其记忆、路由与检索，使知识落地更准确、更高效。"
+          ],
+          [
+            "线上验证",
+            "从零搭建覆盖准确性、幻觉、效率与用户体验的线上验证体系，基于规则和 LLM 做失败归因，每次迭代自动完成根因分析。"
+          ]
         ]
       }
     },
     {
-      "id": "peking-university",
-      "en": {"role":"Graduate Research Assistant","org":"Peking University · Full-time · Beijing, China · On-site","date":"Sep. 2023 - Jun. 2026","bullets":[]},
-      "zh": {"role":"研究生研究助理","org":"北京大学 · 全职 · 中国北京 · 现场办公","date":"2023.09 - 2026.06","bullets":[]}
-    },
-    {
-      "id": "calsp",
+      "id": "nalsp",
       "en": {
-        "role": "LLM Algorithm R&D",
-        "org": "China Academy of Land Surveying and Planning · Collaborative project",
+        "role": "LLM Algorithm Engineer · Collaborative Project",
+        "org": "National Academy of Land Surveying and Planning · Beijing, China",
         "date": "Apr. 2025 - Jan. 2026",
         "bullets": [
-          ["Knowledge and reporting agents", "Led the RAG retrieval module for a policy knowledge base and developed an LLM-agent reporting workflow."],
-          ["Workflow impact", "The reporting workflow reduced initial-draft preparation time by more than 90%."]
+          [
+            "RAG retrieval",
+            "Led the retrieval module over a multi-level policy knowledge base, combining a domain-adapted embedding model with hybrid hierarchical reranking for clause-level recall and dynamic citation during generation."
+          ],
+          [
+            "Agentic report generation",
+            "Designed a workflow-based generation pipeline with an LLM-agent analysis module, cutting report drafting time by over 90%."
+          ]
         ]
       },
       "zh": {
-        "role": "大语言模型算法研发",
-        "org": "国土勘测规划院 · 合作项目",
+        "role": "大模型算法工程师 · 合作项目",
+        "org": "国土勘测规划院 · 中国北京",
         "date": "2025.04 - 2026.01",
         "bullets": [
-          ["知识库与报告 Agent", "主导政策知识库 RAG 检索模块，搭建 LLM Agent 报告生成工作流。"],
-          ["工作流影响", "将报告初稿编制时间缩短 90% 以上。"]
+          [
+            "RAG 检索",
+            "主导多层级政策知识库的检索模块，结合领域适配的嵌入模型与混合层级重排序，实现条款级召回和生成中的动态引用。"
+          ],
+          [
+            "Agent 报告生成",
+            "设计基于工作流的生成管线与 LLM Agent 分析模块，报告起草时间缩短 90% 以上。"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "qianmo",
+      "en": {
+        "role": "Co-founder & LLM Algorithm Engineer",
+        "org": "Qianmo Smartlink (Shenzhen) Technology Co., Ltd. · Shenzhen, China",
+        "date": "Dec. 2024 - Present",
+        "bullets": [
+          [
+            "Hybrid geo-RAG",
+            "Co-founded the company and architected AskNearby, an LLM platform that fuses graph, semantic-vector, and geographic retrieval over spatio-temporal community data for hyperlocal Q&A."
+          ],
+          [
+            "Cognitive-map personalization",
+            "Built a user model of neighborhood familiarity and preferences for context-aware recommendation, outperforming LLM- and map-based baselines in deployment."
+          ]
+        ]
+      },
+      "zh": {
+        "role": "联合创始人 & 大模型算法工程师",
+        "org": "阡陌智联（深圳）科技有限公司 · 中国深圳",
+        "date": "2024.12 - 至今",
+        "bullets": [
+          [
+            "混合地理 RAG",
+            "联合创办公司并主导设计方元问问（AskNearby），融合图检索、语义向量检索与地理检索，基于社区时空数据提供超本地问答。"
+          ],
+          [
+            "认知地图个性化",
+            "构建用户邻里熟悉度与偏好模型，用于情境感知推荐，在实际部署中优于基于 LLM 和地图的基线。"
+          ]
         ]
       }
     }
