@@ -190,5 +190,33 @@
       button.focus({ preventScroll: true });
     }),
   );
+  // Analytics: when Umami is loaded (see umami_website_id in _config.yml),
+  // report CV downloads, email clicks, citation copies and outbound links.
+  // Page views are counted by Umami itself.
+  document.addEventListener("click", (event) => {
+    const umami = window.umami;
+    if (!umami || typeof umami.track !== "function") return;
+    const target = event.target.closest("a[href], .copy-citation");
+    if (!target) return;
+    const page = location.pathname;
+    try {
+      if (target.classList.contains("copy-citation")) {
+        const item = target.closest(".paper, .pub");
+        const title = item && item.querySelector("h3");
+        umami.track("cite", { page, paper: title ? title.textContent.trim().slice(0, 120) : "" });
+        return;
+      }
+      const href = target.getAttribute("href") || "";
+      if (/(^|\/)cv[^/]*\.pdf$/i.test(href)) {
+        umami.track("cv-download", { page });
+      } else if (href.startsWith("mailto:")) {
+        umami.track("email", { page });
+      } else if (target.hostname && target.hostname !== location.hostname) {
+        umami.track("outbound", { page, url: target.href });
+      }
+    } catch (_) {
+      /* Analytics must never break navigation. */
+    }
+  });
   syncControls();
 })();

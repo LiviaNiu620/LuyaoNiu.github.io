@@ -152,8 +152,8 @@ fs.mkdirSync(output, { recursive: true });
     9,
   );
   assert.equal(await page.locator('.publication-list .publication-preview').count(), 9);
-  assert.equal(await page.locator('.publication-list .publication-preview img').count(), 8);
-  assert.equal(await page.locator('.publication-list .preview-placeholder').count(), 1);
+  assert.equal(await page.locator('.publication-list .publication-preview img').count(), 9);
+  assert.equal(await page.locator('.publication-list .preview-placeholder').count(), 0);
   assert.equal(await page.locator('.page-description').count(), 0);
   const publicationYears = await page
     .locator(".publication-list .paper .paper-meta > span:first-child")

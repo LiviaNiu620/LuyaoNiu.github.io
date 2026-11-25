@@ -25,6 +25,7 @@
   <link rel="stylesheet" href="{{ '/assets/css/refresh.css' | relative_url }}">
   <link rel="stylesheet" href="{{ '/assets/css/layout.css' | relative_url }}">
   <script src="{{ '/assets/js/academic.js' | relative_url }}" defer></script>
+  {% if site.umami_website_id %}<script defer src="https://cloud.umami.is/script.js" data-website-id="{{ site.umami_website_id }}" data-domains="{{ site.umami_domains }}"></script>{% endif %}
 </head>
 <body class="{% if page.url == '/' %}is-home{% else %}is-subpage{% endif %}">
 {% include icons.html %}

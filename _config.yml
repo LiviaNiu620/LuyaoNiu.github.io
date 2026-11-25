@@ -16,6 +16,11 @@ google_scholar_stats_use_cdn : true
 # google analytics
 google_analytics_id      :  # get google_analytics_id from https://analytics.google.com/analytics/
 
+# Umami analytics (https://cloud.umami.is): paste the Website ID to turn on
+# page-view and click tracking. Leave empty to load no analytics at all.
+umami_website_id         :
+umami_domains            : "livianiu620.github.io"
+
 # SEO Related
 google_site_verification :  # get google_site_verification from https://search.google.com/search-console/about
 bing_site_verification   :  # get bing_site_verification from https://www.bing.com/webmasters/about
