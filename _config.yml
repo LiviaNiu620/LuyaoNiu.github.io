@@ -18,7 +18,7 @@ google_analytics_id      :  # get google_analytics_id from https://analytics.goo
 
 # Umami analytics (https://cloud.umami.is): paste the Website ID to turn on
 # page-view and click tracking. Leave empty to load no analytics at all.
-umami_website_id         :
+umami_website_id         : "1ea0f380-e4a0-4b0b-aa93-5f77718272d2"
 umami_domains            : "livianiu620.github.io"
 
 # SEO Related
