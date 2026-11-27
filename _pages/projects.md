@@ -10,7 +10,7 @@ description_zh: "我现在关注的方向，以及背后的已有工作：自主
 <section class="current-interests" id="current-interests" aria-labelledby="current-interests-title"><span id="current-projects" class="anchor-alias" aria-hidden="true"></span>
   <div class="section-heading"><h2 id="current-interests-title">{{ current.title_en }}</h2></div>
   <div class="interest-grid">{% for item in current.items %}
-    <article class="interest-card" id="{{ item.id }}"><h3>{{ item.en }}</h3><p>{{ item.desc }}</p><span class="topic-methods">{{ item.tags }}</span></article>{% endfor %}
+    <article class="interest-card" id="{{ item.id }}"><h3>{{ item.en }}</h3><p>{{ item.desc }}</p></article>{% endfor %}
   </div>
 </section>
 <div class="section-heading work-so-far"><h2>Work so far</h2></div>
